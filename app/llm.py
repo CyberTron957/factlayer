@@ -16,6 +16,7 @@ from .config import settings
 EXTRACT_SYSTEM = """You extract grounded facts from document chunks. Rules:
 - Output ONLY a JSON array of fact objects, wrapped in [...] even for a single fact. No prose.
 - Every fact MUST include "quote": a verbatim substring of the chunk text supporting it.
+- Copy the quote character-for-character: same words, same order, no rewording, no grammar fixes, no joining separate table cells/rows into one sentence. If you cannot quote it exactly, skip the fact.
 - "subject": the entity the fact is about (company, institution, country...). Use the document's main entity when the chunk implies it.
 - "attribute": the metric/property in plain words (e.g. "revenue from services", "workforce headcount", "policy repo rate").
 - Numeric facts: "value_raw" exactly as written (keep symbols/commas/parentheses), "unit" as written (Cr, %, Mn tons...), "period" as written (FY24, Q4 FY24...), "scope" any qualifier (adjusted, standalone, consolidated...).
