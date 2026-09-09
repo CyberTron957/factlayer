@@ -286,7 +286,8 @@ def _clean_llm_value(raw: str) -> str:
             v = v[len(wrap):-len(wrap)].strip()
     if len(v) >= 2 and v[0] == v[-1] and v[0] in "\"'":
         v = v[1:-1].strip()
-    return v
+    v = v.replace("*", "").replace("`", "").replace("~", "")
+    return " ".join(v.split())
 
 
 def _llm_item_to_fact(it: dict, chunk: Chunk, doc_entity: str) -> Fact | None:

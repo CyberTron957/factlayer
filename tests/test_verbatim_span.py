@@ -88,4 +88,5 @@ def test_value_markdown_stripped():
     assert _clean_llm_value("**ZERO**") == "ZERO"
     assert _clean_llm_value('  "ZERO" ') == "ZERO"
     assert _clean_llm_value("12.7%") == "12.7%"
+    assert _clean_llm_value("# **Annexure 1**\n# **Action**") == "# Annexure 1 # Action"
     assert _clean_llm_value("") == ""
