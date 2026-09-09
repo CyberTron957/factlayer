@@ -4,9 +4,16 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     llama_cloud_api_key: str = ""
-    litellm_model: str = ""          # e.g. "openrouter/anthropic/claude-..." — provided later
+    litellm_model: str = ""          # legacy path (unused if bedrock key set)
     openai_base_url: str = ""
     openai_api_key: str = ""
+    # Bedrock mantle path (primary): OpenAI-compatible /v1/chat/completions
+    # with a Bedrock API key. Model is env-switchable (Luna = one-line swap
+    # once the account is enabled for it).
+    bedrock_api_key: str = ""        # AWS_BEARER_TOKEN_BEDROCK also accepted
+    bedrock_region: str = "us-east-1"
+    bedrock_model: str = "zai.glm-4.7-flash"
+    bedrock_max_link_calls: int = 80  # per-run cap on LLM-as-judge link calls
 
     tier: str = "agentic"            # LlamaParse tier for complex pages
     data_dir: str = "data"           # sqlite + cache + crops (gitignored, rebuilt)

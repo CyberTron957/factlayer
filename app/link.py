@@ -124,20 +124,37 @@ def _ctx(f: Fact) -> str:
     return (", ".join(parts) or "no context") + f" [{f.evidence.doc} p.{f.evidence.page_label}]"
 
 
+_LINK_CALLS = 0  # per-process LLM-link budget (see settings)
+
+
+def _link_budget_ok() -> bool:
+    global _LINK_CALLS
+    try:
+        from .config import settings as _s
+        limit = int(getattr(_s, "bedrock_max_link_calls", 80))
+    except Exception:
+        limit = 80
+    if _LINK_CALLS >= limit:
+        return False
+    _LINK_CALLS += 1
+    return True
+
+
 def link_pair(a: Fact, b: Fact, tol: float, disclosures: dict) -> Relation | None:
     """disclosures: doc -> vintage rank (higher = newer)."""
-    rel: dict = {}
-    if llm_available():
-        try:
-            rel = llm_link(_slim(a), _slim(b)) or {}
-        except Exception:
-            rel = {}
+    rel = heuristic_link(a, b, tol) or {}
+    if rel.get("relation") not in (
+            "corroborates", "contradicts", "reconciled", "superseded-by"):
+        # heuristic ambiguous → LLM judge (budget-capped), never fabricate
+        rel = {}
+        if llm_available() and _link_budget_ok():
+            try:
+                rel = llm_link(_slim(a), _slim(b)) or {}
+            except Exception:
+                rel = {}
     if not rel or rel.get("relation") not in (
             "corroborates", "contradicts", "reconciled", "superseded-by"):
-        rel = heuristic_link(a, b, tol)
-    if not rel or rel.get("relation") not in (
-            "corroborates", "contradicts", "reconciled", "superseded-by"):
-        return None  # ambiguous without LLM confirmation — skip, don't fabricate
+        return None  # ambiguous and LLM has no verdict — skip, don't fabricate
     # supersession: same topic, different disclosure vintages, conflicting values —
     # the newer disclosure wins (restatement or update), it is not a live conflict.
     # Different periods with different values stay reconciled (genuine change over time).

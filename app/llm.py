@@ -1,18 +1,20 @@
-"""LLM layer (central component). All calls go through LiteLLM's
-OpenAI-compatible interface; model comes from LITELLM_MODEL env only.
+"""LLM layer (central component). Calls go straight to the Bedrock mantle
+OpenAI-compatible endpoint with a Bedrock API key (no LiteLLM); the model is
+env-switchable via BEDROCK_MODEL (Luna = one-line swap once enabled).
 
 Two fenced calls: EXTRACT (chunk -> facts JSON) and LINK (fact pair ->
 relation JSON). Both outputs are Pydantic-validated and code-verified
 downstream; the LLM never writes to storage directly.
 """
 import json
-from typing import Any
+import os
+import urllib.request
 
 from .config import settings
 
 
 EXTRACT_SYSTEM = """You extract grounded facts from document chunks. Rules:
-- Output ONLY a JSON array of fact objects. No prose.
+- Output ONLY a JSON array of fact objects, wrapped in [...] even for a single fact. No prose.
 - Every fact MUST include "quote": a verbatim substring of the chunk text supporting it.
 - "subject": the entity the fact is about (company, institution, country...). Use the document's main entity when the chunk implies it.
 - "attribute": the metric/property in plain words (e.g. "revenue from services", "workforce headcount", "policy repo rate").
@@ -33,25 +35,42 @@ LINK_SYSTEM = """You compare two normalized facts about the same topic from diff
 Schema: {"relation":str,"axis":str|null,"explanation":str,"confidence":float}"""
 
 
+def _api_key() -> str:
+    key = settings.bedrock_api_key or os.environ.get("AWS_BEARER_TOKEN_BEDROCK", "")
+    if not key:  # fall back to .env file (short-term keys live there)
+        try:
+            env_path = os.path.join(os.path.dirname(
+                os.path.dirname(os.path.abspath(__file__))), ".env")
+            with open(env_path) as f:
+                for line in f:
+                    line = line.strip()
+                    if line.startswith("AWS_BEARER_TOKEN_BEDROCK="):
+                        key = line.split("=", 1)[1].strip()
+                        break
+        except OSError:
+            pass
+    return key
+
+
 def available() -> bool:
-    return bool(settings.litellm_model)
+    return bool(_api_key())
 
 
 def _chat(system: str, user: str, max_tokens: int = 2000) -> str:
-    import litellm
-    kwargs: dict[str, Any] = {
-        "model": settings.litellm_model,
-        "messages": [{"role": "system", "content": system},
-                     {"role": "user", "content": user}],
-        "temperature": 0,
-        "max_tokens": max_tokens,
-    }
-    if settings.openai_base_url:
-        kwargs["base_url"] = settings.openai_base_url
-    if settings.openai_api_key:
-        kwargs["api_key"] = settings.openai_api_key
-    resp = litellm.completion(**kwargs)
-    return resp.choices[0].message.content or ""
+    url = (f"https://bedrock-mantle.{settings.bedrock_region}"
+           f".api.aws/v1/chat/completions")
+    body = {"model": settings.bedrock_model,
+            "messages": [{"role": "system", "content": system},
+                         {"role": "user", "content": user}],
+            "temperature": 0,
+            "max_tokens": max_tokens}
+    req = urllib.request.Request(
+        url, data=json.dumps(body).encode(),
+        headers={"Content-Type": "application/json",
+                 "Authorization": "Bearer " + _api_key()})
+    with urllib.request.urlopen(req, timeout=180) as resp:
+        out = json.loads(resp.read().decode())
+    return out["choices"][0]["message"]["content"] or ""
 
 
 def _parse_json_array(text: str) -> list[dict]:
@@ -62,7 +81,9 @@ def _parse_json_array(text: str) -> list[dict]:
             text = text[:-3]
     try:
         out = json.loads(text)
-        return out if isinstance(out, list) else []
+        if isinstance(out, list):
+            return out
+        return [out] if isinstance(out, dict) else []  # single-fact object
     except Exception:
         # salvage: outermost [...] slice
         try:

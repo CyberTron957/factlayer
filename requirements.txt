@@ -1,8 +1,9 @@
 # Runtime: use /Users/pradhyun/Movies/myenv (has all of these).
 # Pinned loosely; install only if something is missing.
+# LLM via AWS Bedrock mantle HTTPS (urllib, stdlib) — no LLM SDK needed.
+# Short-term Bedrock API key in .env as AWS_BEARER_TOKEN_BEDROCK (12h TTL).
 llama-parse>=0.6
 llama-cloud>=0.1
-litellm>=1.80
 fastapi>=0.140
 uvicorn[standard]>=0.50
 python-multipart>=0.0.18
