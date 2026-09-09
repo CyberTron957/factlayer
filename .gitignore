@@ -1,0 +1,18 @@
+# deps / env / secrets
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# runtime data (rebuilt locally; samples live in sample_output/)
+data/
+*.db
+*.sqlite3
+
+# keys — never commit (enforced by pre-commit check in scripts/)
+*llx-*
+
+# os / editor
+.DS_Store
+.vscode/
+.idea/

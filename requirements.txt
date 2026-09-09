@@ -1,0 +1,16 @@
+# Runtime: use /Users/pradhyun/Movies/myenv (has all of these).
+# Pinned loosely; install only if something is missing.
+llama-parse>=0.6
+llama-cloud>=0.1
+litellm>=1.80
+fastapi>=0.140
+uvicorn[standard]>=0.50
+python-multipart>=0.0.18
+pydantic>=2.10
+pydantic-settings>=2.10
+PyMuPDF>=1.26
+pdfplumber>=0.11
+rapidfuzz>=3.0
+scikit-learn>=1.6
+reportlab>=4.0
+pytest>=8.0
