@@ -33,14 +33,18 @@ BOILER_RE = re.compile(
     r"^(contents?|what'?s inside|corporate overview|statutory reports|financial statements|"
     r"page \d+|annual report|for more details|https?://|\d+\s*$)", re.I)
 ORG_RE = re.compile(r"\b([A-Z][A-Za-z&.,'’\-]+(?:\s+[A-Z][A-Za-z&.,'’\-]+){0,3})\s+(Limited|Ltd\.?|Inc\.?|Bank|Corporation|Group)\b")
+ADDRESS_RE = re.compile(
+    r"\b(plot|road|street|floor|building|complex|mumbai|delhi|tel|phone|fax|"
+    r"\bCIN\b|pincode|email|@|www\.|gate|opposite|bandra|kurla)\b", re.I)
 ROLE_VERBS = re.compile(r"\b(is|are|was|were|became|appointed|resigned|retired|headquartered|founded|launched|acquired|merged|renamed|vision|mission)\b", re.I)
 
 
 def detect_doc_entity(chunks: list[Chunk]) -> str:
     votes: Counter = Counter()
-    for c in chunks[:40]:
+    for ci, c in enumerate(chunks[:40]):
+        w = 3 if ci < 3 else 1  # cover/titles outweigh banker/auditor lists
         for m in ORG_RE.finditer(c.text):
-            votes[m.group(0).strip()] += 1
+            votes[m.group(0).strip()] += w
     if not votes:
         return ""
     top = votes.most_common(1)[0][0]
@@ -108,6 +112,12 @@ def _numeric_from_sentence(sent: str, chunk: Chunk, doc_entity: str) -> list[Fac
         # extend over a closing paren: "(6.3%)" must keep its negative sign
         if raw.startswith("(") and not raw.endswith(")") and m.end() < len(sent) and sent[m.end()] == ")":
             raw += ")"
+        if not unit_raw and re.fullmatch(r"\(?\s*(19|20)\d{2}\s*,?\)?", raw.strip()):
+            continue  # bare calendar year, not a measurement
+        if not unit_raw and len(re.sub(r"\D", "", raw)) == 6:
+            continue  # 6-digit bare number: pincode/phone fragment, not a fact
+        if not unit_raw and ADDRESS_RE.search(sent):
+            continue  # bare number inside address/contact block
         before = sent[max(0, m.start() - 12):m.start()]
         if _looks_like_period_fragment(raw, before):
             continue

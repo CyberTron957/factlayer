@@ -34,9 +34,9 @@ def process_files(paths: list[str], vintage_base: int = 0,
             chunks = chunks[:limit_chunks]
         entity = detect_doc_entity(chunks)
         S.upsert_document(con, doc, sha, len(pages), entity, vintage_base + vi)
-        chunk_text = {c.page_index: c.text for c in chunks}
         fid = 0
         seen: set[tuple] = set()  # (attr, value_raw, page) dedupe: headings repeat table data
+        seen2: set[tuple] = set()  # (attr, value_norm, unit, page): ₹X vs X double-match
         for c in chunks:
             facts, questions = extract_chunk(c, entity)
             stats["chunks"] += 1
@@ -45,16 +45,18 @@ def process_files(paths: list[str], vintage_base: int = 0,
                                   q.get("detail", ""), [], [])
                 stats["questions"] += 1
             for f in facts:
-                ok, reason = verify_fact(f, chunk_text)
+                ok, reason = verify_fact(f, c.text)
                 if not ok:
                     S.insert_question(con, "verifier-rejection", reason,
                                       [], [f.evidence])
                     stats["questions"] += 1
                     continue
                 key = (f.attribute.lower().strip(), f.value_raw.strip(), f.evidence.page_index)
-                if key in seen:
+                key2 = (f.attribute.lower().strip(), f.value_norm, f.unit_norm, f.evidence.page_index)
+                if key in seen or key2 in seen2:
                     continue
                 seen.add(key)
+                seen2.add(key2)
                 fid += 1
                 f.fact_id = f"{doc[:6]}-{f.evidence.page_index:03d}-{fid:04d}"
                 if "chart-sourced" in f.flags or f.evidence.modality in ("chart", "infographic"):
@@ -137,5 +139,28 @@ def make_crops(con, path_by_doc: dict) -> dict:
             n += 1
         except Exception:
             pass
+    con.commit()
+    # backfill crops into open-question evidence by matching fact_ids
+    import json as _json
+    for qid, fids in con.execute("SELECT id,fact_ids FROM open_questions"):
+        try:
+            ids = _json.loads(fids or "[]")
+        except Exception:
+            continue
+        if not ids:
+            continue
+        row = con.execute(
+            "SELECT crop FROM facts WHERE fact_id IN (%s) AND crop<>'' LIMIT 1"
+            % ",".join("?" * len(ids)), ids).fetchone()
+        if row:
+            ev_rows = con.execute("SELECT evidence FROM open_questions WHERE id=?", (qid,)).fetchone()
+            try:
+                evs = _json.loads(ev_rows[0] or "[]")
+                for e in evs:
+                    e["crop"] = e.get("crop") or row[0]
+                con.execute("UPDATE open_questions SET evidence=? WHERE id=?",
+                            (_json.dumps(evs), qid))
+            except Exception:
+                pass
     con.commit()
     return {"crops": n}

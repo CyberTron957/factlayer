@@ -6,12 +6,10 @@ from .models import Fact
 from .normalize import same_dimension
 
 
-def verify_fact(f: Fact, chunk_by_page: dict) -> tuple[bool, str]:
+def verify_fact(f: Fact, chunk_text: str) -> tuple[bool, str]:
     """Check quote grounding against the source chunk text."""
-    key = (f.evidence.page_index)
-    chunk_text = chunk_by_page.get(key, "")
     if not f.evidence.quote or f.evidence.quote not in chunk_text:
-        return False, "quote not found verbatim in source page"
+        return False, "quote not found verbatim in source chunk"
     if f.fact_type == "numeric" and f.value_norm is None and not f.flags:
         return False, "numeric fact without parseable value"
     return True, "ok"

@@ -32,16 +32,18 @@ def sha_of(path: str) -> str:
     return h.hexdigest()[:16]
 
 
-def _cache_paths(path: str):
+def _cache_paths(path: str, target_pages: str | None = None):
     key = sha_of(path) + "_" + os.path.basename(path).replace("/", "_")
+    if target_pages:
+        key += "_" + re.sub(r"\W+", "-", target_pages)
     return os.path.join(CACHE_DIR, key + ".json")
 
 
 def parse_pdf(path: str, target_pages: str | None = None,
               force: str = "auto") -> list[Page]:
-    """force: 'auto' | 'llamaparse' | 'pypdf'. Returns pages in file order."""
-    cp = _cache_paths(path)
-    if os.path.exists(cp) and target_pages is None:
+    """    force: 'auto' | 'llamaparse' | 'pypdf'. Returns pages in file order."""
+    cp = _cache_paths(path, target_pages)
+    if os.path.exists(cp):
         with open(cp) as f:
             raw = json.load(f)
         return [Page(**p) for p in raw["pages"]]
@@ -62,6 +64,14 @@ def parse_pdf(path: str, target_pages: str | None = None,
         os.makedirs(CACHE_DIR, exist_ok=True)
         with open(cp, "w") as f:
             json.dump({"pages": [p.__dict__ for p in pages]}, f)
+    else:
+        # cache targeted parses too (frugal rebuilds during development)
+        try:
+            os.makedirs(CACHE_DIR, exist_ok=True)
+            with open(cp, "w") as f:
+                json.dump({"pages": [p.__dict__ for p in pages]}, f)
+        except Exception:
+            pass
     return pages
 
 

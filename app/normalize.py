@@ -119,6 +119,8 @@ def same_dimension(u1: str, u2: str) -> bool:
 
 
 FY_RE = re.compile(r"\bFY\s?(\d{2,4})\b", re.I)
+FISCAL_RE = re.compile(r"\bFiscal\s?(?:year\s?ended[^.]{0,30}?)?(20\d{2})\b", re.I)
+NINEMONTH_RE = re.compile(r"nine months?(?: period)? ended[^.]{0,40}?(20\d{2})", re.I)
 Q_RE = re.compile(r"\bQ([1-4])\s*FY\s?(\d{2,4})\b", re.I)
 FYRANGE_RE = re.compile(r"\bFY\s?(\d{4})\s*[-–]\s*(\d{2,4})\b", re.I)
 YEAR_ENDED_RE = re.compile(r"year ended[^.]{0,40}?(\d{1,2}\s+\w+\s+)?(20\d{2})", re.I)
@@ -137,6 +139,12 @@ def canonical_period(text: str) -> tuple[str, list[str]]:
     f = FY_RE.search(text)
     if f:
         return f"FY{_fy4(f.group(1))}", flags
+    g = FISCAL_RE.search(text)
+    if g:
+        return f"FY{g.group(1)}", flags + ["fiscal-year"]
+    nm = NINEMONTH_RE.search(text)
+    if nm:
+        return f"9M-{nm.group(1)}", flags + ["nine-months"]
     y = YEAR_ENDED_RE.search(text)
     if y:
         return f"FY{y.group(2)[-2:]}-ish", flags + ["year-ended-approx"]

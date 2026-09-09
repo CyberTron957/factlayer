@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fact Knowledge Layer</title>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:1100px;margin:0 auto;padding:20px;color:#1a1a1a}
+h1{font-size:24px} .tabs{display:flex;gap:8px;margin:16px 0}
+.tabs button{padding:8px 14px;border:1px solid #ccc;background:#f5f5f5;cursor:pointer;border-radius:6px}
+.tabs button.active{background:#1a1a1a;color:#fff}
+.card{border:1px solid #ddd;border-radius:8px;padding:12px;margin:10px 0}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;background:#eee;margin-right:6px}
+.b-corr{background:#dff5df}.b-cont{background:#ffdfe0}.b-recon{background:#fff3c4}.b-super{background:#e3e9ff}
+.ev{background:#f7f7f7;border-left:3px solid #999;padding:8px;margin:8px 0;font-size:14px}
+.ev img{max-width:100%;border:1px solid #ccc;margin-top:6px}
+input[type=text]{padding:8px;width:320px} #drop{border:2px dashed #aaa;padding:20px;border-radius:8px;text-align:center;margin:12px 0}
+small{color:#666}
+</style>
+</head>
+<body>
+<h1>Fact Knowledge Layer</h1>
+<div id="drop">Drop PDFs here or <input type="file" id="file" multiple accept=".pdf"> <button onclick="upload()">Upload &amp; Process</button> <span id="stat"></span></div>
+<div class="tabs">
+<button class="active" onclick="tab('cases')">4 Cases</button>
+<button onclick="tab('facts')">Facts</button>
+<button onclick="tab('relations')">Relations</button>
+<button onclick="tab('timeline')">Timeline</button>
+<button onclick="tab('questions')">Open questions</button>
+</div>
+<div><input type="text" id="q" placeholder="filter facts…" oninput="loadFacts()"> <span id="counts"></span></div>
+<div id="view"></div>
+<script>
+let cur='cases';
+async function j(u){return (await fetch(u)).json();}
+function evHtml(e){
+  if(!e||!e.quote) return '';
+  return `<div class="ev">“${e.quote}”<br><small>${e.doc||''} · page ${e.page_label||e.page_index||''} · ${e.modality||''}</small>`+
+  (e.crop?`<br><img src="/api/crop?path=${encodeURIComponent(e.crop)}">`:'')+`</div>`;
+}
+function factHtml(f){
+  return `<div class="card"><b>${f.attribute}</b> = <b>${f.value_raw}</b> <small>(${f.unit_norm||''} ${f.period||''} ${f.scope||''})</small><br>
+  <small>subject: ${f.subject} · conf ${f.confidence} · ${f.fact_type}${(f.flags||[]).length?' · ⚠ '+f.flags.join(', '):''}</small>${evHtml(f.evidence)}</div>`;
+}
+function badge(r){return `<span class="badge ${r==='corroborates'?'b-corr':r==='contradicts'?'b-cont':r==='reconciled'?'b-recon':'b-super'}">${r}</span>`;}
+function relHtml(r){
+  return `<div class="card">${badge(r.relation)} <small>${r.axis?'axis: '+r.axis+' · ':''}conf ${r.confidence}${r.verified?' · ✓ verified':''}</small>
+  <p>${r.explanation}</p>${(r.facts||[]).map(f=>f.fact_id?factHtml(f):'').join('')}</div>`;
+}
+async function tab(t){cur=t;document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('active',b.textContent.toLowerCase().includes(t==='questions'?'open':t)));await render();}
+async function render(){
+  const v=document.getElementById('view');
+  if(cur==='cases'){
+    const c=await j('/api/cases');
+    v.innerHTML=`<h3>1. Corroborated</h3>${c.corroborated?relHtml(c.corroborated):'none yet'}
+    <h3>2. Contradiction</h3>${c.contradiction?relHtml(c.contradiction):'none yet'}
+    <h3>3. Reconciled by context</h3>${c.reconciled?relHtml(c.reconciled):'none yet'}
+    <h3>4. Extraction/reasoning failure</h3>${c.failure?`<div class="card"><span class="badge">${c.failure.kind}</span><p>${c.failure.detail}</p>${(c.failure.evidence||[]).map(evHtml).join('')}</div>`:'none yet'}`;
+  }else if(cur==='facts'){await loadFacts();}
+  else if(cur==='relations'){const r=await j('/api/relations');v.innerHTML=r.map(relHtml).join('')||'none yet';}
+  else if(cur==='timeline'){const t=await j('/api/timeline');
+    v.innerHTML='<h3>Supersessions</h3>'+(t.supersessions.map(relHtml).join('')||'none')+'<h3>Facts by period</h3>'+t.facts.slice(0,200).map(factHtml).join('');}
+  else{const q=await j('/api/questions');
+    v.innerHTML=q.map(x=>`<div class="card"><span class="badge">${x.kind}</span><p>${x.detail}</p>${(x.evidence||[]).map(evHtml).join('')}</div>`).join('')||'inbox empty 🎉';}
+  const d=await j('/api/documents');document.getElementById('counts').textContent=d.map(x=>x.doc+` (${x.pages}p)`).join(' · ');
+}
+async function loadFacts(){
+  const q=document.getElementById('q').value;
+  const f=await j('/api/facts?q='+encodeURIComponent(q));
+  document.getElementById('view').innerHTML=`<p>${f.length} facts</p>`+f.slice(0,300).map(factHtml).join('');
+}
+async function upload(){
+  const fs=document.getElementById('file').files;if(!fs.length)return alert('choose PDFs');
+  document.getElementById('stat').textContent='processing…';
+  const fd=new FormData();for(const f of fs)fd.append('files',f);
+  const r=await (await fetch('/api/upload',{method:'POST',body:fd})).json();
+  document.getElementById('stat').textContent=JSON.stringify(r);await render();
+}
+render();
+</script>
+</body>
+</html>

@@ -4,6 +4,8 @@ code re-checks numeric verdicts. Deterministic heuristic covers no-LLM runs.
 Extra relation 'superseded-by': same subject+attribute, different disclosure
 vintage (period or doc date), newer replaces older — distinct from contradiction.
 """
+import re
+
 from rapidfuzz import fuzz
 
 from .config import settings
@@ -11,6 +13,19 @@ from .llm import available as llm_available, llm_link
 from .models import Fact, Relation
 from .normalize import same_dimension
 from .verify import _diff_axis, _scope_key, recheck_relation
+
+PERIOD_UNIT_TOKENS = re.compile(
+    r"\b(fy\d{0,4}|q[1-4]|yoy|qoq|cr|crs|crore?s?|lakhs?|mn|bn|million|"
+    r"billion|rs|inr|usd|per|cent|percent)\b|[₹$%]", re.I)
+FALLBACK_SUBJECTS = {"document", "doc", "report", "presentation"}
+
+
+def _topic_anchor(attr: str) -> str:
+    """Attribute stripped of period/unit/generic tokens — the linkable topic."""
+    s = PERIOD_UNIT_TOKENS.sub(" ", attr.lower())
+    toks = [t for t in re.findall(r"[a-z]{3,}", s)
+            if t not in {"the", "and", "for", "from", "with", "was", "are"}]
+    return " ".join(toks)
 
 
 def block_key(f: Fact) -> str:
@@ -22,14 +37,25 @@ def same_topic(a: Fact, b: Fact) -> bool:
         return False  # cross-document relations only
     if not a.attribute or not b.attribute:
         return False
-    attr = fuzz.token_set_ratio(a.attribute.lower(), b.attribute.lower())
-    subj = fuzz.token_set_ratio(a.subject.lower(), b.subject.lower())
-    if attr < settings.fuzzy_threshold or subj < 60:
+    ta, tb = _topic_anchor(a.attribute), _topic_anchor(b.attribute)
+    if min(len(ta), len(tb)) < 4:
+        return False  # no substantive topic (FY-salad, bare units)
+    toks_a, toks_b = set(ta.split()), set(tb.split())
+    shared = toks_a & toks_b
+    attr_score = fuzz.token_set_ratio(ta, tb)
+    if not shared and attr_score < 92:
+        return False
+    sa, sb = a.subject.lower().strip(), b.subject.lower().strip()
+    if sa in FALLBACK_SUBJECTS and sb in FALLBACK_SUBJECTS:
+        if not shared:
+            return False  # unknown subjects: topic tokens must overlap
+    elif fuzz.token_set_ratio(sa, sb) < 60:
         return False
     if a.fact_type == "numeric" and b.fact_type == "numeric":
+        # money-vs-percent explosions end here; convertible units (₹Mn vs ₹Cr)
+        # share a dimension and still pass
         if a.unit_norm and b.unit_norm and not same_dimension(a.unit_norm, b.unit_norm):
-            # allow: may still reconcile across units — keep as candidate
-            pass
+            return False
     return True
 
 
@@ -56,9 +82,14 @@ def heuristic_link(a: Fact, b: Fact, tol: float) -> dict:
     if close:
         return {"relation": "corroborates", "axis": None,
                 "explanation": _explain(a, b, "Same period, scope and value: "), "confidence": 0.85}
-    return {"relation": "contradicts", "axis": None,
-            "explanation": _explain(a, b, "Same period and scope but different values: "),
-            "confidence": 0.7}
+    # same context but different values: only call it a contradiction when the
+    # topic anchors are identical; different phrasing needs the LLM to confirm
+    # (else revenue-growth vs EBITDA-margin false-positives). Return None = skip.
+    if set(_topic_anchor(a.attribute).split()) == set(_topic_anchor(b.attribute).split()):
+        return {"relation": "contradicts", "axis": None,
+                "explanation": _explain(a, b, "Same period and scope but different values: "),
+                "confidence": 0.7}
+    return {}
 
 
 def _explain(a: Fact, b: Fact, prefix: str) -> str:
@@ -82,9 +113,14 @@ def link_pair(a: Fact, b: Fact, tol: float, disclosures: dict) -> Relation | Non
     if not rel or rel.get("relation") not in (
             "corroborates", "contradicts", "reconciled", "superseded-by"):
         rel = heuristic_link(a, b, tol)
-    # supersession: same topic, newer vintage, different value context
+    if not rel or rel.get("relation") not in (
+            "corroborates", "contradicts", "reconciled", "superseded-by"):
+        return None  # ambiguous without LLM confirmation — skip, don't fabricate
+    # supersession: same topic, different disclosure vintages, conflicting values —
+    # the newer disclosure wins (restatement or update), it is not a live conflict.
+    # Different periods with different values stay reconciled (genuine change over time).
     ra, rb = disclosures.get(a.evidence.doc, 0), disclosures.get(b.evidence.doc, 0)
-    if ra != rb and rel.get("relation") == "contradicts" and a.period != b.period:
+    if ra != rb and rel.get("relation") == "contradicts" and a.period == b.period:
         older, newer = (a, b) if ra < rb else (b, a)
         rel = {"relation": "superseded-by", "axis": "vintage",
                "explanation": (f"{older.value_raw} ({_ctx(older)}) was superseded by "
