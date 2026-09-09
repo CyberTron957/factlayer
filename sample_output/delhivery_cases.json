@@ -1,18 +1,18 @@
 {
  "corroborated": {
-  "id": 656,
+  "id": 1325,
   "relation": "corroborates",
   "axis": null,
-  "fact_a": "03-del-005-0017",
-  "fact_b": "02-del-003-0014",
-  "explanation": "Same period, scope and value: 'FY FY revenue services YoY' is 1.6% (FY2024, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "fact_a": "03-del-005-0033",
+  "fact_b": "02-del-003-0025",
+  "explanation": "Same period, scope and value: 'revenue services YoY' is 1.6% (FY2024, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.85,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0017",
+    "fact_id": "03-del-005-0033",
     "subject": "Delhivery Limited",
-    "attribute": "FY FY revenue services YoY",
+    "attribute": "revenue services YoY",
     "value_raw": "1.6%",
     "value_norm": 1.6,
     "unit_norm": "%",
@@ -33,7 +33,7 @@
     ]
    },
    {
-    "fact_id": "02-del-003-0014",
+    "fact_id": "02-del-003-0025",
     "subject": "Delhivery Limited",
     "attribute": "Mn Revenue services EBITDA Adjusted EBITDA",
     "value_raw": "1.6%",
@@ -59,17 +59,17 @@
  },
  "contradiction": null,
  "reconciled": {
-  "id": 637,
+  "id": 1265,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0011",
-  "fact_b": "02-del-003-0014",
+  "fact_a": "03-del-004-0019",
+  "fact_b": "02-del-003-0025",
   "explanation": "Figures differ but so does context: 'Parcel Service EBITDA profitability robust growth' is 30% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0011",
+    "fact_id": "03-del-004-0019",
     "subject": "Delhivery Limited",
     "attribute": "Parcel Service EBITDA profitability robust growth",
     "value_raw": "30%",
@@ -92,7 +92,7 @@
     ]
    },
    {
-    "fact_id": "02-del-003-0014",
+    "fact_id": "02-del-003-0025",
     "subject": "Delhivery Limited",
     "attribute": "Mn Revenue services EBITDA Adjusted EBITDA",
     "value_raw": "1.6%",
@@ -117,19 +117,17 @@
   ]
  },
  "failure": {
-  "kind": "chart-sourced-provisional",
-  "detail": "Cr = (452 Cr) awaits table/text corroboration.",
-  "fact_ids": [
-   "03-del-004-0008"
-  ],
+  "kind": "verifier-rejection",
+  "detail": "numeric fact without parseable value",
+  "fact_ids": [],
   "evidence": [
    {
     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
-    "page_index": 4,
-    "page_label": "5",
-    "quote": "(452 Cr) in FY23\n   - b PAT profitable in Q3 FY24; PAT loss reduced by Rs.",
-    "crop": "data/crops/03-delhi-p4.png",
-    "modality": "chart"
+    "page_index": 5,
+    "page_label": "6",
+    "quote": "Express parcel shipments since inception",
+    "crop": null,
+    "modality": "text"
    }
   ]
  }

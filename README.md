@@ -15,8 +15,9 @@ pip install -r requirements.txt
 
 # 2. Secrets — never committed (.gitignore + pre-commit grep, see scripts/check_no_keys.sh)
 export LLAMA_CLOUD_API_KEY="llx-..."      # LlamaParse (primary parser)
-export LITELLM_MODEL="..."                # OpenAI-compatible model via LiteLLM
-# optional: export OPENAI_BASE_URL / OPENAI_API_KEY for a custom gateway
+export AWS_BEARER_TOKEN_BEDROCK="..."     # Bedrock API key (console: Bedrock → API keys → short-term, 12h TTL)
+# optional: BEDROCK_MODEL (default zai.glm-4.7-flash; openai.gpt-5.6-luna = one-line swap once enabled)
+#           BEDROCK_REGION (default us-east-1), BEDROCK_MAX_LINK_CALLS (default 80)
 
 # 3. Process PDFs (incremental: unchanged files are skipped by SHA)
 python -m scripts.run_corpus            # Delhivery demo corpus (see --help for subsets)
@@ -52,17 +53,21 @@ tables split row-wise with headers repeated.
 
 **Extract (LLM central, deterministic recall net).** `llm_extract` maps each
 chunk to strict-schema JSON `{subject, attribute, value_raw, unit, period,
-scope, fact_type, confidence, quote, modality}`. Alongside it, a regex/NER
-pre-pass guarantees baseline recall with zero LLM cost. Doc entity comes from
-cover-weighted ORG voting — no filename/schema knowledge.
+scope, fact_type, confidence, quote, modality}` — direct HTTPS to the Bedrock
+mantle OpenAI-compatible endpoint (`/v1/chat/completions`, no SDK), model from
+`BEDROCK_MODEL` env only (GLM 4.7 Flash live; Luna is a one-line swap once AWS
+enables the account). Alongside it, a regex/NER pre-pass guarantees baseline
+recall with zero LLM cost. Doc entity comes from cover-weighted ORG voting —
+no filename/schema knowledge.
 
 **Normalize.** Indian + international numbers, accounting parentheses
 (`(404)`→`-404`), unit algebra (`₹8,142 Cr` ≡ `81,415 ₹Mn`; `$…bn` stays USD,
 never INR), period canonicalization (`FY24`≡`FY2023-24`, quarters, Fiscal years).
 
 **Link.** Fuzzy blocking proposes candidate pairs (topic anchors minus
-period/unit tokens; money-vs-percent can never block together); `llm_link`
-classifies; **code re-checks every numeric verdict** (tolerance, dimension
+period/unit tokens; money-vs-percent can never block together); heuristics
+verdict first, `llm_link` judges only ambiguous pairs (budget-capped);
+**code re-checks every numeric verdict** (tolerance, dimension
 equality) and can overturn the LLM. Fourth relation `superseded-by` separates
 "later disclosure wins" (restatements, director active→resigned) from genuine
 contradiction.
@@ -74,25 +79,27 @@ a rendered page crop as visual evidence.
 
 **Standout bets:** visual evidence crops · temporal versions + "knowledge as
 of…" timeline · open-questions inbox as a product surface. AI tools used:
-LlamaParse (parse), a LiteLLM-served LLM (extract/link — model TBD), coding
-agent for scaffolding; all prompts are dataset-agnostic (see `app/llm.py`).
+LlamaParse (parse), GLM 4.7 Flash via Bedrock mantle (extract/live-tested link
+judge; Luna account-gated — needs AWS Sales enablement, swap is one env var),
+coding agent for scaffolding; all prompts are dataset-agnostic (see `app/llm.py`).
 
 ## Limitations and Next Steps
 
 - **Contradiction on live data is verdict-ready but untriggered**: the engine
-  (tests: 10/10) emits `contradicts`, but the current deterministic attributes
-  are too noisy to surface a true same-context conflict — needs LLM attributes
-  or full-document parses. Same for cross-publisher macro links (MB, RBI/IMF
-  phrasing variance). This is the first thing `LITELLM_MODEL` unlocks.
+  (tests: 10/10) emits `contradicts`, but the Delhivery docs genuinely agree —
+  no true same-context conflict exists in the subsets. Same for cross-publisher
+  macro links (MB, RBI/IMF phrasing variance). LLM extraction (live via Bedrock
+  mantle) raised recall 718→~880 facts and cleaned anchors; linking stays
+  heuristic-first with the LLM judging only ambiguous pairs (budget-capped).
 - Deterministic period attribution uses nearest-token heuristics (table column
   headers need table-aware resolution — currently flagged `ambiguous-period`).
 - Chart legend→segment mapping is positional; ambiguous cases are flagged, not
   guessed. No vision fallback yet (LlamaParse chart parsing sufficed in tests).
 - Relations are pairwise; no multi-hop chains. Q&A box and CSV export beyond
-  `/api/export` are P1. Full 100-page runs await the model + credit budget
+  `/api/export` are P1. Full 100-page runs await LlamaParse credit budget
   (subsets used throughout: 27 + 5 + 4 and 4 + 5 + 5 pages).
-- Next: plug in model → full-corpus runs → calibrated confidence → bridge
-  arithmetic for reconciliations (show the `127 − x = 76` math).
+- Next: Luna swap (one env var, needs AWS Sales enablement) → full-corpus runs
+  → calibrated confidence → bridge arithmetic for reconciliations.
 
 ## Additional Notes
 

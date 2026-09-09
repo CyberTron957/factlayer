@@ -87,8 +87,16 @@ def _subject_of(sent: str, doc_entity: str) -> str:
     return doc_entity or "document"
 
 
+def _clean_llm_attr(attr: str) -> str:
+    """LLM attributes leak period/scope tokens; normalize to ≤6-word anchors."""
+    s = re.sub(r"\b(FY\d{2,4}|Q[1-4]\s*FY\d{2,4}|FY\d{4}-\d{2,4}|20\d{2})\b", " ", attr or "", flags=re.I)
+    out = _attr_of(s)
+    return out or (attr or "statement")[:60]
+
+
 def _attr_of(sent: str) -> str:
     s = clean(re.sub(r"[₹$].*", "", sent))
+    s = re.sub(r"\b(FY\d{2,4}|Q[1-4]\s*FY\d{2,4}|FY\d{4}-\d{2,4}|20\d{2})\b", " ", s, flags=re.I)
     words = re.findall(r"[A-Za-z][A-Za-z&\-']+", s)
     stop = {"the", "a", "an", "of", "in", "on", "for", "to", "and", "was",
             "were", "is", "are", "with", "by", "as", "at", "from", "its", "it",
@@ -239,7 +247,7 @@ def _llm_item_to_fact(it: dict, chunk: Chunk, doc_entity: str) -> Fact | None:
         flags.append("chart-sourced")
     return Fact(
         subject=it.get("subject") or doc_entity or "document",
-        attribute=it.get("attribute") or "statement",
+        attribute=_clean_llm_attr(it.get("attribute") or "statement"),
         value_raw=it.get("value_raw") or "", value_norm=vnorm, unit_norm=unorm,
         period=period, scope=it.get("scope") or "", fact_type=ft,
         confidence=round(conf, 2),
