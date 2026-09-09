@@ -130,7 +130,7 @@ def _split_pages(full: str, target_pages: str | None) -> list[Page]:
     parts = re.split(r"\n== PAGE (\S+) ==\n?", full)
     if len(parts) == 1:  # separator scheme not honoured — single page blob
         idxs = _expand_target(target_pages, 1)
-        return [Page(index=idxs[0], label="?", markdown=full.strip(),
+        return [Page(index=idxs[0], label=str(idxs[0] + 1), markdown=full.strip(),
                      modality_hints=_modality_hints(full))]
     pages: list[Page] = []
     first, rest = parts[0], parts[1:]
