@@ -42,7 +42,7 @@ cases on screen). Record with any screen recorder against a local run; the
 
 ## Approach
 
-**Parse (LlamaParse-first).** Agentic tier returns per-page markdown with tables
+**Parse (LlamaParse-first).** Default-tier parsing returns per-page markdown with tables
 preserved, charts converted to structured series, and page separators that keep
 *both* the file index and the printed folio (curated excerpts jump: file page 11
 == printed 12). `target_pages` + SHA-keyed cache keep runs cheap and

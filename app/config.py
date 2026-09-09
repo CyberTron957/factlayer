@@ -15,7 +15,6 @@ class Settings(BaseSettings):
     bedrock_model: str = "zai.glm-4.7-flash"
     bedrock_max_link_calls: int = 80  # per-run cap on LLM-as-judge link calls
 
-    tier: str = "agentic"            # LlamaParse tier for complex pages
     data_dir: str = "data"           # sqlite + cache + crops (gitignored, rebuilt)
     max_chunk_chars: int = 4000
     link_tolerance: float = 0.02     # numeric corroboration tolerance (relative)
