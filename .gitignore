@@ -6,6 +6,8 @@ __pycache__/
 
 # runtime data (rebuilt locally; samples live in sample_output/)
 data/
+data_macro/
+data_*/
 *.db
 *.sqlite3
 
