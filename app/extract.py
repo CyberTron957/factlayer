@@ -219,14 +219,79 @@ def extract_chunk(chunk: Chunk, doc_entity: str) -> tuple[list[Fact], list[dict]
                 merged.append(f)
         except Exception as e:
             questions.append({"kind": "llm-item-rejected",
-                              "detail": f"schema error: {e}; item={str(it)[:200]}"})
+                              "detail": f"[{chunk.doc} p{chunk.page_label}] rejected: {e}; item={str(it)[:200]}"})
     return merged, questions
+
+
+def _strip_md(text: str) -> tuple[str, list[int]]:
+    """Remove markdown emphasis/table markers, keeping an offset map.
+
+    Returns (stripped_text, original_offsets) so a match in stripped space
+    maps back to the verbatim span in the source chunk.
+    """
+    keep, idx = [], []
+    for i, ch in enumerate(text):
+        if ch in "*_`~>|":
+            continue
+        keep.append(ch)
+        idx.append(i)
+    return "".join(keep), idx
+
+
+def _token_pattern(quote: str) -> str | None:
+    toks = quote.split()
+    if not toks or len(toks) > 150:
+        return None
+    return r"\s+".join(re.escape(t) for t in toks)
+
+
+def _locate_verbatim(quote: str, text: str, cap: int = 500) -> str | None:
+    """Find the LLM quote's span in the source chunk; None if not grounded.
+
+    The LLM routinely reflows newlines/spaces and adds/drops markdown
+    markers (`**`, `|`), so exact `in` fails on genuine quotes. We match
+    tolerantly but always return the ACTUAL chunk span — the stored quote
+    stays a verbatim substring of the source page by construction.
+    True paraphrases (different token sequence) still return None.
+    """
+    if not quote or not text:
+        return None
+    if quote in text:
+        return quote[:cap]
+    pat = _token_pattern(quote)
+    if pat:
+        m = re.search(pat, text)
+        if m:
+            return m.group(0)[:cap]
+        stripped_text, idx = _strip_md(text)
+        stripped_quote, _ = _strip_md(quote)
+        pat2 = _token_pattern(stripped_quote)
+        if pat2 and idx:
+            m2 = re.search(pat2, stripped_text)
+            if m2 and m2.end() - m2.start() >= max(len(stripped_quote) // 2, 8):
+                # map back to original offsets (guard against ragged edges)
+                lo, hi = m2.start(), m2.end() - 1
+                if 0 <= lo < len(idx) and 0 <= hi < len(idx):
+                    return text[idx[lo]:idx[hi] + 1][:cap]
+    return None
+
+
+def _clean_llm_value(raw: str) -> str:
+    """Strip markdown emphasis/quoting the LLM echoes into value fields."""
+    v = (raw or "").strip()
+    for wrap in ("**", "__", "``"):
+        if len(v) > len(wrap) * 2 and v.startswith(wrap) and v.endswith(wrap):
+            v = v[len(wrap):-len(wrap)].strip()
+    if len(v) >= 2 and v[0] == v[-1] and v[0] in "\"'":
+        v = v[1:-1].strip()
+    return v
 
 
 def _llm_item_to_fact(it: dict, chunk: Chunk, doc_entity: str) -> Fact | None:
     quote = (it.get("quote") or "").strip()
-    if not quote or quote not in chunk.text:
-        raise ValueError("quote not verbatim in chunk")
+    span = _locate_verbatim(quote, chunk.text)
+    if not span:
+        raise ValueError("quote not grounded in source page")
     ft = it.get("fact_type", "numeric")
     vnorm, unorm, period, flags = None, "", (it.get("period") or ""), []
     if ft == "numeric":
@@ -234,13 +299,13 @@ def _llm_item_to_fact(it: dict, chunk: Chunk, doc_entity: str) -> Fact | None:
         period = period or per
     else:
         unorm = ""
-        _, pflags = canonical_period((it.get("period") or "") + " " + quote)
+        _, pflags = canonical_period((it.get("period") or "") + " " + span)
         flags = pflags
         if not period:
-            period, _ = canonical_period(quote)
+            period, _ = canonical_period(span)
     modality = it.get("modality", "text")
     if modality == "unknown":
-        modality = "table" if "|" in quote else "text"
+        modality = "table" if "|" in span else "text"
     conf = float(it.get("confidence", 0.6) or 0.6)
     if modality in ("chart", "infographic"):
         conf = min(conf, 0.65)
@@ -248,11 +313,11 @@ def _llm_item_to_fact(it: dict, chunk: Chunk, doc_entity: str) -> Fact | None:
     return Fact(
         subject=it.get("subject") or doc_entity or "document",
         attribute=_clean_llm_attr(it.get("attribute") or "statement"),
-        value_raw=it.get("value_raw") or "", value_norm=vnorm, unit_norm=unorm,
+        value_raw=_clean_llm_value(it.get("value_raw") or ""), value_norm=vnorm, unit_norm=unorm,
         period=period, scope=it.get("scope") or "", fact_type=ft,
         confidence=round(conf, 2),
         evidence=Evidence(doc=chunk.doc, page_index=chunk.page_index,
-                          page_label=chunk.page_label, quote=quote, modality=modality),
+                          page_label=chunk.page_label, quote=span, modality=modality),
         flags=flags)
 
 
