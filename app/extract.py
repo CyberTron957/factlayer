@@ -219,7 +219,9 @@ def extract_chunk(chunk: Chunk, doc_entity: str) -> tuple[list[Fact], list[dict]
                 merged.append(f)
         except Exception as e:
             questions.append({"kind": "llm-item-rejected",
-                              "detail": f"[{chunk.doc} p{chunk.page_label}] rejected: {e}; item={str(it)[:200]}"})
+                              "detail": (f"[{chunk.doc} p{chunk.page_label}] rejected: {e}; "
+                                         f"quote={(it.get('quote') or '')[:400]}; "
+                                         f"item={str(it)[:200]}")})
     return merged, questions
 
 
@@ -289,7 +291,8 @@ def _clean_llm_value(raw: str) -> str:
 
 def _llm_item_to_fact(it: dict, chunk: Chunk, doc_entity: str) -> Fact | None:
     quote = (it.get("quote") or "").strip()
-    span = _locate_verbatim(quote, chunk.text)
+    span = (_locate_verbatim(quote, chunk.text)
+            or _locate_verbatim(quote, chunk.page_text or ""))
     if not span:
         raise ValueError("quote not grounded in source page")
     ft = it.get("fact_type", "numeric")

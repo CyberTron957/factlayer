@@ -14,6 +14,7 @@ class Chunk:
     page_label: str
     text: str
     modality_hints: list
+    page_text: str = ""  # full page markdown; fallback span search stays on-page
 
 
 def chunk_pages(pages: list[Page], doc_name: str) -> list[Chunk]:
@@ -23,7 +24,8 @@ def chunk_pages(pages: list[Page], doc_name: str) -> list[Chunk]:
             if piece.strip():
                 out.append(Chunk(doc=doc_name, page_index=p.index,
                                page_label=p.label, text=piece,
-                               modality_hints=p.modality_hints))
+                               modality_hints=p.modality_hints,
+                               page_text=p.markdown))
     return out
 
 

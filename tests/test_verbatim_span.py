@@ -66,6 +66,24 @@ def test_recovered_fact_stores_chunk_span():
     assert f.evidence.quote in text  # verbatim guarantee holds
 
 
+def test_cross_chunk_quote_recovered_from_page():
+    page = ("Row one says ZERO for talking.\n\n"
+            "Row two says a Rs. 3,000 fine for phones.")
+    c = Chunk(doc="d.pdf", page_index=0, page_label="1",
+              text="Row one says ZERO for talking.", modality_hints=[],
+              page_text=page)
+    f = _llm_item_to_fact(_item("Row two says a Rs. 3,000 fine for phones."),
+                          c, "Doc")
+    assert f.evidence.quote in page  # grounded on the same page
+    # but a quote from another page is still rejected
+    c2 = Chunk(doc="d.pdf", page_index=0, page_label="1",
+               text="Row one says ZERO for talking.", modality_hints=[],
+               page_text="Row one says ZERO for talking.")
+    with pytest.raises(ValueError, match="not grounded"):
+        _llm_item_to_fact(_item("Row two says a Rs. 3,000 fine for phones."),
+                          c2, "Doc")
+
+
 def test_value_markdown_stripped():
     assert _clean_llm_value("**ZERO**") == "ZERO"
     assert _clean_llm_value('  "ZERO" ') == "ZERO"
