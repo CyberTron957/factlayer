@@ -107,9 +107,42 @@ def cases():
         r["facts"] = fs
         return r
 
+    def quality(r):
+        # Rank showcase pairs by link-quality signals: same dimension and
+        # period, overlapping attribute tokens, clean non-chart evidence.
+        fs = [fmap.get(fid) for fid in (r["fact_a"], r["fact_b"])]
+        if any(f is None for f in fs):
+            return -1.0
+        a, b = fs
+        try:
+            from .normalize import same_dimension
+            if not same_dimension(a.unit_norm or "", b.unit_norm or ""):
+                return -1.0  # cross-dimension pairs never showcase
+        except Exception:
+            pass
+        score = 0.0
+        if (a.unit_norm or "") == (b.unit_norm or "") and a.unit_norm:
+            score += 2.0
+        if (a.period or "") == (b.period or "") and a.period:
+            score += 1.0
+        ta = set((a.attribute or "").lower().split())
+        tb = set((b.attribute or "").lower().split())
+        if ta and tb:
+            score += len(ta & tb) / max(len(ta | tb), 1)
+        score += 0.1 * min(a.confidence or 0, b.confidence or 0)
+        for f in fs:
+            if (f.evidence.modality or "") in ("chart", "infographic"):
+                score -= 0.15
+            if len((f.attribute or "").split()) > 6:
+                score -= 0.1
+        return score + (0.05 if r.get("verified") else 0)
+
     def pick(rel):
         cands = [r for r in rels if r["relation"] == rel]
-        return with_facts(cands[0]) if cands else None
+        if not cands:
+            return None
+        cands.sort(key=quality, reverse=True)
+        return with_facts(cands[0])
 
     qs = con.execute("SELECT kind,detail,fact_ids,evidence FROM open_questions ORDER BY id").fetchall()
     failure = None

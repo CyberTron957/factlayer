@@ -5,77 +5,172 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fact Knowledge Layer</title>
 <style>
-body{font-family:system-ui,-apple-system,sans-serif;max-width:1100px;margin:0 auto;padding:20px;color:#1a1a1a}
-h1{font-size:24px} .tabs{display:flex;gap:8px;margin:16px 0}
-.tabs button{padding:8px 14px;border:1px solid #ccc;background:#f5f5f5;cursor:pointer;border-radius:6px}
-.tabs button.active{background:#1a1a1a;color:#fff}
-.card{border:1px solid #ddd;border-radius:8px;padding:12px;margin:10px 0}
-.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;background:#eee;margin-right:6px}
-.b-corr{background:#dff5df}.b-cont{background:#ffdfe0}.b-recon{background:#fff3c4}.b-super{background:#e3e9ff}
-.ev{background:#f7f7f7;border-left:3px solid #999;padding:8px;margin:8px 0;font-size:14px}
-.ev img{max-width:100%;border:1px solid #ccc;margin-top:6px}
-input[type=text]{padding:8px;width:320px} #drop{border:2px dashed #aaa;padding:20px;border-radius:8px;text-align:center;margin:12px 0}
-small{color:#666}
+:root{--ink:#16202e;--mut:#5b6b7f;--line:#e2e8f0;--bg:#f4f6f9;--card:#fff;
+--corr:#15803d;--corrbg:#e7f6ec;--cont:#b91c1c;--contbg:#fdecec;
+--recon:#92400e;--reconbg:#fdf3d7;--super:#3730a3;--superbg:#e9e9fd;--q:#0e7490;--qbg:#e0f5fa}
+*{box-sizing:border-box}body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;margin:0;color:var(--ink);background:var(--bg)}
+header{background:var(--ink);color:#fff;padding:18px 28px;position:sticky;top:0;z-index:5}
+header h1{margin:0;font-size:20px;font-weight:650}header p{margin:4px 0 0;color:#aeb9c7;font-size:13px}
+#docs{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.pill{background:#243349;border:1px solid #3b4f68;border-radius:20px;padding:3px 12px;font-size:12px;color:#dbe4ef}
+.wrap{max-width:1150px;margin:0 auto;padding:20px 22px 60px}
+#drop{background:var(--card);border:2px dashed #b6c2d2;border-radius:10px;padding:16px 18px;margin:18px 0;font-size:14px}
+#drop button{background:var(--ink);color:#fff;border:0;border-radius:7px;padding:8px 16px;cursor:pointer;font-size:14px}
+#stat{color:var(--mut);font-size:13px;margin-left:10px}
+.tabs{display:flex;gap:6px;margin:6px 0 16px;position:sticky;top:86px;background:var(--bg);padding:8px 0;z-index:4}
+.tabs button{padding:9px 16px;border:1px solid var(--line);background:var(--card);cursor:pointer;border-radius:8px;font-size:14px}
+.tabs button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.toolbar input[type=text]{padding:9px 12px;width:340px;border:1px solid var(--line);border-radius:8px;font-size:14px}
+.toolbar select{padding:9px;border:1px solid var(--line);border-radius:8px;font-size:14px}
+.count{color:var(--mut);font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0;box-shadow:0 1px 2px rgba(16,32,46,.05)}
+.card.accent-corr{border-left:5px solid var(--corr)}.card.accent-cont{border-left:5px solid var(--cont)}
+.card.accent-recon{border-left:5px solid var(--recon)}.card.accent-super{border-left:5px solid var(--super)}
+.badge{display:inline-block;padding:3px 11px;border-radius:20px;font-size:12px;font-weight:650;margin-right:6px}
+.b-corr{background:var(--corrbg);color:var(--corr)}.b-cont{background:var(--contbg);color:var(--cont)}
+.b-recon{background:var(--reconbg);color:var(--recon)}.b-super{background:var(--superbg);color:var(--super)}
+.b-q{background:var(--qbg);color:var(--q)}.b-n{background:#eef1f5;color:var(--mut)}
+.factline{font-size:16px}.factline b{font-weight:650}
+.meta{color:var(--mut);font-size:13px;margin-top:5px}
+.conf{display:inline-block;width:74px;height:7px;background:#e8edf2;border-radius:4px;vertical-align:middle;margin:0 6px 0 2px;overflow:hidden}
+.conf i{display:block;height:100%;background:#3b82f6}
+.ev{background:#f7fafc;border-left:3px solid #94a3b8;padding:9px 12px;margin:9px 0;font-size:14px;border-radius:0 8px 8px 0}
+.ev q{quotes:"“" "”";font-style:italic}
+.ev img{max-width:100%;max-height:320px;border:1px solid #cbd5e1;border-radius:6px;margin-top:8px;cursor:zoom-in;display:block}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:760px){.vs{grid-template-columns:1fr}}
+.vs h5{margin:2px 0 6px;font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.expl{font-size:14.5px;line-height:1.5;margin:8px 0}
+.casehead{display:flex;align-items:center;gap:10px;margin:26px 0 4px}
+.casehead h3{margin:0;font-size:17px}.casehead .n{background:var(--ink);color:#fff;border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:14px}
+.axistag{font-size:12.5px;color:var(--recon);background:var(--reconbg);border-radius:6px;padding:2px 9px;font-weight:600}
+.empty{color:var(--mut);background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:22px;text-align:center;margin:12px 0}
+.spin{color:var(--mut);padding:30px;text-align:center}
+#light{position:fixed;inset:0;background:rgba(10,16,24,.82);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
+#light img{max-width:92vw;max-height:92vh;border-radius:8px}
+.tlper{font-size:13px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.05em;margin:20px 0 2px;border-bottom:1px solid var(--line);padding-bottom:4px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:24px}
 </style>
 </head>
 <body>
+<header>
 <h1>Fact Knowledge Layer</h1>
-<div id="drop">Drop PDFs here or <input type="file" id="file" multiple accept=".pdf"> <button onclick="upload()">Upload &amp; Process</button> <span id="stat"></span></div>
-<div class="tabs">
-<button class="active" onclick="tab('cases')">4 Cases</button>
-<button onclick="tab('facts')">Facts</button>
-<button onclick="tab('relations')">Relations</button>
-<button onclick="tab('timeline')">Timeline</button>
-<button onclick="tab('questions')">Open questions</button>
+<p>Grounded facts from PDFs · every claim linked to quote + page + crop · cross-document relations with evidence</p>
+<div id="docs"></div>
+</header>
+<div class="wrap">
+<div id="drop">Drop PDFs here or <input type="file" id="file" multiple accept=".pdf"> <button onclick="upload()">Upload &amp; Process</button><span id="stat"></span></div>
+<div class="tabs" id="tabs">
+<button data-t="cases" class="active">★ 4 Cases</button>
+<button data-t="facts">Facts</button>
+<button data-t="relations">Relations</button>
+<button data-t="timeline">Timeline</button>
+<button data-t="questions">Open questions <span id="qbadge"></span></button>
 </div>
-<div><input type="text" id="q" placeholder="filter facts…" oninput="loadFacts()"> <span id="counts"></span></div>
+<div class="toolbar" id="toolbar" style="display:none">
+<input type="text" id="q" placeholder="filter facts… (attribute, value, subject)" oninput="loadFacts()">
+<select id="ftype" onchange="loadFacts()"><option value="">all types</option><option value="numeric">numeric</option><option value="semantic">semantic</option></select>
+<select id="fflag" onchange="loadFacts()"><option value="">all qualities</option><option value="flagged">flagged only</option><option value="clean">clean only</option></select>
+<span class="count" id="fcount"></span>
+</div>
 <div id="view"></div>
+<footer>Quotes are verbatim substrings of source pages · crops rendered from the PDF · relations code-verified</footer>
+</div>
+<div id="light" onclick="this.style.display='none'"><img id="lightimg" alt=""></div>
 <script>
 let cur='cases';
-async function j(u){return (await fetch(u)).json();}
+const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+async function j(u){const r=await fetch(u);if(!r.ok)throw new Error(r.status);return r.json();}
+function zoom(src){document.getElementById('lightimg').src=src;document.getElementById('light').style.display='flex';}
+function cleanQ(s){return String(s||'').replace(/[#*>|`]/g,'').replace(/\|/g,' ').replace(/\(sup\)|\(sub\)/gi,'').replace(/\s+/g,' ').trim();}
 function evHtml(e){
-  if(!e||!e.quote) return '';
-  return `<div class="ev">“${e.quote}”<br><small>${e.doc||''} · page ${e.page_label||e.page_index||''} · ${e.modality||''}</small>`+
-  (e.crop?`<br><img src="/api/crop?path=${encodeURIComponent(e.crop)}">`:'')+`</div>`;
+  if(!e||!e.quote)return '';
+  return `<div class="ev"><q>${esc(cleanQ(e.quote))}</q><div class="meta">${esc(e.doc||'')} · page ${esc(e.page_label||e.page_index||'')} · ${esc(e.modality||'')}</div>`+
+  (e.crop?`<img loading="lazy" src="/api/crop?path=${encodeURIComponent(e.crop)}" onclick="zoom(this.src)" title="click to enlarge">`:'')+`</div>`;
 }
+function confBar(c){const p=Math.round((c||0)*100);return `<span class="conf"><i style="width:${p}%"></i></span><small>${p}%</small>`;}
 function factHtml(f){
-  return `<div class="card"><b>${f.attribute}</b> = <b>${f.value_raw}</b> <small>(${f.unit_norm||''} ${f.period||''} ${f.scope||''})</small><br>
-  <small>subject: ${f.subject} · conf ${f.confidence} · ${f.fact_type}${(f.flags||[]).length?' · ⚠ '+f.flags.join(', '):''}</small>${evHtml(f.evidence)}</div>`;
+  const fl=(f.flags||[]).filter(x=>x!=='chart-sourced'||true);
+  return `<div class="card"><div class="factline"><b>${esc(f.attribute)}</b> = <b>${esc(f.value_raw)}</b></div>
+  <div class="meta">${esc(f.subject)} · ${esc(f.unit_norm||'')} ${esc(f.period||'')} ${esc(f.scope||'')} · ${esc(f.fact_type)} · ${confBar(f.confidence)}${fl.length?` · ⚠ ${esc(fl.join(', '))}`:''}</div>${evHtml(f.evidence)}</div>`;
 }
-function badge(r){return `<span class="badge ${r==='corroborates'?'b-corr':r==='contradicts'?'b-cont':r==='reconciled'?'b-recon':'b-super'}">${r}</span>`;}
+const ACC={corroborates:'accent-corr',contradicts:'accent-cont',reconciled:'accent-recon','superseded-by':'accent-super'};
+const BDG={corroborates:'b-corr',contradicts:'b-cont',reconciled:'b-recon','superseded-by':'b-super'};
+function badge(r){return `<span class="badge ${BDG[r]||'b-n'}">${esc(r)}</span>`;}
 function relHtml(r){
-  return `<div class="card">${badge(r.relation)} <small>${r.axis?'axis: '+r.axis+' · ':''}conf ${r.confidence}${r.verified?' · ✓ verified':''}</small>
-  <p>${r.explanation}</p>${(r.facts||[]).map(f=>f.fact_id?factHtml(f):'').join('')}</div>`;
+  const fs=(r.facts||[]).filter(f=>f.fact_id);
+  const sides=fs.length===2
+    ? `<div class="vs"><div><h5>Fact A</h5>${factHtml(fs[0])}</div><div><h5>Fact B</h5>${factHtml(fs[1])}</div></div>`
+    : fs.map(factHtml).join('');
+  return `<div class="card ${ACC[r.relation]||''}">${badge(r.relation)}
+  ${r.axis?`<span class="axistag">axis: ${esc(r.axis)}</span>`:''}
+  <span class="meta">conf ${r.confidence}${r.verified?' · ✓ code-verified':''}</span>
+  <p class="expl">${esc(r.explanation)}</p>${sides}</div>`;
 }
-async function tab(t){cur=t;document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('active',b.textContent.toLowerCase().includes(t==='questions'?'open':t)));await render();}
+function failHtml(f){
+  return `<div class="card"><span class="badge b-q">${esc(f.kind)}</span><p class="expl">${esc(f.detail||f.rule||'')}</p>${(f.evidence||[]).map(evHtml).join('')}</div>`;
+}
+function caseSec(n,title,inner){return `<div class="casehead"><span class="n">${n}</span><h3>${title}</h3></div>${inner||'<div class="empty">none yet — needs more documents or the LLM judge</div>'}`;}
 async function render(){
-  const v=document.getElementById('view');
-  if(cur==='cases'){
-    const c=await j('/api/cases');
-    v.innerHTML=`<h3>1. Corroborated</h3>${c.corroborated?relHtml(c.corroborated):'none yet'}
-    <h3>2. Contradiction</h3>${c.contradiction?relHtml(c.contradiction):'none yet'}
-    <h3>3. Reconciled by context</h3>${c.reconciled?relHtml(c.reconciled):'none yet'}
-    <h3>4. Extraction/reasoning failure</h3>${c.failure?`<div class="card"><span class="badge">${c.failure.kind}</span><p>${c.failure.detail}</p>${(c.failure.evidence||[]).map(evHtml).join('')}</div>`:'none yet'}`;
-  }else if(cur==='facts'){await loadFacts();}
-  else if(cur==='relations'){const r=await j('/api/relations');v.innerHTML=r.map(relHtml).join('')||'none yet';}
-  else if(cur==='timeline'){const t=await j('/api/timeline');
-    v.innerHTML='<h3>Supersessions</h3>'+(t.supersessions.map(relHtml).join('')||'none')+'<h3>Facts by period</h3>'+t.facts.slice(0,200).map(factHtml).join('');}
-  else{const q=await j('/api/questions');
-    v.innerHTML=q.map(x=>`<div class="card"><span class="badge">${x.kind}</span><p>${x.detail}</p>${(x.evidence||[]).map(evHtml).join('')}</div>`).join('')||'inbox empty 🎉';}
-  const d=await j('/api/documents');document.getElementById('counts').textContent=d.map(x=>x.doc+` (${x.pages}p)`).join(' · ');
+  document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('active',b.dataset.t===cur));
+  document.getElementById('toolbar').style.display=cur==='facts'?'flex':'none';
+  const v=document.getElementById('view');v.innerHTML='<div class="spin">loading…</div>';
+  try{
+    if(cur==='cases'){
+      const c=await j('/api/cases');
+      v.innerHTML=
+        caseSec(1,'Corroborated — two sources agree',c.corroborated?relHtml(c.corroborated):'')+
+        caseSec(2,'Contradiction — same context, disagreeing values',c.contradiction?relHtml(c.contradiction):'')+
+        caseSec(3,'Reconciled by context — differ, explained',c.reconciled?relHtml(c.reconciled):'')+
+        caseSec(4,'Extraction / reasoning failure — what we do instead',c.failure?failHtml(c.failure):'');
+    }else if(cur==='facts'){await loadFacts();return;}
+    else if(cur==='relations'){
+      const r=await j('/api/relations');
+      const groups={};r.forEach(x=>{(groups[x.relation]=groups[x.relation]||[]).push(x);});
+      v.innerHTML=Object.keys(groups).sort().map(k=>`<h3>${badge(k)} <span class="count">${groups[k].length}</span></h3>`+groups[k].slice(0,120).map(relHtml).join('')).join('')||'<div class="empty">no relations yet</div>';
+    }else if(cur==='timeline'){
+      const t=await j('/api/timeline');
+      let h='<div class="casehead"><span class="n">↻</span><h3>Supersessions (newer disclosure wins)</h3></div>'+((t.supersessions||[]).map(relHtml).join('')||'<div class="empty">none</div>');
+      const byP={};(t.facts||[]).forEach(f=>{(byP[f.period||'undated']=byP[f.period||'undated']||[]).push(f);});
+      h+=Object.keys(byP).sort().map(p=>`<div class="tlper">${esc(p)} · ${byP[p].length}</div>`+byP[p].slice(0,60).map(factHtml).join('')).join('');
+      v.innerHTML=h;
+    }else{
+      const q=await j('/api/questions');
+      document.getElementById('qbadge').textContent=q.length?`(${q.length})`:'';
+      const g={};q.forEach(x=>{(g[x.kind]=g[x.kind]||[]).push(x);});
+      v.innerHTML=Object.keys(g).sort().map(k=>`<h3><span class="badge b-q">${esc(k)}</span> <span class="count">${g[k].length}</span></h3>`+g[k].slice(0,80).map(x=>`<div class="card"><p class="expl">${esc(x.detail)}</p>${(x.evidence||[]).map(evHtml).join('')}</div>`).join('')).join('')||'<div class="empty">inbox empty 🎉</div>';
+    }
+  }catch(e){v.innerHTML=`<div class="empty">failed to load: ${esc(e.message)} — is the server running?</div>`;}
+  refreshDocs();
 }
 async function loadFacts(){
-  const q=document.getElementById('q').value;
-  const f=await j('/api/facts?q='+encodeURIComponent(q));
-  document.getElementById('view').innerHTML=`<p>${f.length} facts</p>`+f.slice(0,300).map(factHtml).join('');
+  const q=document.getElementById('q').value,ft=document.getElementById('ftype').value,fl=document.getElementById('fflag').value;
+  const v=document.getElementById('view');v.innerHTML='<div class="spin">loading…</div>';
+  try{
+    let f=await j('/api/facts?q='+encodeURIComponent(q));
+    if(ft)f=f.filter(x=>x.fact_type===ft);
+    if(fl==='flagged')f=f.filter(x=>(x.flags||[]).length);
+    if(fl==='clean')f=f.filter(x=>!(x.flags||[]).length);
+    document.getElementById('fcount').textContent=`${f.length} match`;
+    v.innerHTML=f.slice(0,300).map(factHtml).join('')||'<div class="empty">no facts match</div>';
+  }catch(e){v.innerHTML=`<div class="empty">failed to load: ${esc(e.message)}</div>`;}
+}
+async function refreshDocs(){
+  try{
+    const d=await j('/api/documents');
+    document.getElementById('docs').innerHTML=d.map(x=>`<span class="pill">📄 ${esc(x.doc)} · ${x.pages}p</span>`).join('');
+    const q=await j('/api/questions');document.getElementById('qbadge').textContent=q.length?`(${q.length})`:'';
+  }catch(e){}
 }
 async function upload(){
-  const fs=document.getElementById('file').files;if(!fs.length)return alert('choose PDFs');
-  document.getElementById('stat').textContent='processing…';
+  const fs=document.getElementById('file').files;if(!fs.length)return alert('choose PDFs first');
+  document.getElementById('stat').textContent='processing… (this takes minutes for large PDFs)';
   const fd=new FormData();for(const f of fs)fd.append('files',f);
-  const r=await (await fetch('/api/upload',{method:'POST',body:fd})).json();
-  document.getElementById('stat').textContent=JSON.stringify(r);await render();
+  try{const r=await (await fetch('/api/upload',{method:'POST',body:fd})).json();document.getElementById('stat').textContent=JSON.stringify(r);}
+  catch(e){document.getElementById('stat').textContent='upload failed: '+e.message;}
+  await render();
 }
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{cur=b.dataset.t;render();});
 render();
 </script>
 </body>

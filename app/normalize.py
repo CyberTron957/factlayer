@@ -65,7 +65,7 @@ def canonical_unit(unit_raw: str, currency_hint: str = "") -> str:
                        ["shipment", "ton", "employee", "people", "branch", "order", "parcel"])
     scale = "cr" if "cr" in hint or "crore" in hint else (
         "lakh" if "lakh" in hint else (
-        "mn" if re.search(r"\bmn\b|million", hint) else (
+        "mn" if re.search(r"\bmn\b|\bmil\b|million", hint) else (
         "bn" if re.search(r"\bbn\b|billion", hint) else "")))
     table = {
         "cr": "inr-cr", "crs": "inr-cr", "crore": "cr", "crores": "cr",
@@ -167,7 +167,11 @@ def normalize_fact_value(value_raw: str, unit_raw: str,
                          context: str) -> tuple[float | None, str, str, list[str]]:
     """Full numeric normalization. Returns (value_base, unit_norm, period, flags)."""
     v, flags = parse_number(value_raw)
-    unit_norm = canonical_unit(unit_raw, currency_hint=value_raw + " " + context)
+    u = (unit_raw or "").strip().lower()
+    if "%" in value_raw and u not in ("%", "percent"):
+        u = "%"  # explicit % in the value beats any nearby context symbols
+        flags = flags + ["pct-forced"]
+    unit_norm = canonical_unit(u, currency_hint=value_raw + " " + context)
     period, pflags = canonical_period(context)
     base = to_base(v, unit_norm) if v is not None else None
     return base, unit_norm, period, flags + pflags

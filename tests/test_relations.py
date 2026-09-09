@@ -85,3 +85,23 @@ def test_usd_not_inr():
     assert canonical_unit("bn", "$ 282.8 billion trade deficit") == "usd-bn"
     assert canonical_unit("Cr", "₹8,142 Cr revenue") == "inr-cr"
     assert not same_dimension("usd-bn", "inr-cr")
+
+
+def test_pct_in_value_beats_money_context():
+    from app.normalize import normalize_fact_value
+    _, unorm, _, _ = normalize_fact_value("31%", "", "revenue ₹8,142 Cr grew by 31% YoY")
+    assert unorm == "%", unorm
+
+
+def test_cross_dimension_veto():
+    from app.link import link_pair
+    from app.models import Fact, Evidence
+    def mk(attr, raw, unit, period="FY2024"):
+        return Fact(subject="Delhivery", attribute=attr, value_raw=raw,
+                    value_norm=8142.0 if "8,142" in raw else 31.0,
+                    unit_norm=unit, period=period, scope="", fact_type="numeric",
+                    confidence=0.9,
+                    evidence=Evidence(doc="d1", page_index=0, page_label="1", quote=raw))
+    a = mk("revenue services", "8,142", "inr-cr")
+    b = mk("revenue growth", "31%", "%")
+    assert link_pair(a, b, 0.02, {}) is None

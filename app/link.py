@@ -71,7 +71,17 @@ def same_topic(a: Fact, b: Fact) -> bool:
     return True
 
 
+def _cross_dimension(a: Fact, b: Fact) -> bool:
+    """True when both units map to known but different comparability families
+    (money vs percent vs days...). Such pairs can never be directly related."""
+    from .normalize import UNIT_DIM
+    da, db = UNIT_DIM.get(a.unit_norm or ""), UNIT_DIM.get(b.unit_norm or "")
+    return bool(da and db and da != db)
+
+
 def heuristic_link(a: Fact, b: Fact, tol: float) -> dict:
+    if a.fact_type == "numeric" and b.fact_type == "numeric" and _cross_dimension(a, b):
+        return {}  # veto: incomparable dimensions, no relation at all
     if (a.fact_type == "numeric") != (b.fact_type == "numeric"):
         # a number and a prose claim corroborate only if the prose cites the number
         num, prose = (a, b) if a.fact_type == "numeric" else (b, a)
@@ -87,9 +97,7 @@ def heuristic_link(a: Fact, b: Fact, tol: float) -> dict:
                 "explanation": f"Both state '{a.attribute}' similarly ('{a.value_raw}' vs '{b.value_raw}').",
                 "confidence": 0.5}
     if a.value_norm is None or b.value_norm is None:
-        return {"relation": "corroborates", "axis": None,
-                "explanation": "Values not machine-comparable; grouped by topic only.",
-                "confidence": 0.35}
+        return {}  # unverifiable numbers must not "corroborate" — skip
     denom = max(abs(a.value_norm), abs(b.value_norm), 1e-9)
     close = abs(a.value_norm - b.value_norm) / denom <= tol
     if a.period != b.period or _scope_key(a) != _scope_key(b) or a.unit_norm != b.unit_norm:
@@ -143,6 +151,9 @@ def _link_budget_ok() -> bool:
 def link_pair(a: Fact, b: Fact, tol: float, disclosures: dict) -> Relation | None:
     """disclosures: doc -> vintage rank (higher = newer)."""
     rel = heuristic_link(a, b, tol) or {}
+    if not rel and a.fact_type == "numeric" and b.fact_type == "numeric" \
+            and _cross_dimension(a, b):
+        return None  # veto stands even for the LLM judge
     if rel.get("relation") not in (
             "corroborates", "contradicts", "reconciled", "superseded-by"):
         # heuristic ambiguous → LLM judge (budget-capped), never fabricate
