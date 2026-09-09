@@ -27,7 +27,10 @@ python -m scripts.run_corpus            # Delhivery demo corpus (see --help for 
 uvicorn app.main:app --port 8137        # open http://localhost:8137
 ```
 
-Useful endpoints: `POST /api/upload` (PDFs) · `GET /api/facts?q=` ·
+Useful endpoints: `POST /api/upload` (PDFs → returns a job id; processing runs
+in background with a progress bar, ETA, and cancel — see `GET /api/jobs`,
+`GET /api/jobs/<id>`, `POST /api/jobs/<id>/cancel`; refresh-safe, partial
+results are kept on cancel) · `GET /api/facts?q=` ·
 `GET /api/relations` · `GET /api/timeline` · `GET /api/questions` (open
 inbox) · `GET /api/cases` (the four required cases) · `GET /api/export` (CSV).
 

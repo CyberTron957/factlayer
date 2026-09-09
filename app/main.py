@@ -8,9 +8,15 @@ from fastapi.staticfiles import StaticFiles
 
 from . import store as S
 from .config import settings
-from .pipeline import _all_facts, link_all, process_files
+from . import jobs as J
+from .pipeline import _all_facts
 
 app = FastAPI(title="Fact Knowledge Layer")
+
+
+@app.on_event("startup")
+def _reconcile_jobs():
+    J.reconcile()  # jobs left running by a restart become "interrupted"
 
 
 def _rel_rows(con):
@@ -196,8 +202,32 @@ async def upload(files: list[UploadFile] = File(...)):
         paths.append(dest)
     if not paths:
         return {"error": "no PDFs received"}
-    stats = process_files(paths)
-    return stats
+    # async: returns instantly with a job id; the UI polls /api/jobs/<id>
+    job = J.start_job(paths)
+    if job.get("error"):  # NB: job dicts always CONTAIN "error" (None on success)
+        return JSONResponse(job, status_code=409)
+    return {"job_id": job["id"], "files": job["files"]}
+
+
+@app.get("/api/jobs")
+def jobs():
+    return J.list_jobs()
+
+
+@app.get("/api/jobs/{jid}")
+def job_status(jid: str):
+    job = J.get_job(jid)
+    if not job:
+        return JSONResponse({"error": "unknown job"}, status_code=404)
+    return job
+
+
+@app.post("/api/jobs/{jid}/cancel")
+def job_cancel(jid: str):
+    job = J.cancel_job(jid)
+    if not job:
+        return JSONResponse({"error": "unknown job"}, status_code=404)
+    return job
 
 
 @app.get("/api/crop")

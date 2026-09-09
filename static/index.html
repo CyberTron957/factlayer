@@ -16,7 +16,18 @@ header h1{margin:0;font-size:20px;font-weight:650}header p{margin:4px 0 0;color:
 .wrap{max-width:1150px;margin:0 auto;padding:20px 22px 60px}
 #drop{background:var(--card);border:2px dashed #b6c2d2;border-radius:10px;padding:16px 18px;margin:18px 0;font-size:14px}
 #drop button{background:var(--ink);color:#fff;border:0;border-radius:7px;padding:8px 16px;cursor:pointer;font-size:14px}
-#stat{color:var(--mut);font-size:13px;margin-left:10px}
+#drop button:disabled{opacity:.45;cursor:default}
+#hint{color:var(--mut);font-size:13px;margin-left:10px}
+#jobbar{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:-6px 0 18px;display:none}
+.jrow{display:flex;align-items:center;gap:12px}
+.jrow b{font-size:14.5px}
+#jtime{color:var(--mut);font-size:13px}
+#jcancel{margin-left:auto;background:#fff;color:var(--cont);border:1px solid var(--cont);border-radius:7px;padding:6px 14px;cursor:pointer;font-size:13px;font-weight:600}
+#jcancel:hover{background:var(--contbg)}
+.jtrack{background:#e8edf2;border-radius:6px;height:12px;margin:10px 0 6px;overflow:hidden}
+#jfill{height:100%;width:0%;background:linear-gradient(90deg,#3b82f6,#0e7490);border-radius:6px;transition:width .5s}
+#jdetail{color:var(--mut);font-size:13px;min-height:18px}
+#jdone{font-size:14px;margin-top:4px}
 .tabs{display:flex;gap:6px;margin:6px 0 16px;position:sticky;top:86px;background:var(--bg);padding:8px 0;z-index:4}
 .tabs button{padding:9px 16px;border:1px solid var(--line);background:var(--card);cursor:pointer;border-radius:8px;font-size:14px}
 .tabs button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -59,7 +70,13 @@ footer{color:var(--mut);font-size:12.5px;text-align:center;padding:24px}
 <div id="docs"></div>
 </header>
 <div class="wrap">
-<div id="drop">Drop PDFs here or <input type="file" id="file" multiple accept=".pdf"> <button onclick="upload()">Upload &amp; Process</button><span id="stat"></span></div>
+<div id="drop">Drop PDFs here or <input type="file" id="file" multiple accept=".pdf"> <button id="upbtn" onclick="upload()">Upload &amp; Process</button><span id="hint">large PDFs take minutes — progress shows below, safe to refresh mid-run</span></div>
+<div id="jobbar">
+  <div class="jrow"><b id="jtitle">Working…</b><span id="jtime"></span><button id="jcancel" onclick="cancelJob()">Cancel</button></div>
+  <div class="jtrack"><div id="jfill"></div></div>
+  <div id="jdetail"></div>
+  <div id="jdone"></div>
+</div>
 <div class="tabs" id="tabs">
 <button data-t="cases" class="active">★ 4 Cases</button>
 <button data-t="facts">Facts</button>
@@ -164,13 +181,66 @@ async function refreshDocs(){
 }
 async function upload(){
   const fs=document.getElementById('file').files;if(!fs.length)return alert('choose PDFs first');
-  document.getElementById('stat').textContent='processing… (this takes minutes for large PDFs)';
   const fd=new FormData();for(const f of fs)fd.append('files',f);
-  try{const r=await (await fetch('/api/upload',{method:'POST',body:fd})).json();document.getElementById('stat').textContent=JSON.stringify(r);}
-  catch(e){document.getElementById('stat').textContent='upload failed: '+e.message;}
-  await render();
+  document.getElementById('upbtn').disabled=true;
+  try{
+    const r=await fetch('/api/upload',{method:'POST',body:fd});
+    const d=await r.json();
+    if(r.status===409){alert(d.error+' — showing the running job below.');if(d.active)attachJob(d.active.id);return;}
+    if(d.error||(!d.job_id&&!d.id)){alert('upload failed: '+(d.error||'unknown'));return;}
+    attachJob(d.job_id||d.id);
+  }catch(e){alert('upload failed: '+e.message);}
+  finally{document.getElementById('upbtn').disabled=false;}
+}
+const STAGE_LABEL={queued:'Queued',parse:'① Parsing PDFs',extract:'② Extracting facts',link:'③ Linking across documents',crops:'④ Rendering page snapshots',done:'Done'};
+function fmtClock(s){s=Math.max(0,Math.round(s||0));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+function fmtETA(s){if(s==null)return 'estimating time…';if(s<=3)return 'almost done…';if(s<90)return '~'+Math.round(s)+'s left';return '~'+Math.round(s/60)+' min left';}
+let jobId=null,pollT=null;
+function attachJob(id){
+  jobId=id;document.getElementById('jobbar').style.display='block';document.getElementById('jdone').textContent='';
+  document.getElementById('jobbar').scrollIntoView({block:'nearest'});
+  clearInterval(pollT);pollJob();pollT=setInterval(pollJob,1500);
+}
+async function pollJob(){
+  if(!jobId)return;
+  let jb;try{jb=await j('/api/jobs/'+jobId);}catch(e){return;}
+  paintJob(jb);
+  if(['done','error','cancelled','interrupted'].includes(jb.status)){clearInterval(pollT);onJobEnd(jb);}
+}
+function paintJob(jb){
+  const pct=Math.round((jb.frac||0)*100);
+  document.getElementById('jfill').style.width=pct+'%';
+  document.getElementById('jtitle').textContent=`${STAGE_LABEL[jb.stage]||jb.stage} — ${pct}%`;
+  document.getElementById('jtime').textContent=`elapsed ${fmtClock(jb.elapsed_s)} · ${fmtETA(jb.eta_s)}`;
+  document.getElementById('jdetail').textContent=jb.detail||'';
+  document.getElementById('jcancel').style.display=(jb.status==='running'||jb.status==='queued')?'':'none';
+}
+function statsLine(s){
+  const bits=[];
+  if(s.docs!=null)bits.push(`${s.docs} docs`);if(s.pages!=null)bits.push(`${s.pages} pages`);
+  if(s.facts!=null)bits.push(`${s.facts} facts`);if(s.relations!=null)bits.push(`${s.relations} relations`);
+  if(s.questions!=null)bits.push(`${s.questions} open questions`);
+  return bits.join(' · ');
+}
+function onJobEnd(jb){
+  document.getElementById('jcancel').style.display='none';
+  const d=document.getElementById('jdone');
+  if(jb.status==='done'){document.getElementById('jfill').style.width='100%';d.textContent='✓ finished — '+statsLine(jb.stats||{});}
+  else if(jb.status==='cancelled'){const s=jb.stats||{};d.textContent=`✕ cancelled — kept partial results (${s.facts_so_far??s.facts??0} facts). Upload simpler documents any time.`;}
+  else if(jb.status==='interrupted'){d.textContent='⚠ server restarted mid-run — already-parsed pages are cached, just re-upload to resume cheaply.';}
+  else{d.textContent='⚠ failed: '+(jb.error||'unknown error');}
+  render();
+}
+async function cancelJob(){
+  if(!jobId)return;
+  document.getElementById('jcancel').disabled=true;
+  try{await fetch(`/api/jobs/${jobId}/cancel`,{method:'POST'});}catch(e){}
+  document.getElementById('jcancel').disabled=false;
+  pollJob();
 }
 document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{cur=b.dataset.t;render();});
+// reattach to a running job after refresh/reopen — never restarts the work
+(async()=>{try{const js=await j('/api/jobs');const a=(js||[]).find(x=>x.status==='running'||x.status==='queued');if(a)attachJob(a.id);}catch(e){}})();
 render();
 </script>
 </body>
