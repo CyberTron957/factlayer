@@ -105,3 +105,38 @@ def test_cross_dimension_veto():
     a = mk("revenue services", "8,142", "inr-cr")
     b = mk("revenue growth", "31%", "%")
     assert link_pair(a, b, 0.02, {}) is None
+
+
+def test_equal_vintages_stay_contradiction():
+    # sibling disclosures, same content vintage, same period, disagreeing
+    # values -> live contradiction, never superseded-by (upload order is
+    # not evidence of a newer disclosure).
+    a = F("a", "earnings", "net profit", "Rs. 52 Cr", 520000000.0, "inr-cr", "FY2025")
+    b = F("b", "annual", "net profit", "Rs. 38 Cr", 380000000.0, "inr-cr", "FY2025")
+    rel = link_pair(a, b, 0.02, {"earnings": 2025, "annual": 2025})
+    assert rel.relation == "contradicts"
+
+
+def test_unknown_vintage_never_supersedes():
+    a = F("a", "d1", "net profit", "Rs. 52 Cr", 520000000.0, "inr-cr", "FY2025")
+    b = F("b", "d2", "net profit", "Rs. 38 Cr", 380000000.0, "inr-cr", "FY2025")
+    assert link_pair(a, b, 0.02, {"d1": 0, "d2": 2025}).relation == "contradicts"
+    assert link_pair(a, b, 0.02, {}).relation == "contradicts"
+
+
+def test_doc_vintage_from_content_not_upload_order():
+    from types import SimpleNamespace
+    from app.pipeline import _doc_vintage
+    mk_pages = lambda *texts: [SimpleNamespace(markdown=t) for t in texts]
+    # content years win over upload position
+    assert _doc_vintage("acme-earnings-q4.pdf",
+                        mk_pages("Total revenue Rs. 450 Cr in FY2025, vs FY2024"),
+                        fallback=0) == 2025
+    assert _doc_vintage("acme-prospectus-2022.pdf",
+                        mk_pages("Share capital Rs. 100 Cr (2022)"), fallback=2) == 2022
+    # filename year fallback, then explicit fallback
+    assert _doc_vintage("report-2021.pdf", mk_pages("no years here"), fallback=7) == 2021
+    assert _doc_vintage("notes.pdf", mk_pages("no years here"), fallback=7) == 7
+    # two sibling docs, different upload positions, same content vintage
+    assert (_doc_vintage("a.pdf", mk_pages("FY2025 results"), fallback=0)
+            == _doc_vintage("b.pdf", mk_pages("FY2025 results"), fallback=1))

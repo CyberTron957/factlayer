@@ -166,11 +166,13 @@ def link_pair(a: Fact, b: Fact, tol: float, disclosures: dict) -> Relation | Non
     if not rel or rel.get("relation") not in (
             "corroborates", "contradicts", "reconciled", "superseded-by"):
         return None  # ambiguous and LLM has no verdict — skip, don't fabricate
-    # supersession: same topic, different disclosure vintages, conflicting values —
-    # the newer disclosure wins (restatement or update), it is not a live conflict.
+    # supersession: same topic, different KNOWN disclosure vintages, conflicting
+    # values — the newer disclosure wins (restatement or update), it is not a
+    # live conflict. Unknown vintage (0) never supersedes: without evidence of
+    # a newer disclosure, same-period conflicts stay contradictions.
     # Different periods with different values stay reconciled (genuine change over time).
     ra, rb = disclosures.get(a.evidence.doc, 0), disclosures.get(b.evidence.doc, 0)
-    if ra != rb and rel.get("relation") == "contradicts" and a.period == b.period:
+    if ra and rb and ra != rb and rel.get("relation") == "contradicts" and a.period == b.period:
         older, newer = (a, b) if ra < rb else (b, a)
         rel = {"relation": "superseded-by", "axis": "vintage",
                "explanation": (f"{older.value_raw} ({_ctx(older)}) was superseded by "

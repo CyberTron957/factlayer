@@ -3,6 +3,7 @@ documents already in storage (by SHA) are skipped; new docs link against all
 stored facts without rebuilding anything."""
 import json
 import os
+import re
 
 from .chunk import chunk_pages
 from .config import settings
@@ -12,6 +13,29 @@ from .models import Fact
 from .parse import parse_pdf, render_crop, sha_of
 from . import store as S
 from .verify import verify_fact
+
+
+_YEAR_RE = re.compile(r"(?<![\d.,])(19\d{2}|20[0-3]\d)(?!\d)")
+
+
+def _doc_vintage(doc: str, pages, fallback: int = 0) -> int:
+    """Disclosure vintage from CONTENT (filing years), never upload order.
+
+    Same-period conflicts between sibling disclosures (e.g. earnings release
+    vs annual report, both FY2025) must be contradictions — upload position
+    in a batch must not decide which fact "wins". Only a genuinely newer
+    disclosure (restatement with later filing years) supersedes.
+    Returns max content year in [1990, 2030], else filename year, else fallback.
+    """
+    years = [int(y) for p in pages
+             for y in _YEAR_RE.findall(getattr(p, "markdown", "") or "")]
+    years = [y for y in years if 1990 <= y <= 2030]
+    if years:
+        return max(years)
+    m = _YEAR_RE.search(doc or "")
+    if m and 1990 <= int(m.group(1)) <= 2030:
+        return int(m.group(1))
+    return fallback
 
 
 def process_files(paths: list[str], vintage_base: int = 0,
@@ -62,7 +86,8 @@ def process_files(paths: list[str], vintage_base: int = 0,
             if limit_chunks:
                 chunks = chunks[:limit_chunks]
             entity = detect_doc_entity(chunks)
-            S.upsert_document(con, doc, sha, len(pages), entity, vintage_base + vi)
+            vintage = _doc_vintage(doc, pages, fallback=vintage_base + vi)
+            S.upsert_document(con, doc, sha, len(pages), entity, vintage)
             chunked.append((vi, doc, path, pages, chunks, entity))
         total_chunks = sum(len(c[4]) for c in chunked) or 1
         # phase 3 — extract (dominates runtime: LLM calls per chunk)
