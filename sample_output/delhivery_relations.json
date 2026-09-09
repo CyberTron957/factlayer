@@ -1,16 +1,16 @@
 [
  {
-  "id": 1325,
+  "id": 1321,
   "relation": "corroborates",
   "axis": null,
-  "fact_a": "03-del-005-0033",
+  "fact_a": "03-del-005-0034",
   "fact_b": "02-del-003-0025",
   "explanation": "Same period, scope and value: 'revenue services YoY' is 1.6% (FY2024, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.85,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0033",
+    "fact_id": "03-del-005-0034",
     "subject": "Delhivery Limited",
     "attribute": "revenue services YoY",
     "value_raw": "1.6%",
@@ -58,17 +58,17 @@
   ]
  },
  {
-  "id": 1419,
+  "id": 1395,
   "relation": "corroborates",
   "axis": null,
-  "fact_a": "03-del-005-0053",
+  "fact_a": "03-del-005-0054",
   "fact_b": "02-del-003-0030",
   "explanation": "Same period, scope and value: 'Mn PTL freight tonnage Mn Tons' is 29.8% (FY2024, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 30% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.85,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0053",
+    "fact_id": "03-del-005-0054",
     "subject": "Delhivery Limited",
     "attribute": "Mn PTL freight tonnage Mn Tons",
     "value_raw": "29.8%",
@@ -114,19 +114,189 @@
   ]
  },
  {
-  "id": 1297,
+  "id": 1445,
+  "relation": "corroborates",
+  "axis": null,
+  "fact_a": "03-del-005-0070",
+  "fact_b": "02-del-003-0041",
+  "explanation": "Same period, scope and value: 'PTL freight tonnage YoY growth' is 29.8% (FY24, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs grew by 30% (FY24, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.85,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0070",
+    "subject": "Delhivery",
+    "attribute": "PTL freight tonnage YoY growth",
+    "value_raw": "29.8%",
+    "value_norm": 29.8,
+    "unit_norm": "%",
+    "period": "FY24",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 1.0,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "YoY: 29.8%",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "text"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-003-0041",
+    "subject": "Delhivery",
+    "attribute": "Part-truckload tonnage growth",
+    "value_raw": "grew by 30%",
+    "value_norm": 30.0,
+    "unit_norm": "%",
+    "period": "FY24",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 1.0,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "Our part truckload **tonnage grew by 30%**",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "text"
+    },
+    "flags": [
+     "pct-forced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 1268,
   "relation": "corroborates",
   "axis": "time",
-  "fact_a": "03-del-004-0025",
-  "fact_b": "02-del-003-0032",
-  "explanation": "Same figure expressed with different context: 'NWC days' is 31 days (FY24, YoY reduction, days [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 31 days (days [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "fact_a": "03-del-004-0020",
+  "fact_b": "02-del-003-0041",
+  "explanation": "Same figure expressed with different context: 'Parcel Service EBITDA profitability robust growth' is 30% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs grew by 30% (FY24, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.75,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0025",
+    "fact_id": "03-del-004-0020",
+    "subject": "Delhivery Limited",
+    "attribute": "Parcel Service EBITDA profitability robust growth",
+    "value_raw": "30%",
+    "value_norm": 30.0,
+    "unit_norm": "%",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-003-0041",
     "subject": "Delhivery",
-    "attribute": "NWC days",
+    "attribute": "Part-truckload tonnage growth",
+    "value_raw": "grew by 30%",
+    "value_norm": 30.0,
+    "unit_norm": "%",
+    "period": "FY24",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 1.0,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "Our part truckload **tonnage grew by 30%**",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "text"
+    },
+    "flags": [
+     "pct-forced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 1299,
+  "relation": "corroborates",
+  "axis": "scope",
+  "fact_a": "03-del-004-0027",
+  "fact_b": "02-del-003-0041",
+  "explanation": "Same figure expressed with different context: 'PTL YoY growth' is 30%+ (FY24, PTL, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs grew by 30% (FY24, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.75,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0027",
+    "subject": "Delhivery",
+    "attribute": "PTL YoY growth",
+    "value_raw": "30%+",
+    "value_norm": 30.0,
+    "unit_norm": "%",
+    "period": "FY24",
+    "scope": "PTL",
+    "fact_type": "numeric",
+    "confidence": 0.9,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "PTL: 30%+ YoY growth with significant improvement in profitability and market share",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "text"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-003-0041",
+    "subject": "Delhivery",
+    "attribute": "Part-truckload tonnage growth",
+    "value_raw": "grew by 30%",
+    "value_norm": 30.0,
+    "unit_norm": "%",
+    "period": "FY24",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 1.0,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "Our part truckload **tonnage grew by 30%**",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "text"
+    },
+    "flags": [
+     "pct-forced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 1304,
+  "relation": "corroborates",
+  "axis": "time",
+  "fact_a": "03-del-004-0030",
+  "fact_b": "02-del-003-0032",
+  "explanation": "Same figure expressed with different context: 'Net Working Capital days' is 31 days (FY24, YoY reduction, days [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 31 days (days [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.75,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0030",
+    "subject": "Delhivery",
+    "attribute": "Net Working Capital days",
     "value_raw": "31 days",
     "value_norm": 31.0,
     "unit_norm": "days",
@@ -171,19 +341,19 @@
   ]
  },
  {
-  "id": 1298,
+  "id": 1306,
   "relation": "corroborates",
   "axis": "time",
-  "fact_a": "03-del-004-0025",
+  "fact_a": "03-del-004-0030",
   "fact_b": "02-del-003-0044",
-  "explanation": "Same figure expressed with different context: 'NWC days' is 31 days (FY24, YoY reduction, days [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 31 days (March 2024, days [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "explanation": "Same figure expressed with different context: 'Net Working Capital days' is 31 days (FY24, YoY reduction, days [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 31 days (March 2024, days [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.75,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0025",
+    "fact_id": "03-del-004-0030",
     "subject": "Delhivery",
-    "attribute": "NWC days",
+    "attribute": "Net Working Capital days",
     "value_raw": "31 days",
     "value_norm": 31.0,
     "unit_norm": "days",
@@ -216,7 +386,7 @@
      "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
      "page_index": 3,
      "page_label": "4",
-     "quote": "We significantly reduced our **net working capital days to 31 days** as of March 2024",
+     "quote": "reduced our **net working capital days to 31 days** as of March 2024",
      "crop": "data/crops/02-delhi-p3.png",
      "modality": "text"
     },
@@ -225,73 +395,17 @@
   ]
  },
  {
-  "id": 1367,
+  "id": 1385,
   "relation": "corroborates",
   "axis": "time",
-  "fact_a": "03-del-005-0041",
-  "fact_b": "01-del-055-0042",
-  "explanation": "Same figure expressed with different context: 'margin Mn Express parcel shipments YoY' is 11.5% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (11.35)%, (9.11)%, (6.95)%, (8.06)%, and (0.72)% (Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021, % [01-delhivery-prospectus-2022-excerpt.pdf p.226])",
-  "confidence": 0.75,
-  "verified": 1,
-  "facts": [
-   {
-    "fact_id": "03-del-005-0041",
-    "subject": "Delhivery Limited",
-    "attribute": "margin Mn Express parcel shipments YoY",
-    "value_raw": "11.5%",
-    "value_norm": 11.5,
-    "unit_norm": "%",
-    "period": "FY2023",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.75,
-    "evidence": {
-     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
-     "page_index": 5,
-     "page_label": "6",
-     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
-     "crop": "data/crops/03-delhi-p5.png",
-     "modality": "table"
-    },
-    "flags": []
-   },
-   {
-    "fact_id": "01-del-055-0042",
-    "subject": "Delhivery",
-    "attribute": "Adjusted EBITDA margin",
-    "value_raw": "(11.35)%, (9.11)%, (6.95)%, (8.06)%, and (0.72)%",
-    "value_norm": 11.35,
-    "unit_norm": "%",
-    "period": "Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.95,
-    "evidence": {
-     "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
-     "page_index": 55,
-     "page_label": "226",
-     "quote": "Our Adjusted EBITDA margin has improved from (11.35%) in Fiscal 2019 to (9.11%) in Fiscal 2020 and to (6.95%) in Fiscal 2021 and from (8.06%) for the nine months period ended December 31, 2020 to (0.72%) for the nine months period ended December 31, 2021.",
-     "crop": "data/crops/01-delhi-p55.png",
-     "modality": "text"
-    },
-    "flags": [
-     "fiscal-year"
-    ]
-   }
-  ]
- },
- {
-  "id": 1400,
-  "relation": "corroborates",
-  "axis": "time",
-  "fact_a": "03-del-005-0047",
+  "fact_a": "03-del-005-0048",
   "fact_b": "02-del-003-0025",
   "explanation": "Same figure expressed with different context: 'services EBITDA EBITDA margin' is 1.6% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.75,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0047",
+    "fact_id": "03-del-005-0048",
     "subject": "Delhivery Limited",
     "attribute": "services EBITDA EBITDA margin",
     "value_raw": "1.6%",
@@ -337,21 +451,21 @@
   ]
  },
  {
-  "id": 1417,
+  "id": 1396,
   "relation": "corroborates",
   "axis": "time",
-  "fact_a": "03-del-005-0051",
-  "fact_b": "01-del-055-0042",
-  "explanation": "Same figure expressed with different context: 'margin Express parcel shipments Mn' is 11.5% (FY2024, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (11.35)%, (9.11)%, (6.95)%, (8.06)%, and (0.72)% (Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021, % [01-delhivery-prospectus-2022-excerpt.pdf p.226])",
+  "fact_a": "03-del-005-0054",
+  "fact_b": "02-del-003-0041",
+  "explanation": "Same figure expressed with different context: 'Mn PTL freight tonnage Mn Tons' is 29.8% (FY2024, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs grew by 30% (FY24, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.75,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0051",
+    "fact_id": "03-del-005-0054",
     "subject": "Delhivery Limited",
-    "attribute": "margin Express parcel shipments Mn",
-    "value_raw": "11.5%",
-    "value_norm": 11.5,
+    "attribute": "Mn PTL freight tonnage Mn Tons",
+    "value_raw": "29.8%",
+    "value_norm": 29.8,
     "unit_norm": "%",
     "period": "FY2024",
     "scope": "",
@@ -368,42 +482,42 @@
     "flags": []
    },
    {
-    "fact_id": "01-del-055-0042",
+    "fact_id": "02-del-003-0041",
     "subject": "Delhivery",
-    "attribute": "Adjusted EBITDA margin",
-    "value_raw": "(11.35)%, (9.11)%, (6.95)%, (8.06)%, and (0.72)%",
-    "value_norm": 11.35,
+    "attribute": "Part-truckload tonnage growth",
+    "value_raw": "grew by 30%",
+    "value_norm": 30.0,
     "unit_norm": "%",
-    "period": "Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021",
+    "period": "FY24",
     "scope": "",
     "fact_type": "numeric",
-    "confidence": 0.95,
+    "confidence": 1.0,
     "evidence": {
-     "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
-     "page_index": 55,
-     "page_label": "226",
-     "quote": "Our Adjusted EBITDA margin has improved from (11.35%) in Fiscal 2019 to (9.11%) in Fiscal 2020 and to (6.95%) in Fiscal 2021 and from (8.06%) for the nine months period ended December 31, 2020 to (0.72%) for the nine months period ended December 31, 2021.",
-     "crop": "data/crops/01-delhi-p55.png",
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "Our part truckload **tonnage grew by 30%**",
+     "crop": "data/crops/02-delhi-p3.png",
      "modality": "text"
     },
     "flags": [
-     "fiscal-year"
+     "pct-forced"
     ]
    }
   ]
  },
  {
-  "id": 1420,
+  "id": 1397,
   "relation": "corroborates",
   "axis": "time",
-  "fact_a": "03-del-005-0055",
+  "fact_a": "03-del-005-0056",
   "fact_b": "02-del-001-0002",
   "explanation": "Same figure expressed with different context: 'Mn Tons Bn Express parcel shipments' is 4.8 Mn (FY2024, mn-shipments [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 4.8Mn (Q4-FY2024, mn-shipments [02-delhivery-annual-report-fy24-excerpt.pdf p.2])",
   "confidence": 0.75,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0055",
+    "fact_id": "03-del-005-0056",
     "subject": "Delhivery Limited",
     "attribute": "Mn Tons Bn Express parcel shipments",
     "value_raw": "4.8 Mn",
@@ -447,17 +561,17 @@
   ]
  },
  {
-  "id": 1439,
+  "id": 1418,
   "relation": "corroborates",
   "axis": "time",
-  "fact_a": "03-del-005-0059",
+  "fact_a": "03-del-005-0060",
   "fact_b": "02-del-003-0025",
   "explanation": "Same figure expressed with different context: 'EBITDA margin' is 1.6% (FY24, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.75,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0059",
+    "fact_id": "03-del-005-0060",
     "subject": "Delhivery",
     "attribute": "EBITDA margin",
     "value_raw": "1.6%",
@@ -503,17 +617,17 @@
   ]
  },
  {
-  "id": 1476,
+  "id": 1443,
   "relation": "corroborates",
   "axis": "time",
-  "fact_a": "03-del-005-0069",
+  "fact_a": "03-del-005-0070",
   "fact_b": "02-del-003-0030",
   "explanation": "Same figure expressed with different context: 'PTL freight tonnage YoY growth' is 29.8% (FY24, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 30% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.75,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0069",
+    "fact_id": "03-del-005-0070",
     "subject": "Delhivery",
     "attribute": "PTL freight tonnage YoY growth",
     "value_raw": "29.8%",
@@ -559,17 +673,17 @@
   ]
  },
  {
-  "id": 1780,
+  "id": 1714,
   "relation": "corroborates",
   "axis": "time",
-  "fact_a": "03-del-008-0162",
-  "fact_b": "02-del-005-0076",
+  "fact_a": "03-del-008-0164",
+  "fact_b": "02-del-005-0075",
   "explanation": "Same figure expressed with different context: 'PTL freight tonnage Tons Year Value' is 1,579 (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.9]) vs 1,579 (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.75,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-008-0162",
+    "fact_id": "03-del-008-0164",
     "subject": "Delhivery Limited",
     "attribute": "PTL freight tonnage Tons Year Value",
     "value_raw": "1,579",
@@ -590,7 +704,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0076",
+    "fact_id": "02-del-005-0075",
     "subject": "Delhivery Limited",
     "attribute": "Year Tonnage",
     "value_raw": "1,579",
@@ -613,71 +727,17 @@
   ]
  },
  {
-  "id": 2026,
-  "relation": "corroborates",
-  "axis": "time",
-  "fact_a": "03-del-011-0251",
-  "fact_b": "02-del-003-0042",
-  "explanation": "Same figure expressed with different context: 'Cross Border Services revenue' is 31 (Q3 FY24, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.12]) vs grew by 31% (FY24, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
-  "confidence": 0.75,
-  "verified": 1,
-  "facts": [
-   {
-    "fact_id": "03-del-011-0251",
-    "subject": "Delhivery",
-    "attribute": "Cross Border Services revenue",
-    "value_raw": "31",
-    "value_norm": 310000000.0,
-    "unit_norm": "inr-cr",
-    "period": "Q3 FY24",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 1.0,
-    "evidence": {
-     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
-     "page_index": 11,
-     "page_label": "12",
-     "quote": "Q3 FY24 | 31",
-     "crop": "data/crops/03-delhi-p11.png",
-     "modality": "table"
-    },
-    "flags": []
-   },
-   {
-    "fact_id": "02-del-003-0042",
-    "subject": "Delhivery",
-    "attribute": "Part-truckload revenue growth",
-    "value_raw": "grew by 31%",
-    "value_norm": 310000000.0,
-    "unit_norm": "inr-cr",
-    "period": "FY24",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 1.0,
-    "evidence": {
-     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
-     "page_index": 3,
-     "page_label": "4",
-     "quote": "revenues from part truckload grew by 31% in FY24",
-     "crop": "data/crops/02-delhi-p3.png",
-     "modality": "text"
-    },
-    "flags": []
-   }
-  ]
- },
- {
-  "id": 2426,
+  "id": 2242,
   "relation": "corroborates",
   "axis": "units",
-  "fact_a": "03-del-018-0431",
-  "fact_b": "02-del-084-0184",
+  "fact_a": "03-del-018-0433",
+  "fact_b": "02-del-084-0170",
   "explanation": "Same figure expressed with different context: 'Mar deposits investments Unbilled receivables amounting' is ₹581 cr (inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.19]) vs ₹ 5,801.70 million (inr-mn [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.75,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-018-0431",
+    "fact_id": "03-del-018-0433",
     "subject": "Delhivery Limited",
     "attribute": "Mar deposits investments Unbilled receivables amounting",
     "value_raw": "₹581 cr",
@@ -700,7 +760,7 @@
     ]
    },
    {
-    "fact_id": "02-del-084-0184",
+    "fact_id": "02-del-084-0170",
     "subject": "Delhivery Limited",
     "attribute": "this includes unbilled receivable",
     "value_raw": "₹ 5,801.70 million",
@@ -725,17 +785,17 @@
   ]
  },
  {
-  "id": 1265,
+  "id": 1266,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0019",
+  "fact_a": "03-del-004-0020",
   "fact_b": "02-del-003-0025",
   "explanation": "Figures differ but so does context: 'Parcel Service EBITDA profitability robust growth' is 30% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0019",
+    "fact_id": "03-del-004-0020",
     "subject": "Delhivery Limited",
     "attribute": "Parcel Service EBITDA profitability robust growth",
     "value_raw": "30%",
@@ -773,64 +833,6 @@
      "page_index": 3,
      "page_label": "4",
      "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
-     "crop": "data/crops/02-delhi-p3.png",
-     "modality": "chart"
-    },
-    "flags": [
-     "chart-sourced"
-    ]
-   }
-  ]
- },
- {
-  "id": 1266,
-  "relation": "reconciled",
-  "axis": "time",
-  "fact_a": "03-del-004-0019",
-  "fact_b": "02-del-003-0027",
-  "explanation": "Figures differ but so does context: 'Parcel Service EBITDA profitability robust growth' is 30% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
-  "confidence": 0.7,
-  "verified": 1,
-  "facts": [
-   {
-    "fact_id": "03-del-004-0019",
-    "subject": "Delhivery Limited",
-    "attribute": "Parcel Service EBITDA profitability robust growth",
-    "value_raw": "30%",
-    "value_norm": 30.0,
-    "unit_norm": "%",
-    "period": "FY2023",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.65,
-    "evidence": {
-     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
-     "page_index": 4,
-     "page_label": "5",
-     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
-     "crop": "data/crops/03-delhi-p4.png",
-     "modality": "chart"
-    },
-    "flags": [
-     "chart-sourced"
-    ]
-   },
-   {
-    "fact_id": "02-del-003-0027",
-    "subject": "Delhivery Limited",
-    "attribute": "service lines coupled inherent operating leverage",
-    "value_raw": "1.6%",
-    "value_norm": 1.6,
-    "unit_norm": "%",
-    "period": "FY2024",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.65,
-    "evidence": {
-     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
-     "page_index": 3,
-     "page_label": "4",
-     "quote": "Our steady growth across service lines, coupled with inherent operating leverage in our business, led to a **1.6% EBITDA margin** in FY24.\n\n### First quarterly PAT profitability\nWe delivered our **first PAT profitable quarter** in FY24.",
      "crop": "data/crops/02-delhi-p3.png",
      "modality": "chart"
     },
@@ -844,14 +846,14 @@
   "id": 1267,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0019",
-  "fact_b": "01-del-055-0041",
-  "explanation": "Figures differ but so does context: 'Parcel Service EBITDA profitability robust growth' is 30% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (8.29)%, (6.19)%, (2.75)%, (3.37)%, and (4.82)% (Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021, % [01-delhivery-prospectus-2022-excerpt.pdf p.226])",
+  "fact_a": "03-del-004-0020",
+  "fact_b": "02-del-003-0027",
+  "explanation": "Figures differ but so does context: 'Parcel Service EBITDA profitability robust growth' is 30% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0019",
+    "fact_id": "03-del-004-0020",
     "subject": "Delhivery Limited",
     "attribute": "Parcel Service EBITDA profitability robust growth",
     "value_raw": "30%",
@@ -874,84 +876,26 @@
     ]
    },
    {
-    "fact_id": "01-del-055-0041",
-    "subject": "Delhivery",
-    "attribute": "EBITDA margin",
-    "value_raw": "(8.29)%, (6.19)%, (2.75)%, (3.37)%, and (4.82)%",
-    "value_norm": 8.29,
-    "unit_norm": "%",
-    "period": "Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.95,
-    "evidence": {
-     "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
-     "page_index": 55,
-     "page_label": "226",
-     "quote": "Our EBITDA margin improved from (8.29)% in Fiscal 2019 to (6.19)% in Fiscal 2020 and to (2.75)% in Fiscal 2021, while declining from (3.37)% in the nine months period ended December 31, 2020 to (4.82)% in the nine months period ended December 31, 2021.",
-     "crop": "data/crops/01-delhi-p55.png",
-     "modality": "text"
-    },
-    "flags": [
-     "fiscal-year"
-    ]
-   }
-  ]
- },
- {
-  "id": 1268,
-  "relation": "reconciled",
-  "axis": "time",
-  "fact_a": "03-del-004-0019",
-  "fact_b": "01-del-055-0042",
-  "explanation": "Figures differ but so does context: 'Parcel Service EBITDA profitability robust growth' is 30% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (11.35)%, (9.11)%, (6.95)%, (8.06)%, and (0.72)% (Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021, % [01-delhivery-prospectus-2022-excerpt.pdf p.226])",
-  "confidence": 0.7,
-  "verified": 1,
-  "facts": [
-   {
-    "fact_id": "03-del-004-0019",
+    "fact_id": "02-del-003-0027",
     "subject": "Delhivery Limited",
-    "attribute": "Parcel Service EBITDA profitability robust growth",
-    "value_raw": "30%",
-    "value_norm": 30.0,
+    "attribute": "service lines coupled inherent operating leverage",
+    "value_raw": "1.6%",
+    "value_norm": 1.6,
     "unit_norm": "%",
-    "period": "FY2023",
+    "period": "FY2024",
     "scope": "",
     "fact_type": "numeric",
     "confidence": 0.65,
     "evidence": {
-     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
-     "page_index": 4,
-     "page_label": "5",
-     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
-     "crop": "data/crops/03-delhi-p4.png",
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "Our steady growth across service lines, coupled with inherent operating leverage in our business, led to a **1.6% EBITDA margin** in FY24.\n\n### First quarterly PAT profitability\nWe delivered our **first PAT profitable quarter** in FY24.",
+     "crop": "data/crops/02-delhi-p3.png",
      "modality": "chart"
     },
     "flags": [
      "chart-sourced"
-    ]
-   },
-   {
-    "fact_id": "01-del-055-0042",
-    "subject": "Delhivery",
-    "attribute": "Adjusted EBITDA margin",
-    "value_raw": "(11.35)%, (9.11)%, (6.95)%, (8.06)%, and (0.72)%",
-    "value_norm": 11.35,
-    "unit_norm": "%",
-    "period": "Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.95,
-    "evidence": {
-     "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
-     "page_index": 55,
-     "page_label": "226",
-     "quote": "Our Adjusted EBITDA margin has improved from (11.35%) in Fiscal 2019 to (9.11%) in Fiscal 2020 and to (6.95%) in Fiscal 2021 and from (8.06%) for the nine months period ended December 31, 2020 to (0.72%) for the nine months period ended December 31, 2021.",
-     "crop": "data/crops/01-delhi-p55.png",
-     "modality": "text"
-    },
-    "flags": [
-     "fiscal-year"
     ]
    }
   ]
@@ -961,13 +905,71 @@
   "relation": "reconciled",
   "axis": "time",
   "fact_a": "03-del-004-0020",
+  "fact_b": "02-del-003-0042",
+  "explanation": "Figures differ but so does context: 'Parcel Service EBITDA profitability robust growth' is 30% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs grew by 31% (FY24, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0020",
+    "subject": "Delhivery Limited",
+    "attribute": "Parcel Service EBITDA profitability robust growth",
+    "value_raw": "30%",
+    "value_norm": 30.0,
+    "unit_norm": "%",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-003-0042",
+    "subject": "Delhivery",
+    "attribute": "Part-truckload revenue growth",
+    "value_raw": "grew by 31%",
+    "value_norm": 31.0,
+    "unit_norm": "%",
+    "period": "FY24",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 1.0,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "revenues from part truckload grew by 31% in FY24",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "text"
+    },
+    "flags": [
+     "pct-forced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 1270,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-004-0021",
   "fact_b": "02-del-003-0025",
   "explanation": "Figures differ but so does context: 'share SCS Doubled service EBITDA profitability' is 40% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0020",
+    "fact_id": "03-del-004-0021",
     "subject": "Delhivery Limited",
     "attribute": "share SCS Doubled service EBITDA profitability",
     "value_raw": "40%",
@@ -1015,17 +1017,17 @@
   ]
  },
  {
-  "id": 1270,
+  "id": 1271,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0020",
+  "fact_a": "03-del-004-0021",
   "fact_b": "02-del-003-0027",
   "explanation": "Figures differ but so does context: 'share SCS Doubled service EBITDA profitability' is 40% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0020",
+    "fact_id": "03-del-004-0021",
     "subject": "Delhivery Limited",
     "attribute": "share SCS Doubled service EBITDA profitability",
     "value_raw": "40%",
@@ -1073,17 +1075,17 @@
   ]
  },
  {
-  "id": 1271,
+  "id": 1272,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0020",
+  "fact_a": "03-del-004-0021",
   "fact_b": "02-del-003-0035",
   "explanation": "Figures differ but so does context: 'share SCS Doubled service EBITDA profitability' is 40% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 70% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0020",
+    "fact_id": "03-del-004-0021",
     "subject": "Delhivery Limited",
     "attribute": "share SCS Doubled service EBITDA profitability",
     "value_raw": "40%",
@@ -1131,133 +1133,17 @@
   ]
  },
  {
-  "id": 1272,
-  "relation": "reconciled",
-  "axis": "time",
-  "fact_a": "03-del-004-0020",
-  "fact_b": "01-del-055-0041",
-  "explanation": "Figures differ but so does context: 'share SCS Doubled service EBITDA profitability' is 40% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (8.29)%, (6.19)%, (2.75)%, (3.37)%, and (4.82)% (Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021, % [01-delhivery-prospectus-2022-excerpt.pdf p.226])",
-  "confidence": 0.7,
-  "verified": 1,
-  "facts": [
-   {
-    "fact_id": "03-del-004-0020",
-    "subject": "Delhivery Limited",
-    "attribute": "share SCS Doubled service EBITDA profitability",
-    "value_raw": "40%",
-    "value_norm": 40.0,
-    "unit_norm": "%",
-    "period": "FY2023",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.65,
-    "evidence": {
-     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
-     "page_index": 4,
-     "page_label": "5",
-     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
-     "crop": "data/crops/03-delhi-p4.png",
-     "modality": "chart"
-    },
-    "flags": [
-     "chart-sourced"
-    ]
-   },
-   {
-    "fact_id": "01-del-055-0041",
-    "subject": "Delhivery",
-    "attribute": "EBITDA margin",
-    "value_raw": "(8.29)%, (6.19)%, (2.75)%, (3.37)%, and (4.82)%",
-    "value_norm": 8.29,
-    "unit_norm": "%",
-    "period": "Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.95,
-    "evidence": {
-     "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
-     "page_index": 55,
-     "page_label": "226",
-     "quote": "Our EBITDA margin improved from (8.29)% in Fiscal 2019 to (6.19)% in Fiscal 2020 and to (2.75)% in Fiscal 2021, while declining from (3.37)% in the nine months period ended December 31, 2020 to (4.82)% in the nine months period ended December 31, 2021.",
-     "crop": "data/crops/01-delhi-p55.png",
-     "modality": "text"
-    },
-    "flags": [
-     "fiscal-year"
-    ]
-   }
-  ]
- },
- {
   "id": 1273,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0020",
-  "fact_b": "01-del-055-0042",
-  "explanation": "Figures differ but so does context: 'share SCS Doubled service EBITDA profitability' is 40% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (11.35)%, (9.11)%, (6.95)%, (8.06)%, and (0.72)% (Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021, % [01-delhivery-prospectus-2022-excerpt.pdf p.226])",
-  "confidence": 0.7,
-  "verified": 1,
-  "facts": [
-   {
-    "fact_id": "03-del-004-0020",
-    "subject": "Delhivery Limited",
-    "attribute": "share SCS Doubled service EBITDA profitability",
-    "value_raw": "40%",
-    "value_norm": 40.0,
-    "unit_norm": "%",
-    "period": "FY2023",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.65,
-    "evidence": {
-     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
-     "page_index": 4,
-     "page_label": "5",
-     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
-     "crop": "data/crops/03-delhi-p4.png",
-     "modality": "chart"
-    },
-    "flags": [
-     "chart-sourced"
-    ]
-   },
-   {
-    "fact_id": "01-del-055-0042",
-    "subject": "Delhivery",
-    "attribute": "Adjusted EBITDA margin",
-    "value_raw": "(11.35)%, (9.11)%, (6.95)%, (8.06)%, and (0.72)%",
-    "value_norm": 11.35,
-    "unit_norm": "%",
-    "period": "Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.95,
-    "evidence": {
-     "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
-     "page_index": 55,
-     "page_label": "226",
-     "quote": "Our Adjusted EBITDA margin has improved from (11.35%) in Fiscal 2019 to (9.11%) in Fiscal 2020 and to (6.95%) in Fiscal 2021 and from (8.06%) for the nine months period ended December 31, 2020 to (0.72%) for the nine months period ended December 31, 2021.",
-     "crop": "data/crops/01-delhi-p55.png",
-     "modality": "text"
-    },
-    "flags": [
-     "fiscal-year"
-    ]
-   }
-  ]
- },
- {
-  "id": 1274,
-  "relation": "reconciled",
-  "axis": "time",
-  "fact_a": "03-del-004-0021",
+  "fact_a": "03-del-004-0022",
   "fact_b": "02-del-003-0034",
   "explanation": "Figures differ but so does context: 'EBITDA profitability improvement Sharp YoY reduction' is 31 days (FY2023, days [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 77 days (days [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0021",
+    "fact_id": "03-del-004-0022",
     "subject": "Delhivery Limited",
     "attribute": "EBITDA profitability improvement Sharp YoY reduction",
     "value_raw": "31 days",
@@ -1306,17 +1192,17 @@
   ]
  },
  {
-  "id": 1275,
+  "id": 1274,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0022",
+  "fact_a": "03-del-004-0023",
   "fact_b": "02-del-003-0021",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. 127 Cr (FY24, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1,429 (FY2024, inr-mn [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0022",
+    "fact_id": "03-del-004-0023",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. 127 Cr",
@@ -1362,17 +1248,17 @@
   ]
  },
  {
-  "id": 1276,
+  "id": 1275,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0022",
-  "fact_b": "02-del-005-0064",
+  "fact_a": "03-del-004-0023",
+  "fact_b": "02-del-005-0063",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. 127 Cr (FY24, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1,355 (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0022",
+    "fact_id": "03-del-004-0023",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. 127 Cr",
@@ -1393,7 +1279,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0064",
+    "fact_id": "02-del-005-0063",
     "subject": "Delhivery Limited",
     "attribute": "Year EBITDA Margin",
     "value_raw": "1,355",
@@ -1416,17 +1302,17 @@
   ]
  },
  {
-  "id": 1277,
+  "id": 1276,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0022",
-  "fact_b": "02-del-005-0068",
+  "fact_a": "03-del-004-0023",
+  "fact_b": "02-del-005-0067",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. 127 Cr (FY24, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (1,720) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0022",
+    "fact_id": "03-del-004-0023",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. 127 Cr",
@@ -1447,7 +1333,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0068",
+    "fact_id": "02-del-005-0067",
     "subject": "Delhivery Limited",
     "attribute": "EBITDA margin Year EBITDA Margin",
     "value_raw": "(1,720)",
@@ -1472,17 +1358,17 @@
   ]
  },
  {
-  "id": 1278,
+  "id": 1277,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0022",
-  "fact_b": "02-del-005-0069",
+  "fact_a": "03-del-004-0023",
+  "fact_b": "02-del-005-0068",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. 127 Cr (FY24, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (1,229) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0022",
+    "fact_id": "03-del-004-0023",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. 127 Cr",
@@ -1503,7 +1389,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0069",
+    "fact_id": "02-del-005-0068",
     "subject": "Delhivery Limited",
     "attribute": "EBITDA Margin",
     "value_raw": "(1,229)",
@@ -1528,17 +1414,17 @@
   ]
  },
  {
-  "id": 1279,
+  "id": 1278,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0022",
-  "fact_b": "02-del-005-0073",
+  "fact_a": "03-del-004-0023",
+  "fact_b": "02-del-005-0072",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. 127 Cr (FY24, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (2,532) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0022",
+    "fact_id": "03-del-004-0023",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. 127 Cr",
@@ -1559,7 +1445,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0073",
+    "fact_id": "02-del-005-0072",
     "subject": "Delhivery Limited",
     "attribute": "EBITDA margin Year EBITDA Margin",
     "value_raw": "(2,532)",
@@ -1584,17 +1470,17 @@
   ]
  },
  {
-  "id": 1280,
+  "id": 1279,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0022",
-  "fact_b": "02-del-005-0074",
+  "fact_a": "03-del-004-0023",
+  "fact_b": "02-del-005-0073",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. 127 Cr (FY24, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (2,533) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0022",
+    "fact_id": "03-del-004-0023",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. 127 Cr",
@@ -1615,7 +1501,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0074",
+    "fact_id": "02-del-005-0073",
     "subject": "Delhivery Limited",
     "attribute": "EBITDA Margin",
     "value_raw": "(2,533)",
@@ -1640,17 +1526,17 @@
   ]
  },
  {
-  "id": 1281,
+  "id": 1280,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0022",
-  "fact_b": "02-del-005-0076",
+  "fact_a": "03-del-004-0023",
+  "fact_b": "02-del-005-0075",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. 127 Cr (FY24, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1,579 (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0022",
+    "fact_id": "03-del-004-0023",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. 127 Cr",
@@ -1671,7 +1557,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0076",
+    "fact_id": "02-del-005-0075",
     "subject": "Delhivery Limited",
     "attribute": "Year Tonnage",
     "value_raw": "1,579",
@@ -1694,17 +1580,17 @@
   ]
  },
  {
-  "id": 1282,
+  "id": 1281,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0022",
-  "fact_b": "02-del-005-0079",
+  "fact_a": "03-del-004-0023",
+  "fact_b": "02-del-005-0078",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. 127 Cr (FY24, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (2,689) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0022",
+    "fact_id": "03-del-004-0023",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. 127 Cr",
@@ -1725,7 +1611,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0079",
+    "fact_id": "02-del-005-0078",
     "subject": "Delhivery Limited",
     "attribute": "tax Year Profit Margin",
     "value_raw": "(2,689)",
@@ -1750,17 +1636,17 @@
   ]
  },
  {
-  "id": 1283,
+  "id": 1282,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0022",
-  "fact_b": "02-del-084-0188",
+  "fact_a": "03-del-004-0023",
+  "fact_b": "02-del-084-0174",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. 127 Cr (FY24, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 615.83 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0022",
+    "fact_id": "03-del-004-0023",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. 127 Cr",
@@ -1781,7 +1667,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-084-0188",
+    "fact_id": "02-del-084-0174",
     "subject": "Delhivery Limited",
     "attribute": "Add contract asset created during year",
     "value_raw": "615.83",
@@ -1806,17 +1692,17 @@
   ]
  },
  {
-  "id": 1284,
+  "id": 1283,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0022",
-  "fact_b": "02-del-084-0189",
+  "fact_a": "03-del-004-0023",
+  "fact_b": "02-del-084-0175",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. 127 Cr (FY24, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (528.97) (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0022",
+    "fact_id": "03-del-004-0023",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. 127 Cr",
@@ -1837,11 +1723,68 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-084-0189",
+    "fact_id": "02-del-084-0175",
     "subject": "Delhivery Limited",
     "attribute": "year Less contract asset billed during",
     "value_raw": "(528.97)",
     "value_norm": -5289700000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "The contract assets are transferred to the receivables when the rights become unconditional.\n\n## Contract Assets:\n\n| Particulars                                 | March 31, 2024 | March 31, 2023 |\n| ------------------------------------------- | -------------- | -------------- |\n| **Opening balance**                         | **528.97**     | **769.92**     |\n| Add: contract asset created during the year | 615.83         | 528.97         |\n| Less: contract asset billed during the year | (528.97) ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative",
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 1284,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-004-0023",
+  "fact_b": "02-del-084-0176",
+  "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. 127 Cr (FY24, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (769.92) (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0023",
+    "subject": "Delhivery",
+    "attribute": "full year EBITDA",
+    "value_raw": "Rs. 127 Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY24",
+    "scope": "full year",
+    "fact_type": "numeric",
+    "confidence": 0.95,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "FY24 EBITDA increased by Rs. 578 Cr to Rs. 127 Cr from Rs. (452 Cr) in FY23",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "text"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-084-0176",
+    "subject": "Delhivery Limited",
+    "attribute": "Less contract asset billed during year",
+    "value_raw": "(769.92)",
+    "value_norm": -7699200000.0,
     "unit_norm": "inr-cr",
     "period": "",
     "scope": "",
@@ -1866,71 +1809,14 @@
   "id": 1285,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0022",
-  "fact_b": "02-del-084-0190",
-  "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. 127 Cr (FY24, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (769.92) (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
-  "confidence": 0.7,
-  "verified": 1,
-  "facts": [
-   {
-    "fact_id": "03-del-004-0022",
-    "subject": "Delhivery",
-    "attribute": "full year EBITDA",
-    "value_raw": "Rs. 127 Cr",
-    "value_norm": 1270000000.0,
-    "unit_norm": "inr-cr",
-    "period": "FY24",
-    "scope": "full year",
-    "fact_type": "numeric",
-    "confidence": 0.95,
-    "evidence": {
-     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
-     "page_index": 4,
-     "page_label": "5",
-     "quote": "FY24 EBITDA increased by Rs. 578 Cr to Rs. 127 Cr from Rs. (452 Cr) in FY23",
-     "crop": "data/crops/03-delhi-p4.png",
-     "modality": "text"
-    },
-    "flags": []
-   },
-   {
-    "fact_id": "02-del-084-0190",
-    "subject": "Delhivery Limited",
-    "attribute": "Less contract asset billed during year",
-    "value_raw": "(769.92)",
-    "value_norm": -7699200000.0,
-    "unit_norm": "inr-cr",
-    "period": "",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.65,
-    "evidence": {
-     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
-     "page_index": 84,
-     "page_label": "85",
-     "quote": "The contract assets are transferred to the receivables when the rights become unconditional.\n\n## Contract Assets:\n\n| Particulars                                 | March 31, 2024 | March 31, 2023 |\n| ------------------------------------------- | -------------- | -------------- |\n| **Opening balance**                         | **528.97**     | **769.92**     |\n| Add: contract asset created during the year | 615.83         | 528.97         |\n| Less: contract asset billed during the year | (528.97) ",
-     "crop": "data/crops/02-delhi-p84.png",
-     "modality": "table"
-    },
-    "flags": [
-     "paren-negative",
-     "no-period"
-    ]
-   }
-  ]
- },
- {
-  "id": 1286,
-  "relation": "reconciled",
-  "axis": "time",
-  "fact_a": "03-del-004-0023",
+  "fact_a": "03-del-004-0024",
   "fact_b": "02-del-003-0021",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. (452 Cr) (FY23, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1,429 (FY2024, inr-mn [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0023",
+    "fact_id": "03-del-004-0024",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. (452 Cr)",
@@ -1976,17 +1862,17 @@
   ]
  },
  {
-  "id": 1287,
+  "id": 1286,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0023",
-  "fact_b": "02-del-005-0064",
+  "fact_a": "03-del-004-0024",
+  "fact_b": "02-del-005-0063",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. (452 Cr) (FY23, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1,355 (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0023",
+    "fact_id": "03-del-004-0024",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. (452 Cr)",
@@ -2007,7 +1893,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0064",
+    "fact_id": "02-del-005-0063",
     "subject": "Delhivery Limited",
     "attribute": "Year EBITDA Margin",
     "value_raw": "1,355",
@@ -2030,17 +1916,17 @@
   ]
  },
  {
-  "id": 1288,
+  "id": 1287,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0023",
-  "fact_b": "02-del-005-0068",
+  "fact_a": "03-del-004-0024",
+  "fact_b": "02-del-005-0067",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. (452 Cr) (FY23, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (1,720) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0023",
+    "fact_id": "03-del-004-0024",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. (452 Cr)",
@@ -2061,7 +1947,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0068",
+    "fact_id": "02-del-005-0067",
     "subject": "Delhivery Limited",
     "attribute": "EBITDA margin Year EBITDA Margin",
     "value_raw": "(1,720)",
@@ -2086,17 +1972,17 @@
   ]
  },
  {
-  "id": 1289,
+  "id": 1288,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0023",
-  "fact_b": "02-del-005-0069",
+  "fact_a": "03-del-004-0024",
+  "fact_b": "02-del-005-0068",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. (452 Cr) (FY23, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (1,229) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0023",
+    "fact_id": "03-del-004-0024",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. (452 Cr)",
@@ -2117,7 +2003,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0069",
+    "fact_id": "02-del-005-0068",
     "subject": "Delhivery Limited",
     "attribute": "EBITDA Margin",
     "value_raw": "(1,229)",
@@ -2142,17 +2028,17 @@
   ]
  },
  {
-  "id": 1290,
+  "id": 1289,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0023",
-  "fact_b": "02-del-005-0073",
+  "fact_a": "03-del-004-0024",
+  "fact_b": "02-del-005-0072",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. (452 Cr) (FY23, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (2,532) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0023",
+    "fact_id": "03-del-004-0024",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. (452 Cr)",
@@ -2173,7 +2059,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0073",
+    "fact_id": "02-del-005-0072",
     "subject": "Delhivery Limited",
     "attribute": "EBITDA margin Year EBITDA Margin",
     "value_raw": "(2,532)",
@@ -2198,17 +2084,17 @@
   ]
  },
  {
-  "id": 1291,
+  "id": 1290,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0023",
-  "fact_b": "02-del-005-0074",
+  "fact_a": "03-del-004-0024",
+  "fact_b": "02-del-005-0073",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. (452 Cr) (FY23, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (2,533) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0023",
+    "fact_id": "03-del-004-0024",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. (452 Cr)",
@@ -2229,7 +2115,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0074",
+    "fact_id": "02-del-005-0073",
     "subject": "Delhivery Limited",
     "attribute": "EBITDA Margin",
     "value_raw": "(2,533)",
@@ -2254,17 +2140,17 @@
   ]
  },
  {
-  "id": 1292,
+  "id": 1291,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0023",
-  "fact_b": "02-del-005-0076",
+  "fact_a": "03-del-004-0024",
+  "fact_b": "02-del-005-0075",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. (452 Cr) (FY23, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1,579 (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0023",
+    "fact_id": "03-del-004-0024",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. (452 Cr)",
@@ -2285,7 +2171,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0076",
+    "fact_id": "02-del-005-0075",
     "subject": "Delhivery Limited",
     "attribute": "Year Tonnage",
     "value_raw": "1,579",
@@ -2308,17 +2194,17 @@
   ]
  },
  {
-  "id": 1293,
+  "id": 1292,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0023",
-  "fact_b": "02-del-005-0079",
+  "fact_a": "03-del-004-0024",
+  "fact_b": "02-del-005-0078",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. (452 Cr) (FY23, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (2,689) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0023",
+    "fact_id": "03-del-004-0024",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. (452 Cr)",
@@ -2339,7 +2225,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-005-0079",
+    "fact_id": "02-del-005-0078",
     "subject": "Delhivery Limited",
     "attribute": "tax Year Profit Margin",
     "value_raw": "(2,689)",
@@ -2364,17 +2250,17 @@
   ]
  },
  {
-  "id": 1294,
+  "id": 1293,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0023",
-  "fact_b": "02-del-084-0188",
+  "fact_a": "03-del-004-0024",
+  "fact_b": "02-del-084-0174",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. (452 Cr) (FY23, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 615.83 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0023",
+    "fact_id": "03-del-004-0024",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. (452 Cr)",
@@ -2395,7 +2281,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-084-0188",
+    "fact_id": "02-del-084-0174",
     "subject": "Delhivery Limited",
     "attribute": "Add contract asset created during year",
     "value_raw": "615.83",
@@ -2420,17 +2306,17 @@
   ]
  },
  {
-  "id": 1295,
+  "id": 1294,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0023",
-  "fact_b": "02-del-084-0189",
+  "fact_a": "03-del-004-0024",
+  "fact_b": "02-del-084-0175",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. (452 Cr) (FY23, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (528.97) (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0023",
+    "fact_id": "03-del-004-0024",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. (452 Cr)",
@@ -2451,7 +2337,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-084-0189",
+    "fact_id": "02-del-084-0175",
     "subject": "Delhivery Limited",
     "attribute": "year Less contract asset billed during",
     "value_raw": "(528.97)",
@@ -2477,17 +2363,17 @@
   ]
  },
  {
-  "id": 1296,
+  "id": 1295,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-004-0023",
-  "fact_b": "02-del-084-0190",
+  "fact_a": "03-del-004-0024",
+  "fact_b": "02-del-084-0176",
   "explanation": "Figures differ but so does context: 'full year EBITDA' is Rs. (452 Cr) (FY23, full year, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (769.92) (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-004-0023",
+    "fact_id": "03-del-004-0024",
     "subject": "Delhivery",
     "attribute": "full year EBITDA",
     "value_raw": "Rs. (452 Cr)",
@@ -2508,7 +2394,7 @@
     "flags": []
    },
    {
-    "fact_id": "02-del-084-0190",
+    "fact_id": "02-del-084-0176",
     "subject": "Delhivery Limited",
     "attribute": "Less contract asset billed during year",
     "value_raw": "(769.92)",
@@ -2534,12 +2420,12 @@
   ]
  },
  {
-  "id": 1299,
+  "id": 1296,
   "relation": "reconciled",
   "axis": "time",
   "fact_a": "03-del-004-0026",
   "fact_b": "02-del-003-0025",
-  "explanation": "Figures differ but so does context: 'Express Parcel service EBITDA profitability' is 18%+ (FY24, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "explanation": "Figures differ but so does context: 'Express Parcel service EBITDA profitability' is 18%+ (FY24, Express Parcel, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
@@ -2551,7 +2437,7 @@
     "value_norm": 18.0,
     "unit_norm": "%",
     "period": "FY24",
-    "scope": "",
+    "scope": "Express Parcel",
     "fact_type": "numeric",
     "confidence": 0.9,
     "evidence": {
@@ -2590,12 +2476,12 @@
   ]
  },
  {
-  "id": 1300,
+  "id": 1297,
   "relation": "reconciled",
   "axis": "time",
   "fact_a": "03-del-004-0026",
   "fact_b": "02-del-003-0027",
-  "explanation": "Figures differ but so does context: 'Express Parcel service EBITDA profitability' is 18%+ (FY24, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "explanation": "Figures differ but so does context: 'Express Parcel service EBITDA profitability' is 18%+ (FY24, Express Parcel, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
@@ -2607,7 +2493,7 @@
     "value_norm": 18.0,
     "unit_norm": "%",
     "period": "FY24",
-    "scope": "",
+    "scope": "Express Parcel",
     "fact_type": "numeric",
     "confidence": 0.9,
     "evidence": {
@@ -2646,124 +2532,12 @@
   ]
  },
  {
-  "id": 1301,
-  "relation": "reconciled",
-  "axis": "time",
-  "fact_a": "03-del-004-0026",
-  "fact_b": "01-del-055-0041",
-  "explanation": "Figures differ but so does context: 'Express Parcel service EBITDA profitability' is 18%+ (FY24, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (8.29)%, (6.19)%, (2.75)%, (3.37)%, and (4.82)% (Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021, % [01-delhivery-prospectus-2022-excerpt.pdf p.226])",
-  "confidence": 0.7,
-  "verified": 1,
-  "facts": [
-   {
-    "fact_id": "03-del-004-0026",
-    "subject": "Delhivery",
-    "attribute": "Express Parcel service EBITDA profitability",
-    "value_raw": "18%+",
-    "value_norm": 18.0,
-    "unit_norm": "%",
-    "period": "FY24",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.9,
-    "evidence": {
-     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
-     "page_index": 4,
-     "page_label": "5",
-     "quote": "Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments",
-     "crop": "data/crops/03-delhi-p4.png",
-     "modality": "text"
-    },
-    "flags": []
-   },
-   {
-    "fact_id": "01-del-055-0041",
-    "subject": "Delhivery",
-    "attribute": "EBITDA margin",
-    "value_raw": "(8.29)%, (6.19)%, (2.75)%, (3.37)%, and (4.82)%",
-    "value_norm": 8.29,
-    "unit_norm": "%",
-    "period": "Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.95,
-    "evidence": {
-     "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
-     "page_index": 55,
-     "page_label": "226",
-     "quote": "Our EBITDA margin improved from (8.29)% in Fiscal 2019 to (6.19)% in Fiscal 2020 and to (2.75)% in Fiscal 2021, while declining from (3.37)% in the nine months period ended December 31, 2020 to (4.82)% in the nine months period ended December 31, 2021.",
-     "crop": "data/crops/01-delhi-p55.png",
-     "modality": "text"
-    },
-    "flags": [
-     "fiscal-year"
-    ]
-   }
-  ]
- },
- {
-  "id": 1302,
-  "relation": "reconciled",
-  "axis": "time",
-  "fact_a": "03-del-004-0026",
-  "fact_b": "01-del-055-0042",
-  "explanation": "Figures differ but so does context: 'Express Parcel service EBITDA profitability' is 18%+ (FY24, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs (11.35)%, (9.11)%, (6.95)%, (8.06)%, and (0.72)% (Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021, % [01-delhivery-prospectus-2022-excerpt.pdf p.226])",
-  "confidence": 0.7,
-  "verified": 1,
-  "facts": [
-   {
-    "fact_id": "03-del-004-0026",
-    "subject": "Delhivery",
-    "attribute": "Express Parcel service EBITDA profitability",
-    "value_raw": "18%+",
-    "value_norm": 18.0,
-    "unit_norm": "%",
-    "period": "FY24",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.9,
-    "evidence": {
-     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
-     "page_index": 4,
-     "page_label": "5",
-     "quote": "Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments",
-     "crop": "data/crops/03-delhi-p4.png",
-     "modality": "text"
-    },
-    "flags": []
-   },
-   {
-    "fact_id": "01-del-055-0042",
-    "subject": "Delhivery",
-    "attribute": "Adjusted EBITDA margin",
-    "value_raw": "(11.35)%, (9.11)%, (6.95)%, (8.06)%, and (0.72)%",
-    "value_norm": 11.35,
-    "unit_norm": "%",
-    "period": "Fiscal 2019, Fiscal 2020, Fiscal 2021, the nine months period ended December 31, 2020, and the nine months period ended December 31, 2021",
-    "scope": "",
-    "fact_type": "numeric",
-    "confidence": 0.95,
-    "evidence": {
-     "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
-     "page_index": 55,
-     "page_label": "226",
-     "quote": "Our Adjusted EBITDA margin has improved from (11.35%) in Fiscal 2019 to (9.11%) in Fiscal 2020 and to (6.95%) in Fiscal 2021 and from (8.06%) for the nine months period ended December 31, 2020 to (0.72%) for the nine months period ended December 31, 2021.",
-     "crop": "data/crops/01-delhi-p55.png",
-     "modality": "text"
-    },
-    "flags": [
-     "fiscal-year"
-    ]
-   }
-  ]
- },
- {
-  "id": 1303,
+  "id": 1298,
   "relation": "reconciled",
   "axis": "time",
   "fact_a": "03-del-004-0027",
   "fact_b": "02-del-003-0029",
-  "explanation": "Figures differ but so does context: 'PTL YoY growth' is 30%+ (FY24, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 0.5% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "explanation": "Figures differ but so does context: 'PTL YoY growth' is 30%+ (FY24, PTL, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 0.5% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
@@ -2775,7 +2549,7 @@
     "value_norm": 30.0,
     "unit_norm": "%",
     "period": "FY24",
-    "scope": "",
+    "scope": "PTL",
     "fact_type": "numeric",
     "confidence": 0.9,
     "evidence": {
@@ -2814,12 +2588,68 @@
   ]
  },
  {
-  "id": 1310,
+  "id": 1300,
+  "relation": "reconciled",
+  "axis": "scope",
+  "fact_a": "03-del-004-0027",
+  "fact_b": "02-del-003-0042",
+  "explanation": "Figures differ but so does context: 'PTL YoY growth' is 30%+ (FY24, PTL, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs grew by 31% (FY24, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0027",
+    "subject": "Delhivery",
+    "attribute": "PTL YoY growth",
+    "value_raw": "30%+",
+    "value_norm": 30.0,
+    "unit_norm": "%",
+    "period": "FY24",
+    "scope": "PTL",
+    "fact_type": "numeric",
+    "confidence": 0.9,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "PTL: 30%+ YoY growth with significant improvement in profitability and market share",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "text"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-003-0042",
+    "subject": "Delhivery",
+    "attribute": "Part-truckload revenue growth",
+    "value_raw": "grew by 31%",
+    "value_norm": 31.0,
+    "unit_norm": "%",
+    "period": "FY24",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 1.0,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "revenues from part truckload grew by 31% in FY24",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "text"
+    },
+    "flags": [
+     "pct-forced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 1301,
   "relation": "reconciled",
   "axis": "time",
   "fact_a": "03-del-004-0029",
   "fact_b": "02-del-003-0025",
-  "explanation": "Figures differ but so does context: 'TL YoY revenue growth' is 40%+ (FY24, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "explanation": "Figures differ but so does context: 'TL YoY revenue growth' is 40%+ (FY24, TL, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
@@ -2831,7 +2661,7 @@
     "value_norm": 40.0,
     "unit_norm": "%",
     "period": "FY24",
-    "scope": "",
+    "scope": "TL",
     "fact_type": "numeric",
     "confidence": 0.9,
     "evidence": {
@@ -2870,17 +2700,186 @@
   ]
  },
  {
-  "id": 1311,
+  "id": 1302,
+  "relation": "reconciled",
+  "axis": "scope",
+  "fact_a": "03-del-004-0029",
+  "fact_b": "02-del-003-0041",
+  "explanation": "Figures differ but so does context: 'TL YoY revenue growth' is 40%+ (FY24, TL, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs grew by 30% (FY24, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0029",
+    "subject": "Delhivery",
+    "attribute": "TL YoY revenue growth",
+    "value_raw": "40%+",
+    "value_norm": 40.0,
+    "unit_norm": "%",
+    "period": "FY24",
+    "scope": "TL",
+    "fact_type": "numeric",
+    "confidence": 0.9,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "TL: 40% YoY revenue growth with service EBITDA profitability improvement",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "text"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-003-0041",
+    "subject": "Delhivery",
+    "attribute": "Part-truckload tonnage growth",
+    "value_raw": "grew by 30%",
+    "value_norm": 30.0,
+    "unit_norm": "%",
+    "period": "FY24",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 1.0,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "Our part truckload **tonnage grew by 30%**",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "text"
+    },
+    "flags": [
+     "pct-forced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 1303,
+  "relation": "reconciled",
+  "axis": "scope",
+  "fact_a": "03-del-004-0029",
+  "fact_b": "02-del-003-0042",
+  "explanation": "Figures differ but so does context: 'TL YoY revenue growth' is 40%+ (FY24, TL, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs grew by 31% (FY24, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0029",
+    "subject": "Delhivery",
+    "attribute": "TL YoY revenue growth",
+    "value_raw": "40%+",
+    "value_norm": 40.0,
+    "unit_norm": "%",
+    "period": "FY24",
+    "scope": "TL",
+    "fact_type": "numeric",
+    "confidence": 0.9,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "TL: 40% YoY revenue growth with service EBITDA profitability improvement",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "text"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-003-0042",
+    "subject": "Delhivery",
+    "attribute": "Part-truckload revenue growth",
+    "value_raw": "grew by 31%",
+    "value_norm": 31.0,
+    "unit_norm": "%",
+    "period": "FY24",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 1.0,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "revenues from part truckload grew by 31% in FY24",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "text"
+    },
+    "flags": [
+     "pct-forced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 1305,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-005-0030",
+  "fact_a": "03-del-004-0030",
+  "fact_b": "02-del-003-0033",
+  "explanation": "Figures differ but so does context: 'Net Working Capital days' is 31 days (FY24, YoY reduction, days [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 38 days (days [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0030",
+    "subject": "Delhivery",
+    "attribute": "Net Working Capital days",
+    "value_raw": "31 days",
+    "value_norm": 31.0,
+    "unit_norm": "days",
+    "period": "FY24",
+    "scope": "YoY reduction",
+    "fact_type": "numeric",
+    "confidence": 0.9,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "Sharp YoY reduction in NWC days from 38 to 31 days",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "text"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-003-0033",
+    "subject": "Delhivery Limited",
+    "attribute": "significantly reduced our net working capital",
+    "value_raw": "38 days",
+    "value_norm": 38.0,
+    "unit_norm": "days",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.55,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "The part truckload business showed consistent sequential growth over the past five quarters, driven by higher-than-ever service levels, new business development, and jettisoning of customers that did not meet the target return on capital.\n\n## Net working capital days\nWe significantly reduced our **net working capital days to 31 days** as of March 2024 from 38 days a year ago due to a **sharp reduction in our receivable days to 66** as of March 2024 from 77 days a year ago.",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced",
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 1307,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0031",
   "fact_b": "02-del-001-0008",
   "explanation": "Figures differ but so does context: 'India's largest integrated logistics platform Cr' is ₹8,142 Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 4,445 (Q4-FY2024, inr [02-delhivery-annual-report-fy24-excerpt.pdf p.2])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0030",
+    "fact_id": "03-del-005-0031",
     "subject": "Delhivery Limited",
     "attribute": "India's largest integrated logistics platform Cr",
     "value_raw": "₹8,142 Cr",
@@ -2926,22 +2925,22 @@
   ]
  },
  {
-  "id": 1312,
+  "id": 1308,
   "relation": "reconciled",
   "axis": "time",
   "fact_a": "03-del-005-0032",
   "fact_b": "02-del-003-0042",
-  "explanation": "Figures differ but so does context: 'revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs grew by 31% (FY24, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "explanation": "Figures differ but so does context: 'logistics platform revenue services YoY' is 12.7% (FY2024, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs grew by 31% (FY24, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
     "fact_id": "03-del-005-0032",
     "subject": "Delhivery Limited",
-    "attribute": "revenue services YoY Cr",
-    "value_raw": "₹127Cr",
-    "value_norm": 1270000000.0,
-    "unit_norm": "inr-cr",
+    "attribute": "logistics platform revenue services YoY",
+    "value_raw": "12.7%",
+    "value_norm": 12.7,
+    "unit_norm": "%",
     "period": "FY2024",
     "scope": "",
     "fact_type": "numeric",
@@ -2963,8 +2962,8 @@
     "subject": "Delhivery",
     "attribute": "Part-truckload revenue growth",
     "value_raw": "grew by 31%",
-    "value_norm": 310000000.0,
-    "unit_norm": "inr-cr",
+    "value_norm": 31.0,
+    "unit_norm": "%",
     "period": "FY24",
     "scope": "",
     "fact_type": "numeric",
@@ -2977,22 +2976,24 @@
      "crop": "data/crops/02-delhi-p3.png",
      "modality": "text"
     },
-    "flags": []
+    "flags": [
+     "pct-forced"
+    ]
    }
   ]
  },
  {
-  "id": 1313,
+  "id": 1309,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-005-0032",
-  "fact_b": "02-del-084-0159",
+  "fact_a": "03-del-005-0033",
+  "fact_b": "02-del-084-0145",
   "explanation": "Figures differ but so does context: 'revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 81,415.38 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0032",
+    "fact_id": "03-del-005-0033",
     "subject": "Delhivery Limited",
     "attribute": "revenue services YoY Cr",
     "value_raw": "₹127Cr",
@@ -3015,7 +3016,7 @@
     ]
    },
    {
-    "fact_id": "02-del-084-0159",
+    "fact_id": "02-del-084-0145",
     "subject": "Delhivery Limited",
     "attribute": "Revenue services",
     "value_raw": "81,415.38",
@@ -3040,17 +3041,17 @@
   ]
  },
  {
-  "id": 1314,
+  "id": 1310,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-005-0032",
-  "fact_b": "02-del-084-0160",
+  "fact_a": "03-del-005-0033",
+  "fact_b": "02-del-084-0146",
   "explanation": "Figures differ but so does context: 'revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 72,236.47 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0032",
+    "fact_id": "03-del-005-0033",
     "subject": "Delhivery Limited",
     "attribute": "revenue services YoY Cr",
     "value_raw": "₹127Cr",
@@ -3073,7 +3074,7 @@
     ]
    },
    {
-    "fact_id": "02-del-084-0160",
+    "fact_id": "02-del-084-0146",
     "subject": "Delhivery Limited",
     "attribute": "Revenue services",
     "value_raw": "72,236.47",
@@ -3098,17 +3099,17 @@
   ]
  },
  {
-  "id": 1315,
+  "id": 1311,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-005-0032",
-  "fact_b": "02-del-084-0161",
+  "fact_a": "03-del-005-0033",
+  "fact_b": "02-del-084-0147",
   "explanation": "Figures differ but so does context: 'revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 16.54 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0032",
+    "fact_id": "03-del-005-0033",
     "subject": "Delhivery Limited",
     "attribute": "revenue services YoY Cr",
     "value_raw": "₹127Cr",
@@ -3131,7 +3132,7 @@
     ]
    },
    {
-    "fact_id": "02-del-084-0161",
+    "fact_id": "02-del-084-0147",
     "subject": "Delhivery Limited",
     "attribute": "Revenue sale traded goods",
     "value_raw": "16.54",
@@ -3156,17 +3157,17 @@
   ]
  },
  {
-  "id": 1316,
+  "id": 1312,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-005-0032",
-  "fact_b": "02-del-084-0163",
+  "fact_a": "03-del-005-0033",
+  "fact_b": "02-del-084-0149",
   "explanation": "Figures differ but so does context: 'revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 50,765.87 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0032",
+    "fact_id": "03-del-005-0033",
     "subject": "Delhivery Limited",
     "attribute": "revenue services YoY Cr",
     "value_raw": "₹127Cr",
@@ -3189,7 +3190,7 @@
     ]
    },
    {
-    "fact_id": "02-del-084-0163",
+    "fact_id": "02-del-084-0149",
     "subject": "Delhivery Limited",
     "attribute": "Revenue Express Parcel services",
     "value_raw": "50,765.87",
@@ -3214,17 +3215,17 @@
   ]
  },
  {
-  "id": 1317,
+  "id": 1313,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-005-0032",
-  "fact_b": "02-del-084-0164",
+  "fact_a": "03-del-005-0033",
+  "fact_b": "02-del-084-0150",
   "explanation": "Figures differ but so does context: 'revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 45,522.22 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0032",
+    "fact_id": "03-del-005-0033",
     "subject": "Delhivery Limited",
     "attribute": "revenue services YoY Cr",
     "value_raw": "₹127Cr",
@@ -3247,7 +3248,7 @@
     ]
    },
    {
-    "fact_id": "02-del-084-0164",
+    "fact_id": "02-del-084-0150",
     "subject": "Delhivery Limited",
     "attribute": "Revenue Express Parcel services",
     "value_raw": "45,522.22",
@@ -3272,17 +3273,17 @@
   ]
  },
  {
-  "id": 1318,
+  "id": 1314,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-005-0032",
-  "fact_b": "02-del-084-0165",
+  "fact_a": "03-del-005-0033",
+  "fact_b": "02-del-084-0151",
   "explanation": "Figures differ but so does context: 'revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 15,174.05 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0032",
+    "fact_id": "03-del-005-0033",
     "subject": "Delhivery Limited",
     "attribute": "revenue services YoY Cr",
     "value_raw": "₹127Cr",
@@ -3305,7 +3306,7 @@
     ]
    },
    {
-    "fact_id": "02-del-084-0165",
+    "fact_id": "02-del-084-0151",
     "subject": "Delhivery Limited",
     "attribute": "services Revenue Part Truck Load services",
     "value_raw": "15,174.05",
@@ -3330,17 +3331,17 @@
   ]
  },
  {
-  "id": 1319,
+  "id": 1315,
   "relation": "reconciled",
   "axis": "time",
-  "fact_a": "03-del-005-0032",
-  "fact_b": "02-del-084-0166",
+  "fact_a": "03-del-005-0033",
+  "fact_b": "02-del-084-0152",
   "explanation": "Figures differ but so does context: 'revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 11,565.38 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
   "confidence": 0.7,
   "verified": 1,
   "facts": [
    {
-    "fact_id": "03-del-005-0032",
+    "fact_id": "03-del-005-0033",
     "subject": "Delhivery Limited",
     "attribute": "revenue services YoY Cr",
     "value_raw": "₹127Cr",
@@ -3363,7 +3364,7 @@
     ]
    },
    {
-    "fact_id": "02-del-084-0166",
+    "fact_id": "02-del-084-0152",
     "subject": "Delhivery Limited",
     "attribute": "Revenue Part Truck Load services",
     "value_raw": "11,565.38",

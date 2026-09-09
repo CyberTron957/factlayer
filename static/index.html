@@ -90,7 +90,7 @@ function evHtml(e){
 }
 function confBar(c){const p=Math.round((c||0)*100);return `<span class="conf"><i style="width:${p}%"></i></span><small>${p}%</small>`;}
 function factHtml(f){
-  const fl=(f.flags||[]).filter(x=>x!=='chart-sourced'||true);
+  const fl=(f.flags||[]).filter(x=>!['pct-forced'].includes(x));
   return `<div class="card"><div class="factline"><b>${esc(f.attribute)}</b> = <b>${esc(f.value_raw)}</b></div>
   <div class="meta">${esc(f.subject)} · ${esc(f.unit_norm||'')} ${esc(f.period||'')} ${esc(f.scope||'')} · ${esc(f.fact_type)} · ${confBar(f.confidence)}${fl.length?` · ⚠ ${esc(fl.join(', '))}`:''}</div>${evHtml(f.evidence)}</div>`;
 }
