@@ -17,6 +17,26 @@ header h1{margin:0;font-size:20px;font-weight:650}header p{margin:4px 0 0;color:
 #drop{background:var(--card);border:2px dashed #b6c2d2;border-radius:10px;padding:16px 18px;margin:18px 0;font-size:14px}
 #drop button{background:var(--ink);color:#fff;border:0;border-radius:7px;padding:8px 16px;cursor:pointer;font-size:14px}
 #drop button:disabled{opacity:.45;cursor:default}
+#corpus{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+#corpus h3{margin:0 0 4px;font-size:16px}
+#dz{border:2px dashed #b6c2d2;border-radius:10px;padding:20px;text-align:center;color:var(--mut);font-size:14px;margin:10px 0;transition:background .15s,border-color .15s}
+#dz.over{background:#eef4ff;border-color:#3b82f6;color:var(--ink)}
+.btn{display:inline-block;background:var(--ink);color:#fff;border-radius:7px;padding:8px 16px;cursor:pointer;font-size:14px;font-weight:600}
+#picked{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0}
+.chip{background:#eef1f5;border:1px solid var(--line);border-radius:20px;padding:4px 8px 4px 14px;font-size:13px;display:inline-flex;align-items:center;gap:8px}
+.chip button{border:0;background:#cbd5e1;color:var(--ink);border-radius:50%;width:20px;height:20px;cursor:pointer;font-size:12px;line-height:1}
+.chip button:hover{background:var(--cont);color:#fff}
+.urow{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:10px 0 4px;font-size:14px}
+.urow label{display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+#upbtn{background:var(--ink);color:#fff;border:0;border-radius:7px;padding:9px 20px;cursor:pointer;font-size:14px;font-weight:650}
+#upbtn:disabled{opacity:.45;cursor:default}
+#doclist{margin-top:12px}
+#doclist table{width:100%;border-collapse:collapse;font-size:13.5px}
+#doclist th{text-align:left;color:var(--mut);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--line)}
+#doclist td{padding:7px 8px;border-bottom:1px solid #eef1f5}
+.del{background:#fff;color:var(--cont);border:1px solid var(--cont);border-radius:6px;padding:3px 10px;cursor:pointer;font-size:12.5px;font-weight:600}
+.del:hover{background:var(--contbg)}
+#clearall{margin-top:8px}
 #hint{color:var(--mut);font-size:13px;margin-left:10px}
 #jobbar{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:-6px 0 18px;display:none}
 .jrow{display:flex;align-items:center;gap:12px}
@@ -70,7 +90,18 @@ footer{color:var(--mut);font-size:12.5px;text-align:center;padding:24px}
 <div id="docs"></div>
 </header>
 <div class="wrap">
-<div id="drop">Drop PDFs here or <input type="file" id="file" multiple accept=".pdf"> <button id="upbtn" onclick="upload()">Upload &amp; Process</button><span id="hint">large PDFs take minutes — progress shows below, safe to refresh mid-run</span></div>
+<div class="card" id="corpus">
+<h3>Corpus — documents &amp; upload</h3>
+<div id="dz">Drag &amp; drop PDFs here or <label class="btn">browse files<input type="file" id="file" multiple accept=".pdf" hidden></label></div>
+<div id="picked"></div>
+<div class="urow">
+<label title="New files are added alongside the existing documents"><input type="radio" name="mode" value="append" checked> Append to current corpus</label>
+<label title="Everything in the corpus is deleted first, then the new files are processed"><input type="radio" name="mode" value="replace"> Replace — clear everything first</label>
+<button id="upbtn" onclick="upload()">Upload &amp; Process</button>
+<span id="hint">large PDFs take minutes — progress shows below, safe to refresh mid-run</span>
+</div>
+<div id="doclist"></div>
+</div>
 <div id="jobbar">
   <div class="jrow"><b id="jtitle">Working…</b><span id="jtime"></span><button id="jcancel" onclick="cancelJob()">Cancel</button></div>
   <div class="jtrack"><div id="jfill"></div></div>
@@ -177,20 +208,70 @@ async function refreshDocs(){
     const d=await j('/api/documents');
     document.getElementById('docs').innerHTML=d.map(x=>`<span class="pill">📄 ${esc(x.doc)} · ${x.pages}p</span>`).join('');
     const q=await j('/api/questions');document.getElementById('qbadge').textContent=q.length?`(${q.length})`:'';
+    const dl=document.getElementById('doclist');
+    dl.innerHTML=d.length
+      ? `<table><tr><th>Document</th><th>Pages</th><th>Entity</th><th></th></tr>`+
+        d.map(x=>`<tr><td>📄 ${esc(x.doc)}</td><td>${x.pages}</td><td>${esc(x.entity||'—')}</td><td style="text-align:right"><button class="del" onclick="delDoc(decodeURIComponent('${encodeURIComponent(x.doc)}'))">Delete</button></td></tr>`).join('')+
+        `</table><button class="del" id="clearall" onclick="clearDocs()">Clear entire corpus</button>`
+      : `<div class="empty">corpus empty — add PDFs above</div>`;
   }catch(e){}
 }
+// ---- corpus upload: drag-drop + picked files + append/replace ----
+let picked=[];
+function fmtSize(b){return b>1048576?(b/1048576).toFixed(1)+' MB':Math.max(1,Math.round(b/1024))+' KB';}
+function addPicked(list){
+  for(const f of list){if(f.name.toLowerCase().endsWith('.pdf')&&!picked.some(p=>p.name===f.name&&p.size===f.size))picked.push(f);}
+  renderPicked();
+}
+function renderPicked(){
+  document.getElementById('picked').innerHTML=picked.map((f,i)=>`<span class="chip">${esc(f.name)} · ${fmtSize(f.size)} <button onclick="picked.splice(${i},1);renderPicked()" title="remove">✕</button></span>`).join('');
+  document.getElementById('upbtn').disabled=!picked.length;
+}
+document.getElementById('file').addEventListener('change',e=>{addPicked(e.target.files);e.target.value='';});
+const dz=document.getElementById('dz');
+['dragenter','dragover'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.add('over');}));
+['dragleave','drop'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.remove('over');}));
+dz.addEventListener('drop',e=>addPicked(e.dataTransfer.files));
+renderPicked();
+function upMode(){return (document.querySelector('input[name=mode]:checked')||{}).value||'append';}
 async function upload(){
-  const fs=document.getElementById('file').files;if(!fs.length)return alert('choose PDFs first');
-  const fd=new FormData();for(const f of fs)fd.append('files',f);
+  if(!picked.length)return alert('choose PDFs first (drop them above or browse)');
+  const rows=document.querySelectorAll('#doclist tr').length;
+  if(upMode()==='replace'&&!confirm(`Replace mode: delete ALL ${rows?rows-1:0} current document(s) and process only the ${picked.length} new file(s)?`))return;
   document.getElementById('upbtn').disabled=true;
   try{
+    if(upMode()==='replace'){
+      const c=await fetch('/api/documents',{method:'DELETE'});
+      if(c.status===409){alert('a job is already running — cancel it first.');return;}
+      if(!c.ok)throw new Error('clear failed: '+c.status);
+    }
+    const fd=new FormData();for(const f of picked)fd.append('files',f);
     const r=await fetch('/api/upload',{method:'POST',body:fd});
     const d=await r.json();
     if(r.status===409){alert(d.error+' — showing the running job below.');if(d.active)attachJob(d.active.id);return;}
     if(d.error||(!d.job_id&&!d.id)){alert('upload failed: '+(d.error||'unknown'));return;}
+    picked=[];renderPicked();
     attachJob(d.job_id||d.id);
   }catch(e){alert('upload failed: '+e.message);}
-  finally{document.getElementById('upbtn').disabled=false;}
+  finally{renderPicked();}
+}
+async function delDoc(name){
+  if(!confirm(`Delete "${name}" and all its facts, relations and snapshots?`))return;
+  const r=await fetch('/api/documents/'+encodeURIComponent(name),{method:'DELETE'});
+  const d=await r.json().catch(()=>({}));
+  if(r.status===409)return alert(d.error);
+  if(!r.ok)return alert('delete failed: '+(d.error||r.status));
+  alert(`deleted ${name}: ${d.facts} facts, ${d.relations} relations removed.`);
+  render();
+}
+async function clearDocs(){
+  const n=document.querySelectorAll('#doclist tr').length-1;
+  if(!confirm(`Delete ALL ${n} documents and everything derived from them?`))return;
+  const r=await fetch('/api/documents',{method:'DELETE'});
+  const d=await r.json().catch(()=>({}));
+  if(r.status===409)return alert(d.error);
+  if(!r.ok)return alert('clear failed: '+(d.error||r.status));
+  render();
 }
 const STAGE_LABEL={queued:'Queued',parse:'① Parsing PDFs',extract:'② Extracting facts',link:'③ Linking across documents',crops:'④ Rendering page snapshots',done:'Done'};
 function fmtClock(s){s=Math.max(0,Math.round(s||0));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}

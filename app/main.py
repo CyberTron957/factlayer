@@ -209,6 +209,31 @@ async def upload(files: list[UploadFile] = File(...)):
     return {"job_id": job["id"], "files": job["files"]}
 
 
+@app.delete("/api/documents/{doc}")
+def delete_document(doc: str):
+    """Delete one document and everything derived from it (facts, relations,
+    questions, crops, uploaded PDF). Refused while a job is running."""
+    if J.active_job():
+        return JSONResponse(
+            {"error": "a job is running — cancel it before deleting"},
+            status_code=409)
+    res = S.delete_document(doc)
+    if not res["docs"]:
+        return JSONResponse({"error": f"unknown document: {doc}"},
+                            status_code=404)
+    return res
+
+
+@app.delete("/api/documents")
+def clear_documents():
+    """Wipe the whole corpus. Refused while a job is running."""
+    if J.active_job():
+        return JSONResponse(
+            {"error": "a job is running — cancel it before clearing"},
+            status_code=409)
+    return S.clear_all()
+
+
 @app.get("/api/jobs")
 def jobs():
     return J.list_jobs()

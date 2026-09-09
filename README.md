@@ -7,6 +7,15 @@ superseded-by**. No hard-coded facts, filenames, schemas, or document rules —
 the same pipeline runs unmodified on Delhivery filings and on macroeconomy
 reports from different publishers.
 
+## Live demo
+
+**http://16.113.49.75:8137/** — the app running on a server, pre-loaded corpus
+included. Try it: drag in your own PDFs (progress bar + ETA, safe to refresh
+mid-run, cancel keeps partial results), switch **Append ↔ Replace** upload
+mode, delete individual documents or clear the corpus, then browse the
+★ 4 Cases tab for corroborated / contradiction / reconciled / failure examples
+with quote + page + snapshot evidence.
+
 ## Setup and Run Instructions
 
 ```bash
@@ -30,7 +39,9 @@ uvicorn app.main:app --port 8137        # open http://localhost:8137
 Useful endpoints: `POST /api/upload` (PDFs → returns a job id; processing runs
 in background with a progress bar, ETA, and cancel — see `GET /api/jobs`,
 `GET /api/jobs/<id>`, `POST /api/jobs/<id>/cancel`; refresh-safe, partial
-results are kept on cancel) · `GET /api/facts?q=` ·
+results are kept on cancel) · `DELETE /api/documents/<name>` (remove one
+document + its facts/relations/snapshots) · `DELETE /api/documents` (clear
+the whole corpus; both refused with 409 while a job runs) · `GET /api/facts?q=` ·
 `GET /api/relations` · `GET /api/timeline` · `GET /api/questions` (open
 inbox) · `GET /api/cases` (the four required cases) · `GET /api/export` (CSV).
 
