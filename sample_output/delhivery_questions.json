@@ -1,0 +1,3440 @@
+[
+ {
+  "id": 1,
+  "kind": "chart-sourced-provisional",
+  "detail": "Cr = (452 Cr) awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-004-0008"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 4,
+    "page_label": "5",
+    "quote": "(452 Cr) in FY23\n   - b PAT profitable in Q3 FY24; PAT loss reduced by Rs.",
+    "crop": "data/crops/03-delhi-p4.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 2,
+  "kind": "chart-sourced-provisional",
+  "detail": "Cr = (1,008 Cr) awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-004-0009"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 4,
+    "page_label": "5",
+    "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+    "crop": "data/crops/03-delhi-p4.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 3,
+  "kind": "chart-sourced-provisional",
+  "detail": "Cr FY Express Parcel = 18% awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-004-0010"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 4,
+    "page_label": "5",
+    "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+    "crop": "data/crops/03-delhi-p4.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 4,
+  "kind": "chart-sourced-provisional",
+  "detail": "Parcel Service EBITDA profitability robust growth = 30% awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-004-0011"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 4,
+    "page_label": "5",
+    "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+    "crop": "data/crops/03-delhi-p4.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 5,
+  "kind": "chart-sourced-provisional",
+  "detail": "share SCS Doubled service EBITDA profitability = 40% awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-004-0012"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 4,
+    "page_label": "5",
+    "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+    "crop": "data/crops/03-delhi-p4.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 6,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA profitability improvement Sharp YoY reduction = 31 days awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-004-0013"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 4,
+    "page_label": "5",
+    "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+    "crop": "data/crops/03-delhi-p4.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 7,
+  "kind": "chart-sourced-provisional",
+  "detail": "India's largest integrated logistics platform FY = ₹8,142 Cr awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-005-0014"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 5,
+    "page_label": "6",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+    "crop": "data/crops/03-delhi-p5.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 8,
+  "kind": "chart-sourced-provisional",
+  "detail": "logistics platform FY FY revenue services = 12.7% awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-005-0015"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 5,
+    "page_label": "6",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+    "crop": "data/crops/03-delhi-p5.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 9,
+  "kind": "chart-sourced-provisional",
+  "detail": "FY FY revenue services YoY Cr = ₹127Cr awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-005-0016"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 5,
+    "page_label": "6",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+    "crop": "data/crops/03-delhi-p5.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 10,
+  "kind": "chart-sourced-provisional",
+  "detail": "FY FY revenue services YoY = 1.6% awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-005-0017"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 5,
+    "page_label": "6",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+    "crop": "data/crops/03-delhi-p5.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 11,
+  "kind": "chart-sourced-provisional",
+  "detail": "services YoY EBITDA EBITDA margin FY = ₹(452) Cr awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-005-0018"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 5,
+    "page_label": "6",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+    "crop": "data/crops/03-delhi-p5.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 12,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA EBITDA margin FY = (6.3%) awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-005-0019"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 5,
+    "page_label": "6",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+    "crop": "data/crops/03-delhi-p5.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 13,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA EBITDA margin FY Cr = ₹76Cr awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-005-0020"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 5,
+    "page_label": "6",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+    "crop": "data/crops/03-delhi-p5.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 14,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA EBITDA margin FY = 0.9% awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-005-0021"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 5,
+    "page_label": "6",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+    "crop": "data/crops/03-delhi-p5.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 15,
+  "kind": "chart-sourced-provisional",
+  "detail": "India's largest integrated logistics platform FY = ₹2,076 Cr awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-006-0040"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## Q4 FY24\n\n### ₹2,076 Cr\nQ4 FY24 revenue from services\nYoY: 11.6% / QoQ: (5.4%) <sup>(2)</sup>\n\n### ₹46Cr / 2.2%\nEBITDA / EBITDA margin\nQ4 FY23: ₹13 Cr / 0.7%\nQ3 FY24: ₹109 Cr / 5.0%\n\n### ₹21 Cr / 1.0%\nAdj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 16,
+  "kind": "chart-sourced-provisional",
+  "detail": "platform FY FY revenue services YoY = 11.6% awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-006-0041"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## Q4 FY24\n\n### ₹2,076 Cr\nQ4 FY24 revenue from services\nYoY: 11.6% / QoQ: (5.4%) <sup>(2)</sup>\n\n### ₹46Cr / 2.2%\nEBITDA / EBITDA margin\nQ4 FY23: ₹13 Cr / 0.7%\nQ3 FY24: ₹109 Cr / 5.0%\n\n### ₹21 Cr / 1.0%\nAdj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 17,
+  "kind": "chart-sourced-provisional",
+  "detail": "FY FY revenue services YoY QoQ = (5.4%) awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-006-0042"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## Q4 FY24\n\n### ₹2,076 Cr\nQ4 FY24 revenue from services\nYoY: 11.6% / QoQ: (5.4%) <sup>(2)</sup>\n\n### ₹46Cr / 2.2%\nEBITDA / EBITDA margin\nQ4 FY23: ₹13 Cr / 0.7%\nQ3 FY24: ₹109 Cr / 5.0%\n\n### ₹21 Cr / 1.0%\nAdj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 18,
+  "kind": "chart-sourced-provisional",
+  "detail": "FY revenue services YoY QoQ Cr = ₹46Cr awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-006-0043"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## Q4 FY24\n\n### ₹2,076 Cr\nQ4 FY24 revenue from services\nYoY: 11.6% / QoQ: (5.4%) <sup>(2)</sup>\n\n### ₹46Cr / 2.2%\nEBITDA / EBITDA margin\nQ4 FY23: ₹13 Cr / 0.7%\nQ3 FY24: ₹109 Cr / 5.0%\n\n### ₹21 Cr / 1.0%\nAdj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 19,
+  "kind": "chart-sourced-provisional",
+  "detail": "Cr FY revenue services YoY QoQ = 2.2% awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-006-0044"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## Q4 FY24\n\n### ₹2,076 Cr\nQ4 FY24 revenue from services\nYoY: 11.6% / QoQ: (5.4%) <sup>(2)</sup>\n\n### ₹46Cr / 2.2%\nEBITDA / EBITDA margin\nQ4 FY23: ₹13 Cr / 0.7%\nQ3 FY24: ₹109 Cr / 5.0%\n\n### ₹21 Cr / 1.0%\nAdj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 20,
+  "kind": "chart-sourced-provisional",
+  "detail": "QoQ EBITDA EBITDA margin FY Cr = ₹13 Cr awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-006-0045"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## Q4 FY24\n\n### ₹2,076 Cr\nQ4 FY24 revenue from services\nYoY: 11.6% / QoQ: (5.4%) <sup>(2)</sup>\n\n### ₹46Cr / 2.2%\nEBITDA / EBITDA margin\nQ4 FY23: ₹13 Cr / 0.7%\nQ3 FY24: ₹109 Cr / 5.0%\n\n### ₹21 Cr / 1.0%\nAdj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 21,
+  "kind": "chart-sourced-provisional",
+  "detail": "QoQ EBITDA EBITDA margin FY = 0.7% awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-006-0046"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## Q4 FY24\n\n### ₹2,076 Cr\nQ4 FY24 revenue from services\nYoY: 11.6% / QoQ: (5.4%) <sup>(2)</sup>\n\n### ₹46Cr / 2.2%\nEBITDA / EBITDA margin\nQ4 FY23: ₹13 Cr / 0.7%\nQ3 FY24: ₹109 Cr / 5.0%\n\n### ₹21 Cr / 1.0%\nAdj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 22,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA EBITDA margin FY FY Cr = ₹109 Cr awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-006-0047"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## Q4 FY24\n\n### ₹2,076 Cr\nQ4 FY24 revenue from services\nYoY: 11.6% / QoQ: (5.4%) <sup>(2)</sup>\n\n### ₹46Cr / 2.2%\nEBITDA / EBITDA margin\nQ4 FY23: ₹13 Cr / 0.7%\nQ3 FY24: ₹109 Cr / 5.0%\n\n### ₹21 Cr / 1.0%\nAdj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 23,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA EBITDA margin FY FY = 5.0% awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-006-0048"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## Q4 FY24\n\n### ₹2,076 Cr\nQ4 FY24 revenue from services\nYoY: 11.6% / QoQ: (5.4%) <sup>(2)</sup>\n\n### ₹46Cr / 2.2%\nEBITDA / EBITDA margin\nQ4 FY23: ₹13 Cr / 0.7%\nQ3 FY24: ₹109 Cr / 5.0%\n\n### ₹21 Cr / 1.0%\nAdj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 24,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA EBITDA margin FY FY Cr = ₹21 Cr awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-006-0049"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## Q4 FY24\n\n### ₹2,076 Cr\nQ4 FY24 revenue from services\nYoY: 11.6% / QoQ: (5.4%) <sup>(2)</sup>\n\n### ₹46Cr / 2.2%\nEBITDA / EBITDA margin\nQ4 FY23: ₹13 Cr / 0.7%\nQ3 FY24: ₹109 Cr / 5.0%\n\n### ₹21 Cr / 1.0%\nAdj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 25,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA EBITDA margin FY FY = 1.0% awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-006-0050"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## Q4 FY24\n\n### ₹2,076 Cr\nQ4 FY24 revenue from services\nYoY: 11.6% / QoQ: (5.4%) <sup>(2)</sup>\n\n### ₹46Cr / 2.2%\nEBITDA / EBITDA margin\nQ4 FY23: ₹13 Cr / 0.7%\nQ3 FY24: ₹109 Cr / 5.0%\n\n### ₹21 Cr / 1.0%\nAdj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 26,
+  "kind": "ambiguous-period",
+  "detail": "Cr = ₹21 Cr has no detectable period.",
+  "fact_ids": [
+   "03-del-006-0066"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "EBITDA        | ₹21 Cr  | ₹6 Cr   | ₹92 Cr  |\n| Adj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 27,
+  "kind": "ambiguous-period",
+  "detail": "| ₹21 Cr | Cr = ₹6 Cr has no detectable period.",
+  "fact_ids": [
+   "03-del-006-0067"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "EBITDA        | ₹21 Cr  | ₹6 Cr   | ₹92 Cr  |\n| Adj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 28,
+  "kind": "ambiguous-period",
+  "detail": "| ₹21 Cr | ₹6 Cr | Cr = ₹92 Cr has no detectable period.",
+  "fact_ids": [
+   "03-del-006-0068"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 6,
+    "page_label": "7",
+    "quote": "EBITDA        | ₹21 Cr  | ₹6 Cr   | ₹92 Cr  |\n| Adj.",
+    "crop": "data/crops/03-delhi-p6.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 29,
+  "kind": "ambiguous-period",
+  "detail": "Balance sheet Total cash balance Cr = ₹ 5,444 Cr has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0337"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 30,
+  "kind": "ambiguous-period",
+  "detail": "Total equity = 9,177 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0338"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 31,
+  "kind": "ambiguous-period",
+  "detail": "Total equity = 9,145 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0339"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 32,
+  "kind": "ambiguous-period",
+  "detail": "liabilities Total liabilities = 2,036 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0340"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 33,
+  "kind": "ambiguous-period",
+  "detail": "Total liabilities = 2,308 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0341"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 34,
+  "kind": "ambiguous-period",
+  "detail": "Total equity liabilities = 11,213 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0342"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 35,
+  "kind": "ambiguous-period",
+  "detail": "Total equity liabilities = 11,453 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0343"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 36,
+  "kind": "ambiguous-period",
+  "detail": "Non current cash equivalents = 1,411 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0344"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 37,
+  "kind": "ambiguous-period",
+  "detail": "Incl CWIP Goodwill other intangible assets = 1,533 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0345"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 38,
+  "kind": "ambiguous-period",
+  "detail": "Goodwill other intangible assets = 1,433 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0346"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 39,
+  "kind": "ambiguous-period",
+  "detail": "Cash cash equivalents = 4,912 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0347"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 40,
+  "kind": "ambiguous-period",
+  "detail": "Cash cash equivalents = 4,033 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0348"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 41,
+  "kind": "ambiguous-period",
+  "detail": "Trade receivables = 1,524 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0349"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 42,
+  "kind": "ambiguous-period",
+  "detail": "Trade receivables = 1,430 has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0350"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 43,
+  "kind": "ambiguous-period",
+  "detail": "money deposits current deposits original maturity = ₹92 Cr has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0351"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 44,
+  "kind": "ambiguous-period",
+  "detail": "original maturity months excludes = ₹145 Cr has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0352"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 45,
+  "kind": "ambiguous-period",
+  "detail": "Mar deposits investments Unbilled receivables amounting = ₹581 cr has no detectable period.",
+  "fact_ids": [
+   "03-del-018-0353"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 18,
+    "page_label": "19",
+    "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+    "crop": "data/crops/03-delhi-p18.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 46,
+  "kind": "ambiguous-period",
+  "detail": "Cash cash equivalents = 5,508 has no detectable period.",
+  "fact_ids": [
+   "03-del-019-0354"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 19,
+    "page_label": "20",
+    "quote": "# Strong liquidity position\n\n| Debt to Equity<br/>₹ Cr              | Mar '23     | Mar '24     |\n| ------------------------------------ | ----------- | ----------- |\n| Term loan                            | 199         | 126         |\n| Working capital loan                 | -           | -           |\n| **Debt (excludes CCPS) (A)**         | **199**     | **126**     |\n| **Cash and cash equivalents(1) (B)** | **5,508**   | **5,444**   |\n| **Net debt (A-B)**                   | **(5,309)** | **",
+    "crop": "data/crops/03-delhi-p19.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 47,
+  "kind": "ambiguous-period",
+  "detail": "Cash cash equivalents = 5,444 has no detectable period.",
+  "fact_ids": [
+   "03-del-019-0355"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 19,
+    "page_label": "20",
+    "quote": "# Strong liquidity position\n\n| Debt to Equity<br/>₹ Cr              | Mar '23     | Mar '24     |\n| ------------------------------------ | ----------- | ----------- |\n| Term loan                            | 199         | 126         |\n| Working capital loan                 | -           | -           |\n| **Debt (excludes CCPS) (A)**         | **199**     | **126**     |\n| **Cash and cash equivalents(1) (B)** | **5,508**   | **5,444**   |\n| **Net debt (A-B)**                   | **(5,309)** | **",
+    "crop": "data/crops/03-delhi-p19.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 48,
+  "kind": "ambiguous-period",
+  "detail": "Net debt A-B = (5,309) has no detectable period.",
+  "fact_ids": [
+   "03-del-019-0356"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 19,
+    "page_label": "20",
+    "quote": "# Strong liquidity position\n\n| Debt to Equity<br/>₹ Cr              | Mar '23     | Mar '24     |\n| ------------------------------------ | ----------- | ----------- |\n| Term loan                            | 199         | 126         |\n| Working capital loan                 | -           | -           |\n| **Debt (excludes CCPS) (A)**         | **199**     | **126**     |\n| **Cash and cash equivalents(1) (B)** | **5,508**   | **5,444**   |\n| **Net debt (A-B)**                   | **(5,309)** | **",
+    "crop": "data/crops/03-delhi-p19.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 49,
+  "kind": "ambiguous-period",
+  "detail": "Net debt A-B = (5,318) has no detectable period.",
+  "fact_ids": [
+   "03-del-019-0357"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 19,
+    "page_label": "20",
+    "quote": "# Strong liquidity position\n\n| Debt to Equity<br/>₹ Cr              | Mar '23     | Mar '24     |\n| ------------------------------------ | ----------- | ----------- |\n| Term loan                            | 199         | 126         |\n| Working capital loan                 | -           | -           |\n| **Debt (excludes CCPS) (A)**         | **199**     | **126**     |\n| **Cash and cash equivalents(1) (B)** | **5,508**   | **5,444**   |\n| **Net debt (A-B)**                   | **(5,309)** | **",
+    "crop": "data/crops/03-delhi-p19.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 50,
+  "kind": "ambiguous-period",
+  "detail": "Networth = 9,177 has no detectable period.",
+  "fact_ids": [
+   "03-del-019-0358"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 19,
+    "page_label": "20",
+    "quote": "# Strong liquidity position\n\n| Debt to Equity<br/>₹ Cr              | Mar '23     | Mar '24     |\n| ------------------------------------ | ----------- | ----------- |\n| Term loan                            | 199         | 126         |\n| Working capital loan                 | -           | -           |\n| **Debt (excludes CCPS) (A)**         | **199**     | **126**     |\n| **Cash and cash equivalents(1) (B)** | **5,508**   | **5,444**   |\n| **Net debt (A-B)**                   | **(5,309)** | **",
+    "crop": "data/crops/03-delhi-p19.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 51,
+  "kind": "ambiguous-period",
+  "detail": "Networth = 9,145 has no detectable period.",
+  "fact_ids": [
+   "03-del-019-0359"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 19,
+    "page_label": "20",
+    "quote": "# Strong liquidity position\n\n| Debt to Equity<br/>₹ Cr              | Mar '23     | Mar '24     |\n| ------------------------------------ | ----------- | ----------- |\n| Term loan                            | 199         | 126         |\n| Working capital loan                 | -           | -           |\n| **Debt (excludes CCPS) (A)**         | **199**     | **126**     |\n| **Cash and cash equivalents(1) (B)** | **5,508**   | **5,444**   |\n| **Net debt (A-B)**                   | **(5,309)** | **",
+    "crop": "data/crops/03-delhi-p19.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 52,
+  "kind": "ambiguous-period",
+  "detail": "margin money deposits deposits original maturity = ₹145 Cr has no detectable period.",
+  "fact_ids": [
+   "03-del-019-0360"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 19,
+    "page_label": "20",
+    "quote": "# Strong liquidity position\n\n| Debt to Equity<br/>₹ Cr              | Mar '23     | Mar '24     |\n| ------------------------------------ | ----------- | ----------- |\n| Term loan                            | 199         | 126         |\n| Working capital loan                 | -           | -           |\n| **Debt (excludes CCPS) (A)**         | **199**     | **126**     |\n| **Cash and cash equivalents(1) (B)** | **5,508**   | **5,444**   |\n| **Net debt (A-B)**                   | **(5,309)** | **",
+    "crop": "data/crops/03-delhi-p19.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 53,
+  "kind": "ambiguous-period",
+  "detail": "years be unlocked three equal tranches = ₹1,000 has no detectable period.",
+  "fact_ids": [
+   "03-del-024-0466"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 24,
+    "page_label": "25",
+    "quote": "(4) Vesting period ranges from 3 to 4 years\n(5) To be unlocked in three equal tranches upon achieving share prices of ₹800, ₹1,000 and ₹1,200; and vest equally over 2 years thereafter\n\n24",
+    "crop": "data/crops/03-delhi-p24.png",
+    "modality": "text"
+   }
+  ]
+ },
+ {
+  "id": 54,
+  "kind": "ambiguous-period",
+  "detail": "be unlocked three equal tranches upon = ₹1,200 has no detectable period.",
+  "fact_ids": [
+   "03-del-024-0467"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 24,
+    "page_label": "25",
+    "quote": "(4) Vesting period ranges from 3 to 4 years\n(5) To be unlocked in three equal tranches upon achieving share prices of ₹800, ₹1,000 and ₹1,200; and vest equally over 2 years thereafter\n\n24",
+    "crop": "data/crops/03-delhi-p24.png",
+    "modality": "text"
+   }
+  ]
+ },
+ {
+  "id": 55,
+  "kind": "chart-sourced-provisional",
+  "detail": "year impactful growth Mn = 740 Mn awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0009"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 56,
+  "kind": "chart-sourced-provisional",
+  "detail": "year impactful growth Mn Express parcels = 1,429 awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0010"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 57,
+  "kind": "chart-sourced-provisional",
+  "detail": "growth Mn Express parcels shipped tonnes = ₹81,415 Mn awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0011"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 58,
+  "kind": "chart-sourced-provisional",
+  "detail": "tonnes PTL freight delivered Revenue services = ₹1,266 Mn awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0012"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 59,
+  "kind": "chart-sourced-provisional",
+  "detail": "freight delivered Revenue services EBITDA Mn = ₹758 Mn awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0013"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 60,
+  "kind": "chart-sourced-provisional",
+  "detail": "Mn Revenue services EBITDA Adjusted EBITDA = 1.6% awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0014"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 61,
+  "kind": "chart-sourced-provisional",
+  "detail": "freight delivered Revenue services EBITDA = 758 Mn awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0015"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 62,
+  "kind": "chart-sourced-provisional",
+  "detail": "service lines coupled inherent operating leverage = 1.6% awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0016"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "Our steady growth across service lines, coupled with inherent operating leverage in our business, led to a **1.6% EBITDA margin** in FY24.\n\n### First quarterly PAT profitability\nWe delivered our **first PAT profitable quarter** in FY24.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 63,
+  "kind": "chart-sourced-provisional",
+  "detail": "support growth PTL other businesses led = ₹117 million awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0017"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "Robust revenue growth, led by festive seasonal sales in Q3 and firm support from growth in PTL and other businesses, led to our first PAT profitability of ₹117 million, or 0.5% of total income quarterly.\n\n## Part-truckload tonnage\nOur part truckload **tonnage grew by 30%**, and revenues from part truckload grew by 31% in FY24, the **fastest among the listed competitors**.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 64,
+  "kind": "chart-sourced-provisional",
+  "detail": "PTL other businesses led our first = 0.5% awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0018"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "Robust revenue growth, led by festive seasonal sales in Q3 and firm support from growth in PTL and other businesses, led to our first PAT profitability of ₹117 million, or 0.5% of total income quarterly.\n\n## Part-truckload tonnage\nOur part truckload **tonnage grew by 30%**, and revenues from part truckload grew by 31% in FY24, the **fastest among the listed competitors**.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 65,
+  "kind": "chart-sourced-provisional",
+  "detail": "total income quarterly Part-truckload tonnage Our = 30% awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0019"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "Robust revenue growth, led by festive seasonal sales in Q3 and firm support from growth in PTL and other businesses, led to our first PAT profitability of ₹117 million, or 0.5% of total income quarterly.\n\n## Part-truckload tonnage\nOur part truckload **tonnage grew by 30%**, and revenues from part truckload grew by 31% in FY24, the **fastest among the listed competitors**.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 66,
+  "kind": "chart-sourced-provisional",
+  "detail": "part truckload tonnage grew revenues part = 31% awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0020"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "Robust revenue growth, led by festive seasonal sales in Q3 and firm support from growth in PTL and other businesses, led to our first PAT profitability of ₹117 million, or 0.5% of total income quarterly.\n\n## Part-truckload tonnage\nOur part truckload **tonnage grew by 30%**, and revenues from part truckload grew by 31% in FY24, the **fastest among the listed competitors**.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 67,
+  "kind": "chart-sourced-provisional",
+  "detail": "Net working capital days We significantly = 31 days awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0021"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "The part truckload business showed consistent sequential growth over the past five quarters, driven by higher-than-ever service levels, new business development, and jettisoning of customers that did not meet the target return on capital.\n\n## Net working capital days\nWe significantly reduced our **net working capital days to 31 days** as of March 2024 from 38 days a year ago due to a **sharp reduction in our receivable days to 66** as of March 2024 from 77 days a year ago.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 68,
+  "kind": "ambiguous-period",
+  "detail": "Net working capital days We significantly = 31 days has no detectable period.",
+  "fact_ids": [
+   "02-del-003-0021"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "The part truckload business showed consistent sequential growth over the past five quarters, driven by higher-than-ever service levels, new business development, and jettisoning of customers that did not meet the target return on capital.\n\n## Net working capital days\nWe significantly reduced our **net working capital days to 31 days** as of March 2024 from 38 days a year ago due to a **sharp reduction in our receivable days to 66** as of March 2024 from 77 days a year ago.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 69,
+  "kind": "chart-sourced-provisional",
+  "detail": "significantly reduced our net working capital = 38 days awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0022"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "The part truckload business showed consistent sequential growth over the past five quarters, driven by higher-than-ever service levels, new business development, and jettisoning of customers that did not meet the target return on capital.\n\n## Net working capital days\nWe significantly reduced our **net working capital days to 31 days** as of March 2024 from 38 days a year ago due to a **sharp reduction in our receivable days to 66** as of March 2024 from 77 days a year ago.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 70,
+  "kind": "ambiguous-period",
+  "detail": "significantly reduced our net working capital = 38 days has no detectable period.",
+  "fact_ids": [
+   "02-del-003-0022"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "The part truckload business showed consistent sequential growth over the past five quarters, driven by higher-than-ever service levels, new business development, and jettisoning of customers that did not meet the target return on capital.\n\n## Net working capital days\nWe significantly reduced our **net working capital days to 31 days** as of March 2024 from 38 days a year ago due to a **sharp reduction in our receivable days to 66** as of March 2024 from 77 days a year ago.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 71,
+  "kind": "chart-sourced-provisional",
+  "detail": "year ago due sharp reduction our = 77 days awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0023"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "The part truckload business showed consistent sequential growth over the past five quarters, driven by higher-than-ever service levels, new business development, and jettisoning of customers that did not meet the target return on capital.\n\n## Net working capital days\nWe significantly reduced our **net working capital days to 31 days** as of March 2024 from 38 days a year ago due to a **sharp reduction in our receivable days to 66** as of March 2024 from 77 days a year ago.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 72,
+  "kind": "ambiguous-period",
+  "detail": "year ago due sharp reduction our = 77 days has no detectable period.",
+  "fact_ids": [
+   "02-del-003-0023"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "The part truckload business showed consistent sequential growth over the past five quarters, driven by higher-than-ever service levels, new business development, and jettisoning of customers that did not meet the target return on capital.\n\n## Net working capital days\nWe significantly reduced our **net working capital days to 31 days** as of March 2024 from 38 days a year ago due to a **sharp reduction in our receivable days to 66** as of March 2024 from 77 days a year ago.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 73,
+  "kind": "chart-sourced-provisional",
+  "detail": "share load carried through fuel-efficient ft = 70% awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0024"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "This reduction was a result of a number of initiatives taken in FY24 such as tighter credit controls, automating billing processes and faster dispute resolution.\n\n## Tractor trailers\nThe **share of load** carried through **fuel-efficient 46-ft tractor trailers crossed 70%** by the end of FY24.\n\n## Platform application launch\nDuring the year, we launched two more applications, **TransportOne** and **LocateOne**, on our SaaS platform, OS1.\n\n## Investment in Falcon\nWe **increased our ownership in F",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 74,
+  "kind": "chart-sourced-provisional",
+  "detail": "India's leading automation equipment manufacturer logistics = 39% awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0025"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "This reduction was a result of a number of initiatives taken in FY24 such as tighter credit controls, automating billing processes and faster dispute resolution.\n\n## Tractor trailers\nThe **share of load** carried through **fuel-efficient 46-ft tractor trailers crossed 70%** by the end of FY24.\n\n## Platform application launch\nDuring the year, we launched two more applications, **TransportOne** and **LocateOne**, on our SaaS platform, OS1.\n\n## Investment in Falcon\nWe **increased our ownership in F",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 75,
+  "kind": "chart-sourced-provisional",
+  "detail": "terminal built mn = 1.2mn awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0026"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "The terminal is built on 1.2mn square feet of land and has a built up area of 750K square feet.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 76,
+  "kind": "ambiguous-period",
+  "detail": "terminal built mn = 1.2mn has no detectable period.",
+  "fact_ids": [
+   "02-del-003-0026"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "The terminal is built on 1.2mn square feet of land and has a built up area of 750K square feet.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 77,
+  "kind": "chart-sourced-provisional",
+  "detail": "has docking stations designed over = 1,600 awaits table/text corroboration.",
+  "fact_ids": [
+   "02-del-003-0027"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "It has 196 docking stations and is designed for over 1,600 vehicles to transit through it daily, which implies one vehicle every 54 seconds.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 78,
+  "kind": "ambiguous-period",
+  "detail": "has docking stations designed over = 1,600 has no detectable period.",
+  "fact_ids": [
+   "02-del-003-0027"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 3,
+    "page_label": "4",
+    "quote": "It has 196 docking stations and is designed for over 1,600 vehicles to transit through it daily, which implies one vehicle every 54 seconds.",
+    "crop": "data/crops/02-delhi-p3.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 79,
+  "kind": "ambiguous-period",
+  "detail": "Ghose Non-Executive Independent Director DIN = 10243913) has no detectable period.",
+  "fact_ids": [
+   "02-del-023-0064"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 23,
+    "page_label": "24",
+    "quote": "Anindya Ghose as a Non-Executive Independent Director (DIN: 10243913) for a term of five years with effect from August 04, 2023; and\n- Re-appointment of Mr.",
+    "crop": "data/crops/02-delhi-p23.png",
+    "modality": "text"
+   }
+  ]
+ },
+ {
+  "id": 80,
+  "kind": "ambiguous-period",
+  "detail": "Total outstanding dues micro small enterprises = 24.41 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0097"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Trade payables\n\n| Particulars                                                                | Current<br/>March 31, 2024 | Current<br/>March 31, 2023 |\n| -------------------------------------------------------------------------- | -------------------------- | -------------------------- |\n| **Trade payable**                                                          |                            |                            |\n| Total outstanding dues of micro and small enterprises                  ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 81,
+  "kind": "ambiguous-period",
+  "detail": "dues micro small enterprises = 31.24 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0098"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Trade payables\n\n| Particulars                                                                | Current<br/>March 31, 2024 | Current<br/>March 31, 2023 |\n| -------------------------------------------------------------------------- | -------------------------- | -------------------------- |\n| **Trade payable**                                                          |                            |                            |\n| Total outstanding dues of micro and small enterprises                  ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 82,
+  "kind": "ambiguous-period",
+  "detail": "Trade payables non-interest bearing normally settled = 60 days has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0099"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Trade payables\n\n| Particulars                                                                | Current<br/>March 31, 2024 | Current<br/>March 31, 2023 |\n| -------------------------------------------------------------------------- | -------------------------- | -------------------------- |\n| **Trade payable**                                                          |                            |                            |\n| Total outstanding dues of micro and small enterprises                  ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 83,
+  "kind": "ambiguous-period",
+  "detail": "MSME = 12.20 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0106"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Particulars                 | Unbilled     | Not due    | Outstanding for following periods from due date of payment<br/>Less than 1 year | Outstanding for following periods from due date of payment<br/>1-2 year | Outstanding for following periods from due date of payment<br/>2-3 years | Outstanding for following periods from due date of payment<br/>More than 3 years | Total        |\n| --------------------------- | ------------ | ---------- | -----------------------------------------------------",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 84,
+  "kind": "ambiguous-period",
+  "detail": "| - | = 16.14 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0107"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Particulars                 | Unbilled     | Not due    | Outstanding for following periods from due date of payment<br/>Less than 1 year | Outstanding for following periods from due date of payment<br/>1-2 year | Outstanding for following periods from due date of payment<br/>2-3 years | Outstanding for following periods from due date of payment<br/>More than 3 years | Total        |\n| --------------------------- | ------------ | ---------- | -----------------------------------------------------",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 85,
+  "kind": "ambiguous-period",
+  "detail": "ii Others = 909.06 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0108"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Particulars                 | Unbilled     | Not due    | Outstanding for following periods from due date of payment<br/>Less than 1 year | Outstanding for following periods from due date of payment<br/>1-2 year | Outstanding for following periods from due date of payment<br/>2-3 years | Outstanding for following periods from due date of payment<br/>More than 3 years | Total        |\n| --------------------------- | ------------ | ---------- | -----------------------------------------------------",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 86,
+  "kind": "ambiguous-period",
+  "detail": "| 1,026.78 | = 255.67 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0109"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Particulars                 | Unbilled     | Not due    | Outstanding for following periods from due date of payment<br/>Less than 1 year | Outstanding for following periods from due date of payment<br/>1-2 year | Outstanding for following periods from due date of payment<br/>2-3 years | Outstanding for following periods from due date of payment<br/>More than 3 years | Total        |\n| --------------------------- | ------------ | ---------- | -----------------------------------------------------",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 87,
+  "kind": "ambiguous-period",
+  "detail": "| 255.67 | = 174.74 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0110"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Particulars                 | Unbilled     | Not due    | Outstanding for following periods from due date of payment<br/>Less than 1 year | Outstanding for following periods from due date of payment<br/>1-2 year | Outstanding for following periods from due date of payment<br/>2-3 years | Outstanding for following periods from due date of payment<br/>More than 3 years | Total        |\n| --------------------------- | ------------ | ---------- | -----------------------------------------------------",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 88,
+  "kind": "ambiguous-period",
+  "detail": "| 174.74 | = 98.28 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0111"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Particulars                 | Unbilled     | Not due    | Outstanding for following periods from due date of payment<br/>Less than 1 year | Outstanding for following periods from due date of payment<br/>1-2 year | Outstanding for following periods from due date of payment<br/>2-3 years | Outstanding for following periods from due date of payment<br/>More than 3 years | Total        |\n| --------------------------- | ------------ | ---------- | -----------------------------------------------------",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 89,
+  "kind": "ambiguous-period",
+  "detail": "iii Disputed dues MSME = 10.73 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0112"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Particulars                 | Unbilled     | Not due    | Outstanding for following periods from due date of payment<br/>Less than 1 year | Outstanding for following periods from due date of payment<br/>1-2 year | Outstanding for following periods from due date of payment<br/>2-3 years | Outstanding for following periods from due date of payment<br/>More than 3 years | Total        |\n| --------------------------- | ------------ | ---------- | -----------------------------------------------------",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 90,
+  "kind": "ambiguous-period",
+  "detail": "| - | = 15.10 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0113"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Particulars                 | Unbilled     | Not due    | Outstanding for following periods from due date of payment<br/>Less than 1 year | Outstanding for following periods from due date of payment<br/>1-2 year | Outstanding for following periods from due date of payment<br/>2-3 years | Outstanding for following periods from due date of payment<br/>More than 3 years | Total        |\n| --------------------------- | ------------ | ---------- | -----------------------------------------------------",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 91,
+  "kind": "ambiguous-period",
+  "detail": "Total = 925.63 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0114"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Particulars                 | Unbilled     | Not due    | Outstanding for following periods from due date of payment<br/>Less than 1 year | Outstanding for following periods from due date of payment<br/>1-2 year | Outstanding for following periods from due date of payment<br/>2-3 years | Outstanding for following periods from due date of payment<br/>More than 3 years | Total        |\n| --------------------------- | ------------ | ---------- | -----------------------------------------------------",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 92,
+  "kind": "ambiguous-period",
+  "detail": "Revenue services = 81,415.38 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0115"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 93,
+  "kind": "ambiguous-period",
+  "detail": "Revenue services = 72,236.47 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0116"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 94,
+  "kind": "ambiguous-period",
+  "detail": "Revenue sale traded goods = 16.54 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0117"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 95,
+  "kind": "ambiguous-period",
+  "detail": "| 16.54 |\n| | 81,415.38 | = 72,253.01 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0118"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 96,
+  "kind": "ambiguous-period",
+  "detail": "Revenue Express Parcel services = 50,765.87 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0119"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 97,
+  "kind": "ambiguous-period",
+  "detail": "Revenue Express Parcel services = 45,522.22 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0120"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 98,
+  "kind": "ambiguous-period",
+  "detail": "services Revenue Part Truck Load services = 15,174.05 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0121"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 99,
+  "kind": "ambiguous-period",
+  "detail": "Revenue Part Truck Load services = 11,565.38 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0122"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 100,
+  "kind": "ambiguous-period",
+  "detail": "services Others = 101.90 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0123"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 101,
+  "kind": "ambiguous-period",
+  "detail": "Others = 11.55 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0124"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 102,
+  "kind": "ambiguous-period",
+  "detail": "Services rendered over time = 81,415.38 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0125"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 103,
+  "kind": "ambiguous-period",
+  "detail": "Services rendered over time = 72,236.47 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0126"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 104,
+  "kind": "ambiguous-period",
+  "detail": "Goods transferred point time = 16.54 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0127"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 105,
+  "kind": "ambiguous-period",
+  "detail": "Revenue per contracted price = 82,201.05 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0128"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 106,
+  "kind": "ambiguous-period",
+  "detail": "Revenue per contracted price = 73,111.32 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0129"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 107,
+  "kind": "ambiguous-period",
+  "detail": "contracted price Less Credit note = (785.67) has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0130"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 108,
+  "kind": "ambiguous-period",
+  "detail": "Less Credit note = (858.31) has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0131"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 109,
+  "kind": "ambiguous-period",
+  "detail": "(785.67) | (858.31) |\n| | 81,415.38 | = 72,253.01 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0132"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 110,
+  "kind": "ambiguous-period",
+  "detail": "Trade Receivables Unconditional right consideration = 14,296.90 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0133"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 111,
+  "kind": "ambiguous-period",
+  "detail": "Trade Receivables Unconditional right consideration = 15,238.07 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0134"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 112,
+  "kind": "ambiguous-period",
+  "detail": "Contract assets refer note below = 615.83 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0135"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 113,
+  "kind": "ambiguous-period",
+  "detail": "Contract assets refer note below = 528.97 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0136"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 114,
+  "kind": "ambiguous-period",
+  "detail": "Contract liabilities refer note below = 397.51 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0137"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 115,
+  "kind": "ambiguous-period",
+  "detail": "Contract liabilities refer note below = 408.28 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0138"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 116,
+  "kind": "ambiguous-period",
+  "detail": "this includes unbilled receivable million = ₹ 6,095.47 million has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0139"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 117,
+  "kind": "ambiguous-period",
+  "detail": "this includes unbilled receivable = ₹ 5,801.70 million has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0140"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 118,
+  "kind": "ambiguous-period",
+  "detail": "this includes unbilled receivable = 6,095.47 million has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0141"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 119,
+  "kind": "ambiguous-period",
+  "detail": "Opening balance = 528.97 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0142"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "The contract assets are transferred to the receivables when the rights become unconditional.\n\n## Contract Assets:\n\n| Particulars                                 | March 31, 2024 | March 31, 2023 |\n| ------------------------------------------- | -------------- | -------------- |\n| **Opening balance**                         | **528.97**     | **769.92**     |\n| Add: contract asset created during the year | 615.83         | 528.97         |\n| Less: contract asset billed during the year | (528.97) ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 120,
+  "kind": "ambiguous-period",
+  "detail": "Opening balance = 769.92 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0143"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "The contract assets are transferred to the receivables when the rights become unconditional.\n\n## Contract Assets:\n\n| Particulars                                 | March 31, 2024 | March 31, 2023 |\n| ------------------------------------------- | -------------- | -------------- |\n| **Opening balance**                         | **528.97**     | **769.92**     |\n| Add: contract asset created during the year | 615.83         | 528.97         |\n| Less: contract asset billed during the year | (528.97) ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 121,
+  "kind": "ambiguous-period",
+  "detail": "Add contract asset created during year = 615.83 has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0144"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "The contract assets are transferred to the receivables when the rights become unconditional.\n\n## Contract Assets:\n\n| Particulars                                 | March 31, 2024 | March 31, 2023 |\n| ------------------------------------------- | -------------- | -------------- |\n| **Opening balance**                         | **528.97**     | **769.92**     |\n| Add: contract asset created during the year | 615.83         | 528.97         |\n| Less: contract asset billed during the year | (528.97) ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 122,
+  "kind": "ambiguous-period",
+  "detail": "year Less contract asset billed during = (528.97) has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0145"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "The contract assets are transferred to the receivables when the rights become unconditional.\n\n## Contract Assets:\n\n| Particulars                                 | March 31, 2024 | March 31, 2023 |\n| ------------------------------------------- | -------------- | -------------- |\n| **Opening balance**                         | **528.97**     | **769.92**     |\n| Add: contract asset created during the year | 615.83         | 528.97         |\n| Less: contract asset billed during the year | (528.97) ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 123,
+  "kind": "ambiguous-period",
+  "detail": "Less contract asset billed during year = (769.92) has no detectable period.",
+  "fact_ids": [
+   "02-del-084-0146"
+  ],
+  "evidence": [
+   {
+    "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+    "page_index": 84,
+    "page_label": "85",
+    "quote": "The contract assets are transferred to the receivables when the rights become unconditional.\n\n## Contract Assets:\n\n| Particulars                                 | March 31, 2024 | March 31, 2023 |\n| ------------------------------------------- | -------------- | -------------- |\n| **Opening balance**                         | **528.97**     | **769.92**     |\n| Add: contract asset created during the year | 615.83         | 528.97         |\n| Less: contract asset billed during the year | (528.97) ",
+    "crop": "data/crops/02-delhi-p84.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 124,
+  "kind": "chart-sourced-provisional",
+  "detail": "Fiscal million = ₹2,689.26 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0005"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "million in Fiscal 2019 to ₹2,689.26 million in Fiscal 2020 and to ₹4,157.43 million in Fiscal 2021, and from ₹2,974.92 million for the nine months period ended December 31, 2020 to ₹8,911.39 million for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 125,
+  "kind": "chart-sourced-provisional",
+  "detail": "Fiscal = ₹4,157.43 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0006"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "million in Fiscal 2019 to ₹2,689.26 million in Fiscal 2020 and to ₹4,157.43 million in Fiscal 2021, and from ₹2,974.92 million for the nine months period ended December 31, 2020 to ₹8,911.39 million for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 126,
+  "kind": "chart-sourced-provisional",
+  "detail": "to ₹2,689.26 million in Fiscal 2020 and to ₹4,157.43 million = ₹2,974.92 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0007"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "million in Fiscal 2019 to ₹2,689.26 million in Fiscal 2020 and to ₹4,157.43 million in Fiscal 2021, and from ₹2,974.92 million for the nine months period ended December 31, 2020 to ₹8,911.39 million for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 127,
+  "kind": "chart-sourced-provisional",
+  "detail": "2021, and from ₹2,974.92 million for the nine months period  = ₹8,911.39 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0008"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "million in Fiscal 2019 to ₹2,689.26 million in Fiscal 2020 and to ₹4,157.43 million in Fiscal 2021, and from ₹2,974.92 million for the nine months period ended December 31, 2020 to ₹8,911.39 million for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 128,
+  "kind": "chart-sourced-provisional",
+  "detail": "Fiscal = 2,689.26 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0009"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "million in Fiscal 2019 to ₹2,689.26 million in Fiscal 2020 and to ₹4,157.43 million in Fiscal 2021, and from ₹2,974.92 million for the nine months period ended December 31, 2020 to ₹8,911.39 million for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 129,
+  "kind": "chart-sourced-provisional",
+  "detail": "total income increased million = ₹16,948.74 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0010"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our total income increased from ₹16,948.74 million in Fiscal 2019 to ₹29,886.29 million in Fiscal 2020 and to ₹38,382.91 million in Fiscal 2021, and from ₹28,065.29 million for the nine months period ended December 31, 2020 to ₹49,114.06 million for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 130,
+  "kind": "chart-sourced-provisional",
+  "detail": "total income increased = ₹29,886.29 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0011"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our total income increased from ₹16,948.74 million in Fiscal 2019 to ₹29,886.29 million in Fiscal 2020 and to ₹38,382.91 million in Fiscal 2021, and from ₹28,065.29 million for the nine months period ended December 31, 2020 to ₹49,114.06 million for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 131,
+  "kind": "chart-sourced-provisional",
+  "detail": "from ₹16,948.74 million in Fiscal 2019 to ₹29,886.29 million = ₹38,382.91 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0012"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our total income increased from ₹16,948.74 million in Fiscal 2019 to ₹29,886.29 million in Fiscal 2020 and to ₹38,382.91 million in Fiscal 2021, and from ₹28,065.29 million for the nine months period ended December 31, 2020 to ₹49,114.06 million for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 132,
+  "kind": "chart-sourced-provisional",
+  "detail": "to ₹29,886.29 million in Fiscal 2020 and to ₹38,382.91 milli = ₹28,065.29 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0013"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our total income increased from ₹16,948.74 million in Fiscal 2019 to ₹29,886.29 million in Fiscal 2020 and to ₹38,382.91 million in Fiscal 2021, and from ₹28,065.29 million for the nine months period ended December 31, 2020 to ₹49,114.06 million for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 133,
+  "kind": "chart-sourced-provisional",
+  "detail": "2021, and from ₹28,065.29 million for the nine months period = ₹49,114.06 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0014"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our total income increased from ₹16,948.74 million in Fiscal 2019 to ₹29,886.29 million in Fiscal 2020 and to ₹38,382.91 million in Fiscal 2021, and from ₹28,065.29 million for the nine months period ended December 31, 2020 to ₹49,114.06 million for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 134,
+  "kind": "chart-sourced-provisional",
+  "detail": "total income increased = 16,948.74 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0015"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our total income increased from ₹16,948.74 million in Fiscal 2019 to ₹29,886.29 million in Fiscal 2020 and to ₹38,382.91 million in Fiscal 2021, and from ₹28,065.29 million for the nine months period ended December 31, 2020 to ₹49,114.06 million for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 135,
+  "kind": "chart-sourced-provisional",
+  "detail": "value through profit or loss percentage = 89.53% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0016"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our fair value loss on financial liabilities at fair value through profit or loss as a percentage of revenue from contract with customers was 89.53%, nil, 0.25%, nil, and 6.23% in Fiscal 2019, Fiscal 2020, Fiscal 2021 and the nine months periods ended December 31, 2020 and December 31, 2021, respectively.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 136,
+  "kind": "chart-sourced-provisional",
+  "detail": "profit or loss percentage revenue contract = 0.25% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0017"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our fair value loss on financial liabilities at fair value through profit or loss as a percentage of revenue from contract with customers was 89.53%, nil, 0.25%, nil, and 6.23% in Fiscal 2019, Fiscal 2020, Fiscal 2021 and the nine months periods ended December 31, 2020 and December 31, 2021, respectively.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 137,
+  "kind": "chart-sourced-provisional",
+  "detail": "percentage revenue contract customers nil nil = 6.23% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0018"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our fair value loss on financial liabilities at fair value through profit or loss as a percentage of revenue from contract with customers was 89.53%, nil, 0.25%, nil, and 6.23% in Fiscal 2019, Fiscal 2020, Fiscal 2021 and the nine months periods ended December 31, 2020 and December 31, 2021, respectively.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 138,
+  "kind": "chart-sourced-provisional",
+  "detail": "profit loss after tax margin improved = (105.22)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0019"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our profit/(loss) after tax margin improved from (105.22)% in Fiscal 2019 to (9.00)% in Fiscal 2020 and decreased slightly to (10.83)% in Fiscal 2021, and further declined from (10.60)% in the nine months period ended December 31, 2020 to (18.14)% in the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 139,
+  "kind": "chart-sourced-provisional",
+  "detail": "profit loss after tax margin improved = (9.00)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0020"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our profit/(loss) after tax margin improved from (105.22)% in Fiscal 2019 to (9.00)% in Fiscal 2020 and decreased slightly to (10.83)% in Fiscal 2021, and further declined from (10.60)% in the nine months period ended December 31, 2020 to (18.14)% in the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 140,
+  "kind": "chart-sourced-provisional",
+  "detail": "Fiscal Fiscal decreased slightly = (10.83)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0021"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our profit/(loss) after tax margin improved from (105.22)% in Fiscal 2019 to (9.00)% in Fiscal 2020 and decreased slightly to (10.83)% in Fiscal 2021, and further declined from (10.60)% in the nine months period ended December 31, 2020 to (18.14)% in the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 141,
+  "kind": "chart-sourced-provisional",
+  "detail": "Fiscal decreased slightly Fiscal further declined = (10.60)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0022"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our profit/(loss) after tax margin improved from (105.22)% in Fiscal 2019 to (9.00)% in Fiscal 2020 and decreased slightly to (10.83)% in Fiscal 2021, and further declined from (10.60)% in the nine months period ended December 31, 2020 to (18.14)% in the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 142,
+  "kind": "chart-sourced-provisional",
+  "detail": "further declined nine months period ended = (18.14)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0023"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our profit/(loss) after tax margin improved from (105.22)% in Fiscal 2019 to (9.00)% in Fiscal 2020 and decreased slightly to (10.83)% in Fiscal 2021, and further declined from (10.60)% in the nine months period ended December 31, 2020 to (18.14)% in the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 143,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA margin improved = (8.29)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0024"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our EBITDA margin improved from (8.29)% in Fiscal 2019 to (6.19)% in Fiscal 2020 and to (2.75)% in Fiscal 2021, while declining from (3.37)% in the nine months period ended December 31, 2020 to (4.82)% in the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 144,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA margin improved Fiscal = (6.19)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0025"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our EBITDA margin improved from (8.29)% in Fiscal 2019 to (6.19)% in Fiscal 2020 and to (2.75)% in Fiscal 2021, while declining from (3.37)% in the nine months period ended December 31, 2020 to (4.82)% in the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 145,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA margin improved Fiscal Fiscal = (2.75)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0026"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our EBITDA margin improved from (8.29)% in Fiscal 2019 to (6.19)% in Fiscal 2020 and to (2.75)% in Fiscal 2021, while declining from (3.37)% in the nine months period ended December 31, 2020 to (4.82)% in the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 146,
+  "kind": "chart-sourced-provisional",
+  "detail": "Fiscal Fiscal Fiscal while declining = (3.37)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0027"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our EBITDA margin improved from (8.29)% in Fiscal 2019 to (6.19)% in Fiscal 2020 and to (2.75)% in Fiscal 2021, while declining from (3.37)% in the nine months period ended December 31, 2020 to (4.82)% in the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 147,
+  "kind": "chart-sourced-provisional",
+  "detail": "while declining nine months period ended = (4.82)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0028"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our EBITDA margin improved from (8.29)% in Fiscal 2019 to (6.19)% in Fiscal 2020 and to (2.75)% in Fiscal 2021, while declining from (3.37)% in the nine months period ended December 31, 2020 to (4.82)% in the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 148,
+  "kind": "chart-sourced-provisional",
+  "detail": "Adjusted EBITDA margin has improved = (11.35%) awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0029"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our Adjusted EBITDA margin has improved from (11.35%) in Fiscal 2019 to (9.11%) in Fiscal 2020 and to (6.95%) in Fiscal 2021 and from (8.06%) for the nine months period ended December 31, 2020 to (0.72%) for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 149,
+  "kind": "chart-sourced-provisional",
+  "detail": "Adjusted EBITDA margin has improved Fiscal = (9.11%) awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0030"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our Adjusted EBITDA margin has improved from (11.35%) in Fiscal 2019 to (9.11%) in Fiscal 2020 and to (6.95%) in Fiscal 2021 and from (8.06%) for the nine months period ended December 31, 2020 to (0.72%) for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 150,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA margin has improved Fiscal Fiscal = (6.95%) awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0031"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our Adjusted EBITDA margin has improved from (11.35%) in Fiscal 2019 to (9.11%) in Fiscal 2020 and to (6.95%) in Fiscal 2021 and from (8.06%) for the nine months period ended December 31, 2020 to (0.72%) for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 151,
+  "kind": "chart-sourced-provisional",
+  "detail": "Fiscal Fiscal Fiscal = (8.06%) awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0032"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our Adjusted EBITDA margin has improved from (11.35%) in Fiscal 2019 to (9.11%) in Fiscal 2020 and to (6.95%) in Fiscal 2021 and from (8.06%) for the nine months period ended December 31, 2020 to (0.72%) for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 152,
+  "kind": "chart-sourced-provisional",
+  "detail": "Fiscal nine months period ended December = (0.72%) awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0033"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our Adjusted EBITDA margin has improved from (11.35%) in Fiscal 2019 to (9.11%) in Fiscal 2020 and to (6.95%) in Fiscal 2021 and from (8.06%) for the nine months period ended December 31, 2020 to (0.72%) for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 153,
+  "kind": "chart-sourced-provisional",
+  "detail": "customer Retention Rate top customers revenue = 93.00% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0034"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Further, our customer Retention Rate for top 100 customers (by revenue in the respective Fiscal) was 93.00%, 100.00%, and 92.00% for Fiscal 2019, Fiscal 2020 and Fiscal 2021, respectively.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 154,
+  "kind": "chart-sourced-provisional",
+  "detail": "Retention Rate top customers revenue respective = 100.00% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0035"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Further, our customer Retention Rate for top 100 customers (by revenue in the respective Fiscal) was 93.00%, 100.00%, and 92.00% for Fiscal 2019, Fiscal 2020 and Fiscal 2021, respectively.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 155,
+  "kind": "chart-sourced-provisional",
+  "detail": "Rate top customers revenue respective Fiscal = 92.00% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0036"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Further, our customer Retention Rate for top 100 customers (by revenue in the respective Fiscal) was 93.00%, 100.00%, and 92.00% for Fiscal 2019, Fiscal 2020 and Fiscal 2021, respectively.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 156,
+  "kind": "chart-sourced-provisional",
+  "detail": "example our revenue contracts customers has = ₹16,538.97 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0037"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 157,
+  "kind": "chart-sourced-provisional",
+  "detail": "contracts customers has improved = ₹36,465.27 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0038"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 158,
+  "kind": "chart-sourced-provisional",
+  "detail": "improved = ₹48,105.30 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0039"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 159,
+  "kind": "chart-sourced-provisional",
+  "detail": "expenses percentage our revenue contracts customers = 11.87% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0040"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 160,
+  "kind": "chart-sourced-provisional",
+  "detail": "our revenue contracts customers decreased Fiscal = 9.90% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0041"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 161,
+  "kind": "chart-sourced-provisional",
+  "detail": "contracts customers decreased Fiscal Fiscal = 8.78% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0042"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 162,
+  "kind": "chart-sourced-provisional",
+  "detail": "expense percentage our revenue contracts customers = 20.84% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0043"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 163,
+  "kind": "chart-sourced-provisional",
+  "detail": "our revenue contracts customers decreased Fiscal = 16.75% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0044"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 164,
+  "kind": "chart-sourced-provisional",
+  "detail": "customers decreased Fiscal Fiscal but increased = 20.22% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0045"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 165,
+  "kind": "chart-sourced-provisional",
+  "detail": "value loss financial liabilities fair value = 89.53% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0046"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 166,
+  "kind": "chart-sourced-provisional",
+  "detail": "liabilities fair value through profit or = 0.25% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0047"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 167,
+  "kind": "chart-sourced-provisional",
+  "detail": "or loss decreased Fiscal Fiscal increased = 6.23% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0048"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 168,
+  "kind": "chart-sourced-provisional",
+  "detail": "from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million = 48,105.30 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0049"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "For example, our revenue from contracts with customers has improved from ₹16,538.97 million in Fiscal 2019 to ₹36,465.27 million in Fiscal 2021 and ₹48,105.30 million for nine months period ended December 31, 2021, while during the same period, (i) our other expenses as a percentage of our revenue from contracts with customers decreased from 11.87% in Fiscal 2019 to 9.90% in Fiscal 2021 and 8.78% for the nine months period ended December 31, 2021, (ii) our employee benefit expense as a percentag",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 169,
+  "kind": "chart-sourced-provisional",
+  "detail": "our revenue contracts customers our restated = 107.82% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0050"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "As a result, as a percentage of our revenue from contracts with customers, our restated losses improved from 107.82% in Fiscal 2019 to 11.40% in Fiscal 2021, then increased to 18.52% for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 170,
+  "kind": "chart-sourced-provisional",
+  "detail": "contracts customers our restated losses improved = 11.40% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0051"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "As a result, as a percentage of our revenue from contracts with customers, our restated losses improved from 107.82% in Fiscal 2019 to 11.40% in Fiscal 2021, then increased to 18.52% for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 171,
+  "kind": "chart-sourced-provisional",
+  "detail": "losses improved Fiscal Fiscal then increased = 18.52% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0052"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "As a result, as a percentage of our revenue from contracts with customers, our restated losses improved from 107.82% in Fiscal 2019 to 11.40% in Fiscal 2021, then increased to 18.52% for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 172,
+  "kind": "chart-sourced-provisional",
+  "detail": "to ₹29,886.29 million in Fiscal 2020 and to ₹38,382.91 milli = ₹49,114.06 million awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0053"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our total income increased from ₹16,948.74 million in Fiscal 2019 to ₹29,886.29 million in Fiscal 2020 and to ₹38,382.91 million in Fiscal 2021, and to ₹49,114.06 million for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 173,
+  "kind": "chart-sourced-provisional",
+  "detail": "December respectively Our profit loss after = (105.22)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0054"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our fair value loss on financial liabilities at fair value through profit or loss as a percentage of revenue from contract with customers was 89.53%, nil, 0.25%, nil, and 6.23% in Fiscal 2019, Fiscal 2020, Fiscal 2021 and the nine months period ended December 31, 2020 and December 31, 2021, respectively.Our profit/(loss) after tax margin improved from (105.22)% in Fiscal 2019 to (9.00)% in Fiscal 2020 and decreased slightly to (10.83)% in Fiscal 2021 and to (18.14)% in the nine months period end",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 174,
+  "kind": "chart-sourced-provisional",
+  "detail": "respectively Our profit loss after tax = (9.00)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0055"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our fair value loss on financial liabilities at fair value through profit or loss as a percentage of revenue from contract with customers was 89.53%, nil, 0.25%, nil, and 6.23% in Fiscal 2019, Fiscal 2020, Fiscal 2021 and the nine months period ended December 31, 2020 and December 31, 2021, respectively.Our profit/(loss) after tax margin improved from (105.22)% in Fiscal 2019 to (9.00)% in Fiscal 2020 and decreased slightly to (10.83)% in Fiscal 2021 and to (18.14)% in the nine months period end",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 175,
+  "kind": "chart-sourced-provisional",
+  "detail": "Fiscal decreased slightly Fiscal = (18.14)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0056"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our fair value loss on financial liabilities at fair value through profit or loss as a percentage of revenue from contract with customers was 89.53%, nil, 0.25%, nil, and 6.23% in Fiscal 2019, Fiscal 2020, Fiscal 2021 and the nine months period ended December 31, 2020 and December 31, 2021, respectively.Our profit/(loss) after tax margin improved from (105.22)% in Fiscal 2019 to (9.00)% in Fiscal 2020 and decreased slightly to (10.83)% in Fiscal 2021 and to (18.14)% in the nine months period end",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 176,
+  "kind": "chart-sourced-provisional",
+  "detail": "Fiscal Fiscal Fiscal while declining = (4.82)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0057"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our EBITDA margin improved from (8.29)% in Fiscal 2019 to (6.19)% in Fiscal 2020 and to (2.75)% in Fiscal 2021, while declining to (4.82)% in the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 177,
+  "kind": "chart-sourced-provisional",
+  "detail": "Adjusted EBITDA margin improved = (11.35)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0058"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our Adjusted EBITDA margin improved from (11.35)% in Fiscal 2019 to (6.95)% in Fiscal 2021 and (0.72)% for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 178,
+  "kind": "chart-sourced-provisional",
+  "detail": "Adjusted EBITDA margin improved Fiscal = (6.95)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0059"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our Adjusted EBITDA margin improved from (11.35)% in Fiscal 2019 to (6.95)% in Fiscal 2021 and (0.72)% for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 179,
+  "kind": "chart-sourced-provisional",
+  "detail": "EBITDA margin improved Fiscal Fiscal = (0.72)% awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0060"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "Our Adjusted EBITDA margin improved from (11.35)% in Fiscal 2019 to (6.95)% in Fiscal 2021 and (0.72)% for the nine months period ended December 31, 2021.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 180,
+  "kind": "chart-sourced-provisional",
+  "detail": "granted = 7,032,500, awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0063"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "We granted 7,032,500, 5,212,400, 11,742,700 and 22,220,370 ESOPs to our employees during Fiscal 2019, Fiscal 2020, Fiscal 2021 and the nine months period ended December 31, 2021, and 805,879 options thereafter until the date of this Prospectus.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 181,
+  "kind": "chart-sourced-provisional",
+  "detail": "granted = 5,212,400, awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0064"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "We granted 7,032,500, 5,212,400, 11,742,700 and 22,220,370 ESOPs to our employees during Fiscal 2019, Fiscal 2020, Fiscal 2021 and the nine months period ended December 31, 2021, and 805,879 options thereafter until the date of this Prospectus.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 182,
+  "kind": "chart-sourced-provisional",
+  "detail": "granted = 11,742,700 awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0065"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "We granted 7,032,500, 5,212,400, 11,742,700 and 22,220,370 ESOPs to our employees during Fiscal 2019, Fiscal 2020, Fiscal 2021 and the nine months period ended December 31, 2021, and 805,879 options thereafter until the date of this Prospectus.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 183,
+  "kind": "chart-sourced-provisional",
+  "detail": "granted = 22,220,370 awaits table/text corroboration.",
+  "fact_ids": [
+   "01-del-055-0066"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 55,
+    "page_label": "226",
+    "quote": "We granted 7,032,500, 5,212,400, 11,742,700 and 22,220,370 ESOPs to our employees during Fiscal 2019, Fiscal 2020, Fiscal 2021 and the nine months period ended December 31, 2021, and 805,879 options thereafter until the date of this Prospectus.",
+    "crop": "data/crops/01-delhi-p55.png",
+    "modality": "chart"
+   }
+  ]
+ },
+ {
+  "id": 184,
+  "kind": "ambiguous-period",
+  "detail": "operating system cyber security hardware software = ₹943.61 million has no detectable period.",
+  "fact_ids": [
+   "01-del-057-0069"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 57,
+    "page_label": "228",
+    "quote": "Intelligence, proprietary logistics operating system, cyber security, hardware, software, cloud infrastructure were ₹943.61 million, ₹1,377.34 million, ₹1,701.66 million, ₹1,288.17 million and ₹2,418.03 million, respectively.\n\n## **Our network design and engineering**\n\nOur network operates as a dense, dynamic mesh, making it efficient, fast and agile in responding to changes in volumes, shipment profiles and environmental conditions.",
+    "crop": "data/crops/01-delhi-p57.png",
+    "modality": "text"
+   }
+  ]
+ },
+ {
+  "id": 185,
+  "kind": "ambiguous-period",
+  "detail": "system cyber security hardware software cloud = ₹1,377.34 million has no detectable period.",
+  "fact_ids": [
+   "01-del-057-0070"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 57,
+    "page_label": "228",
+    "quote": "Intelligence, proprietary logistics operating system, cyber security, hardware, software, cloud infrastructure were ₹943.61 million, ₹1,377.34 million, ₹1,701.66 million, ₹1,288.17 million and ₹2,418.03 million, respectively.\n\n## **Our network design and engineering**\n\nOur network operates as a dense, dynamic mesh, making it efficient, fast and agile in responding to changes in volumes, shipment profiles and environmental conditions.",
+    "crop": "data/crops/01-delhi-p57.png",
+    "modality": "text"
+   }
+  ]
+ },
+ {
+  "id": 186,
+  "kind": "ambiguous-period",
+  "detail": "hardware software cloud infrastructure = ₹1,701.66 million has no detectable period.",
+  "fact_ids": [
+   "01-del-057-0071"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 57,
+    "page_label": "228",
+    "quote": "Intelligence, proprietary logistics operating system, cyber security, hardware, software, cloud infrastructure were ₹943.61 million, ₹1,377.34 million, ₹1,701.66 million, ₹1,288.17 million and ₹2,418.03 million, respectively.\n\n## **Our network design and engineering**\n\nOur network operates as a dense, dynamic mesh, making it efficient, fast and agile in responding to changes in volumes, shipment profiles and environmental conditions.",
+    "crop": "data/crops/01-delhi-p57.png",
+    "modality": "text"
+   }
+  ]
+ },
+ {
+  "id": 187,
+  "kind": "ambiguous-period",
+  "detail": "cloud infrastructure = ₹1,288.17 million has no detectable period.",
+  "fact_ids": [
+   "01-del-057-0072"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 57,
+    "page_label": "228",
+    "quote": "Intelligence, proprietary logistics operating system, cyber security, hardware, software, cloud infrastructure were ₹943.61 million, ₹1,377.34 million, ₹1,701.66 million, ₹1,288.17 million and ₹2,418.03 million, respectively.\n\n## **Our network design and engineering**\n\nOur network operates as a dense, dynamic mesh, making it efficient, fast and agile in responding to changes in volumes, shipment profiles and environmental conditions.",
+    "crop": "data/crops/01-delhi-p57.png",
+    "modality": "text"
+   }
+  ]
+ },
+ {
+  "id": 188,
+  "kind": "ambiguous-period",
+  "detail": "were ₹943.61 million, ₹1,377.34 million, ₹1,701.66 million,  = ₹2,418.03 million has no detectable period.",
+  "fact_ids": [
+   "01-del-057-0073"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 57,
+    "page_label": "228",
+    "quote": "Intelligence, proprietary logistics operating system, cyber security, hardware, software, cloud infrastructure were ₹943.61 million, ₹1,377.34 million, ₹1,701.66 million, ₹1,288.17 million and ₹2,418.03 million, respectively.\n\n## **Our network design and engineering**\n\nOur network operates as a dense, dynamic mesh, making it efficient, fast and agile in responding to changes in volumes, shipment profiles and environmental conditions.",
+    "crop": "data/crops/01-delhi-p57.png",
+    "modality": "text"
+   }
+  ]
+ },
+ {
+  "id": 189,
+  "kind": "ambiguous-period",
+  "detail": "Designation Non-Executive Independent Director Address = 1432 has no detectable period.",
+  "fact_ids": [
+   "01-del-086-0091"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 86,
+    "page_label": "261",
+    "quote": "Name, Designation, Address, Occupation, Date of Birth, Term Period of Directorship and DIN                                                                                                                                                                                                                                                 | Age (years) | Other Directorships                                                                                          |\n| ----------------------------------------",
+    "crop": "data/crops/01-delhi-p86.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 190,
+  "kind": "ambiguous-period",
+  "detail": "Non-Executive Independent Director Address Great Heron = 95409 has no detectable period.",
+  "fact_ids": [
+   "01-del-086-0092"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 86,
+    "page_label": "261",
+    "quote": "Name, Designation, Address, Occupation, Date of Birth, Term Period of Directorship and DIN                                                                                                                                                                                                                                                 | Age (years) | Other Directorships                                                                                          |\n| ----------------------------------------",
+    "crop": "data/crops/01-delhi-p86.png",
+    "modality": "table"
+   }
+  ]
+ },
+ {
+  "id": 191,
+  "kind": "ambiguous-period",
+  "detail": "Independent Director Address Great Heron Dr = 4360 has no detectable period.",
+  "fact_ids": [
+   "01-del-086-0093"
+  ],
+  "evidence": [
+   {
+    "doc": "01-delhivery-prospectus-2022-excerpt.pdf",
+    "page_index": 86,
+    "page_label": "261",
+    "quote": "Name, Designation, Address, Occupation, Date of Birth, Term Period of Directorship and DIN                                                                                                                                                                                                                                                 | Age (years) | Other Directorships                                                                                          |\n| ----------------------------------------",
+    "crop": "data/crops/01-delhi-p86.png",
+    "modality": "table"
+   }
+  ]
+ }
+]

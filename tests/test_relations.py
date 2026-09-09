@@ -78,3 +78,10 @@ def test_paren_negative_normalization():
     from app.normalize import parse_number
     v, flags = parse_number("(404)")
     assert v == -404.0 and "paren-negative" in flags
+
+
+def test_usd_not_inr():
+    from app.normalize import canonical_unit, same_dimension
+    assert canonical_unit("bn", "$ 282.8 billion trade deficit") == "usd-bn"
+    assert canonical_unit("Cr", "₹8,142 Cr revenue") == "inr-cr"
+    assert not same_dimension("usd-bn", "inr-cr")

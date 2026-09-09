@@ -24,7 +24,9 @@ def _topic_anchor(attr: str) -> str:
     """Attribute stripped of period/unit/generic tokens — the linkable topic."""
     s = PERIOD_UNIT_TOKENS.sub(" ", attr.lower())
     toks = [t for t in re.findall(r"[a-z]{3,}", s)
-            if t not in {"the", "and", "for", "from", "with", "was", "are"}]
+            if t not in {"the", "and", "for", "from", "with", "was", "are",
+                         "that", "this", "these", "those", "which", "such",
+                         "than", "then", "also", "into", "over", "about"}]
     return " ".join(toks)
 
 
@@ -46,9 +48,19 @@ def same_topic(a: Fact, b: Fact) -> bool:
     if not shared and attr_score < 92:
         return False
     sa, sb = a.subject.lower().strip(), b.subject.lower().strip()
-    if sa in FALLBACK_SUBJECTS and sb in FALLBACK_SUBJECTS:
-        if not shared:
-            return False  # unknown subjects: topic tokens must overlap
+    unknown = (sa in FALLBACK_SUBJECTS or sb in FALLBACK_SUBJECTS or not sa or not sb)
+    if unknown and a.fact_type == "semantic" and b.fact_type == "semantic":
+        # bare claims without subjects: demand strong topic overlap
+        if len(shared) < 2 and set(ta.split()) != set(tb.split()):
+            return False
+    elif unknown:
+        if sa in FALLBACK_SUBJECTS and sb in FALLBACK_SUBJECTS:
+            if not shared:
+                return False  # unknown subjects: topic tokens must overlap
+        else:
+            # one side subjectless: demand identical topic anchors (strict)
+            if set(ta.split()) != set(tb.split()) or not ta:
+                return False
     elif fuzz.token_set_ratio(sa, sb) < 60:
         return False
     if a.fact_type == "numeric" and b.fact_type == "numeric":
@@ -60,6 +72,16 @@ def same_topic(a: Fact, b: Fact) -> bool:
 
 
 def heuristic_link(a: Fact, b: Fact, tol: float) -> dict:
+    if (a.fact_type == "numeric") != (b.fact_type == "numeric"):
+        # a number and a prose claim corroborate only if the prose cites the number
+        num, prose = (a, b) if a.fact_type == "numeric" else (b, a)
+        digits = re.sub(r"\D", "", num.value_raw)
+        if digits and digits in re.sub(r"\D", "", prose.value_raw + prose.evidence.quote):
+            return {"relation": "corroborates", "axis": None,
+                    "explanation": (f"Prose claim cites the figure: '{prose.attribute}' "
+                                    f"mentions {num.value_raw} ({_ctx(num)})."),
+                    "confidence": 0.6}
+        return {}  # topic overlap alone is not corroboration — skip
     if a.fact_type != "numeric" or b.fact_type != "numeric":
         return {"relation": "corroborates", "axis": None,
                 "explanation": f"Both state '{a.attribute}' similarly ('{a.value_raw}' vs '{b.value_raw}').",

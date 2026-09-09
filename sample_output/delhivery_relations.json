@@ -1,0 +1,3467 @@
+[
+ {
+  "id": 656,
+  "relation": "corroborates",
+  "axis": null,
+  "fact_a": "03-del-005-0017",
+  "fact_b": "02-del-003-0014",
+  "explanation": "Same period, scope and value: 'FY FY revenue services YoY' is 1.6% (FY2024, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.85,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0017",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY",
+    "value_raw": "1.6%",
+    "value_norm": 1.6,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-003-0014",
+    "subject": "Delhivery Limited",
+    "attribute": "Mn Revenue services EBITDA Adjusted EBITDA",
+    "value_raw": "1.6%",
+    "value_norm": 1.6,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 727,
+  "relation": "corroborates",
+  "axis": null,
+  "fact_a": "03-del-005-0037",
+  "fact_b": "02-del-003-0019",
+  "explanation": "Same period, scope and value: 'FY Mn PTL freight tonnage FY' is 29.8% (FY2024, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 30% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.85,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0037",
+    "subject": "Delhivery Limited",
+    "attribute": "FY Mn PTL freight tonnage FY",
+    "value_raw": "29.8%",
+    "value_norm": 29.8,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin | ₹76Cr / 0.9%  | -     |\n| Express parcel shipments in FY24 | 740 Mn        | 11.5% |\n| PTL freight tonnage in FY24      | 1.4 Mn Tons   | 29.8% |\n\n\n# 2.8 Bn+\nExpress parcel shipments since inception\n\n# 4.8 Mn+ Tons<sup>(3)</sup>\nPTL freight tonnage since inception\n\n<sup>(1)</sup> As per RedSeer report basis FY21 revenue\n<sup>(2)</sup> Growth rate of revenue from services (excluding revenue from traded goods)\n<sup>(3)</sup> Includes Spoton's full year tonnage for FY22\n\n5",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-003-0019",
+    "subject": "Delhivery Limited",
+    "attribute": "total income quarterly Part-truckload tonnage Our",
+    "value_raw": "30%",
+    "value_norm": 30.0,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "Robust revenue growth, led by festive seasonal sales in Q3 and firm support from growth in PTL and other businesses, led to our first PAT profitability of ₹117 million, or 0.5% of total income quarterly.\n\n## Part-truckload tonnage\nOur part truckload **tonnage grew by 30%**, and revenues from part truckload grew by 31% in FY24, the **fastest among the listed competitors**.",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 717,
+  "relation": "corroborates",
+  "axis": "time",
+  "fact_a": "03-del-005-0031",
+  "fact_b": "02-del-003-0014",
+  "explanation": "Same figure expressed with different context: 'services EBITDA EBITDA margin' is 1.6% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.75,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0031",
+    "subject": "Delhivery Limited",
+    "attribute": "services EBITDA EBITDA margin",
+    "value_raw": "1.6%",
+    "value_norm": 1.6,
+    "unit_norm": "%",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-003-0014",
+    "subject": "Delhivery Limited",
+    "attribute": "Mn Revenue services EBITDA Adjusted EBITDA",
+    "value_raw": "1.6%",
+    "value_norm": 1.6,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 728,
+  "relation": "corroborates",
+  "axis": "time",
+  "fact_a": "03-del-005-0039",
+  "fact_b": "02-del-001-0002",
+  "explanation": "Same figure expressed with different context: 'Mn Tons Bn Express parcel shipments' is 4.8 Mn (FY2024, mn-shipments [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 4.8Mn (Q4-FY2024, mn-shipments [02-delhivery-annual-report-fy24-excerpt.pdf p.2])",
+  "confidence": 0.75,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0039",
+    "subject": "Delhivery Limited",
+    "attribute": "Mn Tons Bn Express parcel shipments",
+    "value_raw": "4.8 Mn",
+    "value_norm": 4800000.0,
+    "unit_norm": "mn-shipments",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin | ₹76Cr / 0.9%  | -     |\n| Express parcel shipments in FY24 | 740 Mn        | 11.5% |\n| PTL freight tonnage in FY24      | 1.4 Mn Tons   | 29.8% |\n\n\n# 2.8 Bn+\nExpress parcel shipments since inception\n\n# 4.8 Mn+ Tons<sup>(3)</sup>\nPTL freight tonnage since inception\n\n<sup>(1)</sup> As per RedSeer report basis FY21 revenue\n<sup>(2)</sup> Growth rate of revenue from services (excluding revenue from traded goods)\n<sup>(3)</sup> Includes Spoton's full year tonnage for FY22\n\n5",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-001-0002",
+    "subject": "Delhivery Limited",
+    "attribute": "Numbers Bn Express parcel shipments delivered",
+    "value_raw": "4.8Mn",
+    "value_norm": 4800000.0,
+    "unit_norm": "mn-shipments",
+    "period": "Q4-FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 1,
+     "page_label": "2",
+     "quote": "# Delivery In Numbers\n\n| >2.8Bn(1)<br/>Express parcel shipments delivered since inception | >4.8Mn tonnes(1,2)<br/>Part-truckload freight delivered since inception | 15,065(3)<br/>Daily average fleet size              | 753(1)<br/>Count of 46-ft tractors | 98,135(1,5)<br/>Workforce strength      |                                    |\n| ---------------------------------------------------------------- | ----------------------------------------------------------------------- | ---------------------",
+     "crop": "data/crops/02-delhi-p1.png",
+     "modality": "table"
+    },
+    "flags": []
+   }
+  ]
+ },
+ {
+  "id": 919,
+  "relation": "corroborates",
+  "axis": "time",
+  "fact_a": "03-del-008-0123",
+  "fact_b": "02-del-005-0055",
+  "explanation": "Same figure expressed with different context: 'PTL freight tonnage Tons Year Value' is 1,579 (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.9]) vs 1,579 (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.75,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-008-0123",
+    "subject": "Delhivery Limited",
+    "attribute": "PTL freight tonnage Tons Year Value",
+    "value_raw": "1,579",
+    "value_norm": 15790000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 8,
+     "page_label": "9",
+     "quote": "# **FY24 performance**\n\n## Revenue from services<sup>(1,2)</sup> (₹ Cr)\n\n| Category       | FY22  | FY23  | FY24  |\n| -------------- | ----- | ----- | ----- |\n| Express Parcel | 59%   | 63%   | 62%   |\n| PTL            | 24%   | 16%   | 19%   |\n| TL             | 4%    | 6%    | 7%    |\n| SCS            | 8%    | 11%   | 10%   |\n| Cross Border   | -     | -     | -     |\n| Total          | 7,054 | 7,224 | 8,142 |\n\n\nYoY: ~~13%~~\n\n## Express Parcel revenue (₹ Cr)\n\n| Year | Value |\n| ---- | ----- |",
+     "crop": "data/crops/03-delhi-p8.png",
+     "modality": "table"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-005-0055",
+    "subject": "Delhivery Limited",
+    "attribute": "Year Tonnage FY FY FY",
+    "value_raw": "1,579",
+    "value_norm": 15790000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": []
+   }
+  ]
+ },
+ {
+  "id": 1130,
+  "relation": "corroborates",
+  "axis": "units",
+  "fact_a": "03-del-018-0353",
+  "fact_b": "02-del-084-0140",
+  "explanation": "Same figure expressed with different context: 'Mar deposits investments Unbilled receivables amounting' is ₹581 cr (inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.19]) vs ₹ 5,801.70 million (inr-mn [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.75,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-018-0353",
+    "subject": "Delhivery Limited",
+    "attribute": "Mar deposits investments Unbilled receivables amounting",
+    "value_raw": "₹581 cr",
+    "value_norm": 5810000000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 18,
+     "page_label": "19",
+     "quote": "# Balance sheet\n**Total cash balance: ₹ 5,444 Cr**\n\n| Equity and Liabilities (₹ Cr)    | Mar' 23    | Mar '24    |\n| -------------------------------- | ---------- | ---------- |\n| **Total equity**                 | **9,177**  | **9,145**  |\n| **Non – current liabilities**    |            |            |\n| Borrowings                       | 114        | 40         |\n| Lease liabilities                | 534        | 844        |\n| Provisions                       | 51         | 65         |\n| Defer",
+     "crop": "data/crops/03-delhi-p18.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0140",
+    "subject": "Delhivery Limited",
+    "attribute": "this includes unbilled receivable",
+    "value_raw": "₹ 5,801.70 million",
+    "value_norm": 5801700000.0,
+    "unit_norm": "inr-mn",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 637,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-004-0011",
+  "fact_b": "02-del-003-0014",
+  "explanation": "Figures differ but so does context: 'Parcel Service EBITDA profitability robust growth' is 30% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0011",
+    "subject": "Delhivery Limited",
+    "attribute": "Parcel Service EBITDA profitability robust growth",
+    "value_raw": "30%",
+    "value_norm": 30.0,
+    "unit_norm": "%",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-003-0014",
+    "subject": "Delhivery Limited",
+    "attribute": "Mn Revenue services EBITDA Adjusted EBITDA",
+    "value_raw": "1.6%",
+    "value_norm": 1.6,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 638,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-004-0011",
+  "fact_b": "02-del-003-0016",
+  "explanation": "Figures differ but so does context: 'Parcel Service EBITDA profitability robust growth' is 30% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0011",
+    "subject": "Delhivery Limited",
+    "attribute": "Parcel Service EBITDA profitability robust growth",
+    "value_raw": "30%",
+    "value_norm": 30.0,
+    "unit_norm": "%",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-003-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "service lines coupled inherent operating leverage",
+    "value_raw": "1.6%",
+    "value_norm": 1.6,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "Our steady growth across service lines, coupled with inherent operating leverage in our business, led to a **1.6% EBITDA margin** in FY24.\n\n### First quarterly PAT profitability\nWe delivered our **first PAT profitable quarter** in FY24.",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 639,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-004-0012",
+  "fact_b": "02-del-003-0014",
+  "explanation": "Figures differ but so does context: 'share SCS Doubled service EBITDA profitability' is 40% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0012",
+    "subject": "Delhivery Limited",
+    "attribute": "share SCS Doubled service EBITDA profitability",
+    "value_raw": "40%",
+    "value_norm": 40.0,
+    "unit_norm": "%",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-003-0014",
+    "subject": "Delhivery Limited",
+    "attribute": "Mn Revenue services EBITDA Adjusted EBITDA",
+    "value_raw": "1.6%",
+    "value_norm": 1.6,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 640,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-004-0012",
+  "fact_b": "02-del-003-0016",
+  "explanation": "Figures differ but so does context: 'share SCS Doubled service EBITDA profitability' is 40% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0012",
+    "subject": "Delhivery Limited",
+    "attribute": "share SCS Doubled service EBITDA profitability",
+    "value_raw": "40%",
+    "value_norm": 40.0,
+    "unit_norm": "%",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-003-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "service lines coupled inherent operating leverage",
+    "value_raw": "1.6%",
+    "value_norm": 1.6,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "Our steady growth across service lines, coupled with inherent operating leverage in our business, led to a **1.6% EBITDA margin** in FY24.\n\n### First quarterly PAT profitability\nWe delivered our **first PAT profitable quarter** in FY24.",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 641,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-004-0012",
+  "fact_b": "02-del-003-0024",
+  "explanation": "Figures differ but so does context: 'share SCS Doubled service EBITDA profitability' is 40% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 70% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0012",
+    "subject": "Delhivery Limited",
+    "attribute": "share SCS Doubled service EBITDA profitability",
+    "value_raw": "40%",
+    "value_norm": 40.0,
+    "unit_norm": "%",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-003-0024",
+    "subject": "Delhivery Limited",
+    "attribute": "share load carried through fuel-efficient ft",
+    "value_raw": "70%",
+    "value_norm": 70.0,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "This reduction was a result of a number of initiatives taken in FY24 such as tighter credit controls, automating billing processes and faster dispute resolution.\n\n## Tractor trailers\nThe **share of load** carried through **fuel-efficient 46-ft tractor trailers crossed 70%** by the end of FY24.\n\n## Platform application launch\nDuring the year, we launched two more applications, **TransportOne** and **LocateOne**, on our SaaS platform, OS1.\n\n## Investment in Falcon\nWe **increased our ownership in F",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 642,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-004-0013",
+  "fact_b": "02-del-003-0023",
+  "explanation": "Figures differ but so does context: 'EBITDA profitability improvement Sharp YoY reduction' is 31 days (FY2023, days [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 77 days (days [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0013",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA profitability improvement Sharp YoY reduction",
+    "value_raw": "31 days",
+    "value_norm": 31.0,
+    "unit_norm": "days",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-003-0023",
+    "subject": "Delhivery Limited",
+    "attribute": "year ago due sharp reduction our",
+    "value_raw": "77 days",
+    "value_norm": 77.0,
+    "unit_norm": "days",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.55,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "The part truckload business showed consistent sequential growth over the past five quarters, driven by higher-than-ever service levels, new business development, and jettisoning of customers that did not meet the target return on capital.\n\n## Net working capital days\nWe significantly reduced our **net working capital days to 31 days** as of March 2024 from 38 days a year ago due to a **sharp reduction in our receivable days to 66** as of March 2024 from 77 days a year ago.",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced",
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 643,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0014",
+  "fact_b": "02-del-001-0008",
+  "explanation": "Figures differ but so does context: 'India's largest integrated logistics platform FY' is ₹8,142 Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 4,445 (Q4-FY2024, inr [02-delhivery-annual-report-fy24-excerpt.pdf p.2])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0014",
+    "subject": "Delhivery Limited",
+    "attribute": "India's largest integrated logistics platform FY",
+    "value_raw": "₹8,142 Cr",
+    "value_norm": 81420000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-001-0008",
+    "subject": "Delhivery Limited",
+    "attribute": "Sq ft Logistics area under management",
+    "value_raw": "4,445",
+    "value_norm": 4445.0,
+    "unit_norm": "inr",
+    "period": "Q4-FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 1,
+     "page_label": "2",
+     "quote": "# Delivery In Numbers\n\n| >2.8Bn(1)<br/>Express parcel shipments delivered since inception | >4.8Mn tonnes(1,2)<br/>Part-truckload freight delivered since inception | 15,065(3)<br/>Daily average fleet size              | 753(1)<br/>Count of 46-ft tractors | 98,135(1,5)<br/>Workforce strength      |                                    |\n| ---------------------------------------------------------------- | ----------------------------------------------------------------------- | ---------------------",
+     "crop": "data/crops/02-delhi-p1.png",
+     "modality": "table"
+    },
+    "flags": []
+   }
+  ]
+ },
+ {
+  "id": 644,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0016",
+  "fact_b": "02-del-084-0115",
+  "explanation": "Figures differ but so does context: 'FY FY revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 81,415.38 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY Cr",
+    "value_raw": "₹127Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0115",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue services",
+    "value_raw": "81,415.38",
+    "value_norm": 814153800000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 645,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0016",
+  "fact_b": "02-del-084-0116",
+  "explanation": "Figures differ but so does context: 'FY FY revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 72,236.47 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY Cr",
+    "value_raw": "₹127Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0116",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue services",
+    "value_raw": "72,236.47",
+    "value_norm": 722364700000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 646,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0016",
+  "fact_b": "02-del-084-0117",
+  "explanation": "Figures differ but so does context: 'FY FY revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 16.54 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY Cr",
+    "value_raw": "₹127Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0117",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue sale traded goods",
+    "value_raw": "16.54",
+    "value_norm": 165400000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 647,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0016",
+  "fact_b": "02-del-084-0119",
+  "explanation": "Figures differ but so does context: 'FY FY revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 50,765.87 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY Cr",
+    "value_raw": "₹127Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0119",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue Express Parcel services",
+    "value_raw": "50,765.87",
+    "value_norm": 507658700000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 648,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0016",
+  "fact_b": "02-del-084-0120",
+  "explanation": "Figures differ but so does context: 'FY FY revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 45,522.22 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY Cr",
+    "value_raw": "₹127Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0120",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue Express Parcel services",
+    "value_raw": "45,522.22",
+    "value_norm": 455222200000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 649,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0016",
+  "fact_b": "02-del-084-0121",
+  "explanation": "Figures differ but so does context: 'FY FY revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 15,174.05 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY Cr",
+    "value_raw": "₹127Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0121",
+    "subject": "Delhivery Limited",
+    "attribute": "services Revenue Part Truck Load services",
+    "value_raw": "15,174.05",
+    "value_norm": 151740500000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 650,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0016",
+  "fact_b": "02-del-084-0122",
+  "explanation": "Figures differ but so does context: 'FY FY revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 11,565.38 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY Cr",
+    "value_raw": "₹127Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0122",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue Part Truck Load services",
+    "value_raw": "11,565.38",
+    "value_norm": 115653799999.99998,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 651,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0016",
+  "fact_b": "02-del-084-0123",
+  "explanation": "Figures differ but so does context: 'FY FY revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 101.90 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY Cr",
+    "value_raw": "₹127Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0123",
+    "subject": "Delhivery Limited",
+    "attribute": "services Others",
+    "value_raw": "101.90",
+    "value_norm": 1019000000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 652,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0016",
+  "fact_b": "02-del-084-0125",
+  "explanation": "Figures differ but so does context: 'FY FY revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 81,415.38 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY Cr",
+    "value_raw": "₹127Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0125",
+    "subject": "Delhivery Limited",
+    "attribute": "Services rendered over time",
+    "value_raw": "81,415.38",
+    "value_norm": 814153800000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 653,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0016",
+  "fact_b": "02-del-084-0126",
+  "explanation": "Figures differ but so does context: 'FY FY revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 72,236.47 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY Cr",
+    "value_raw": "₹127Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0126",
+    "subject": "Delhivery Limited",
+    "attribute": "Services rendered over time",
+    "value_raw": "72,236.47",
+    "value_norm": 722364700000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 654,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0016",
+  "fact_b": "02-del-084-0128",
+  "explanation": "Figures differ but so does context: 'FY FY revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 82,201.05 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY Cr",
+    "value_raw": "₹127Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0128",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue per contracted price",
+    "value_raw": "82,201.05",
+    "value_norm": 822010500000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 655,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0016",
+  "fact_b": "02-del-084-0129",
+  "explanation": "Figures differ but so does context: 'FY FY revenue services YoY Cr' is ₹127Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 73,111.32 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0016",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY Cr",
+    "value_raw": "₹127Cr",
+    "value_norm": 1270000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0129",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue per contracted price",
+    "value_raw": "73,111.32",
+    "value_norm": 731113200000.0001,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 657,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-005-0043",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 1,355 (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0043",
+    "subject": "Delhivery Limited",
+    "attribute": "Year EBITDA Margin FY FY",
+    "value_raw": "1,355",
+    "value_norm": 13550000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": []
+   }
+  ]
+ },
+ {
+  "id": 658,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-005-0047",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (1,720) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0047",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA margin Year EBITDA Margin FY",
+    "value_raw": "(1,720)",
+    "value_norm": -17200000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 659,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-005-0048",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (1,229) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0048",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA Margin FY FY",
+    "value_raw": "(1,229)",
+    "value_norm": -12290000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 660,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-005-0052",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (2,532) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0052",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA margin Year EBITDA Margin FY",
+    "value_raw": "(2,532)",
+    "value_norm": -25320000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 661,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-005-0053",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (2,533) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0053",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA Margin FY FY",
+    "value_raw": "(2,533)",
+    "value_norm": -25330000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 662,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-005-0058",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (2,689) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0058",
+    "subject": "Delhivery Limited",
+    "attribute": "tax Year Profit Margin FY",
+    "value_raw": "(2,689)",
+    "value_norm": -26890000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 663,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-005-0059",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (4,157) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0059",
+    "subject": "Delhivery Limited",
+    "attribute": "Profit Margin FY FY",
+    "value_raw": "(4,157)",
+    "value_norm": -41570000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 664,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-084-0115",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 81,415.38 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0115",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue services",
+    "value_raw": "81,415.38",
+    "value_norm": 814153800000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 665,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-084-0116",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 72,236.47 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0116",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue services",
+    "value_raw": "72,236.47",
+    "value_norm": 722364700000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 666,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-084-0119",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 50,765.87 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0119",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue Express Parcel services",
+    "value_raw": "50,765.87",
+    "value_norm": 507658700000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 667,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-084-0120",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 45,522.22 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0120",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue Express Parcel services",
+    "value_raw": "45,522.22",
+    "value_norm": 455222200000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 668,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-084-0121",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 15,174.05 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0121",
+    "subject": "Delhivery Limited",
+    "attribute": "services Revenue Part Truck Load services",
+    "value_raw": "15,174.05",
+    "value_norm": 151740500000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 669,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-084-0122",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 11,565.38 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0122",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue Part Truck Load services",
+    "value_raw": "11,565.38",
+    "value_norm": 115653799999.99998,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 670,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-084-0123",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 101.90 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0123",
+    "subject": "Delhivery Limited",
+    "attribute": "services Others",
+    "value_raw": "101.90",
+    "value_norm": 1019000000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 671,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-084-0125",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 81,415.38 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0125",
+    "subject": "Delhivery Limited",
+    "attribute": "Services rendered over time",
+    "value_raw": "81,415.38",
+    "value_norm": 814153800000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 672,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0018",
+  "fact_b": "02-del-084-0126",
+  "explanation": "Figures differ but so does context: 'services YoY EBITDA EBITDA margin FY' is ₹(452) Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 72,236.47 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0018",
+    "subject": "Delhivery Limited",
+    "attribute": "services YoY EBITDA EBITDA margin FY",
+    "value_raw": "₹(452) Cr",
+    "value_norm": -4520000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "paren-negative",
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-084-0126",
+    "subject": "Delhivery Limited",
+    "attribute": "Services rendered over time",
+    "value_raw": "72,236.47",
+    "value_norm": 722364700000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "# Revenue from Supply Chain services includes Revenue from End-to-End services and Revenue from Warehousing services.\n\n## Timing of rendering of services\n\n| Particulars                                  | March 31, 2024 | March 31, 2023 |\n| -------------------------------------------- | -------------- | -------------- |\n| Services rendered over time                  | 81,415.38      | 72,236.47      |\n| **Total revenue from rendering of services** | **81,415.38**  | **72,236.47**  |\n\n\n## Revenue ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 673,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0020",
+  "fact_b": "02-del-005-0043",
+  "explanation": "Figures differ but so does context: 'EBITDA EBITDA margin FY Cr' is ₹76Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 1,355 (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0020",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA EBITDA margin FY Cr",
+    "value_raw": "₹76Cr",
+    "value_norm": 760000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0043",
+    "subject": "Delhivery Limited",
+    "attribute": "Year EBITDA Margin FY FY",
+    "value_raw": "1,355",
+    "value_norm": 13550000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": []
+   }
+  ]
+ },
+ {
+  "id": 674,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0020",
+  "fact_b": "02-del-005-0047",
+  "explanation": "Figures differ but so does context: 'EBITDA EBITDA margin FY Cr' is ₹76Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (1,720) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0020",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA EBITDA margin FY Cr",
+    "value_raw": "₹76Cr",
+    "value_norm": 760000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0047",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA margin Year EBITDA Margin FY",
+    "value_raw": "(1,720)",
+    "value_norm": -17200000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 675,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0020",
+  "fact_b": "02-del-005-0048",
+  "explanation": "Figures differ but so does context: 'EBITDA EBITDA margin FY Cr' is ₹76Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (1,229) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0020",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA EBITDA margin FY Cr",
+    "value_raw": "₹76Cr",
+    "value_norm": 760000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0048",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA Margin FY FY",
+    "value_raw": "(1,229)",
+    "value_norm": -12290000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 676,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0020",
+  "fact_b": "02-del-005-0052",
+  "explanation": "Figures differ but so does context: 'EBITDA EBITDA margin FY Cr' is ₹76Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (2,532) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0020",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA EBITDA margin FY Cr",
+    "value_raw": "₹76Cr",
+    "value_norm": 760000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0052",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA margin Year EBITDA Margin FY",
+    "value_raw": "(2,532)",
+    "value_norm": -25320000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 677,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0020",
+  "fact_b": "02-del-005-0053",
+  "explanation": "Figures differ but so does context: 'EBITDA EBITDA margin FY Cr' is ₹76Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (2,533) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0020",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA EBITDA margin FY Cr",
+    "value_raw": "₹76Cr",
+    "value_norm": 760000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0053",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA Margin FY FY",
+    "value_raw": "(2,533)",
+    "value_norm": -25330000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 678,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0020",
+  "fact_b": "02-del-005-0058",
+  "explanation": "Figures differ but so does context: 'EBITDA EBITDA margin FY Cr' is ₹76Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (2,689) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0020",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA EBITDA margin FY Cr",
+    "value_raw": "₹76Cr",
+    "value_norm": 760000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0058",
+    "subject": "Delhivery Limited",
+    "attribute": "tax Year Profit Margin FY",
+    "value_raw": "(2,689)",
+    "value_norm": -26890000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 679,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0020",
+  "fact_b": "02-del-005-0059",
+  "explanation": "Figures differ but so does context: 'EBITDA EBITDA margin FY Cr' is ₹76Cr (FY2024, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (4,157) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0020",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA EBITDA margin FY Cr",
+    "value_raw": "₹76Cr",
+    "value_norm": 760000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0059",
+    "subject": "Delhivery Limited",
+    "attribute": "Profit Margin FY FY",
+    "value_raw": "(4,157)",
+    "value_norm": -41570000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 680,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0022",
+  "fact_b": "02-del-005-0043",
+  "explanation": "Figures differ but so does context: 'margin FY Cr' is ₹(404) Cr (FY2023, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 1,355 (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0022",
+    "subject": "Delhivery Limited",
+    "attribute": "margin FY Cr",
+    "value_raw": "₹(404) Cr",
+    "value_norm": -4040000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0043",
+    "subject": "Delhivery Limited",
+    "attribute": "Year EBITDA Margin FY FY",
+    "value_raw": "1,355",
+    "value_norm": 13550000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": []
+   }
+  ]
+ },
+ {
+  "id": 681,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0022",
+  "fact_b": "02-del-005-0047",
+  "explanation": "Figures differ but so does context: 'margin FY Cr' is ₹(404) Cr (FY2023, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (1,720) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0022",
+    "subject": "Delhivery Limited",
+    "attribute": "margin FY Cr",
+    "value_raw": "₹(404) Cr",
+    "value_norm": -4040000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0047",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA margin Year EBITDA Margin FY",
+    "value_raw": "(1,720)",
+    "value_norm": -17200000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 682,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0022",
+  "fact_b": "02-del-005-0048",
+  "explanation": "Figures differ but so does context: 'margin FY Cr' is ₹(404) Cr (FY2023, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (1,229) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0022",
+    "subject": "Delhivery Limited",
+    "attribute": "margin FY Cr",
+    "value_raw": "₹(404) Cr",
+    "value_norm": -4040000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0048",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA Margin FY FY",
+    "value_raw": "(1,229)",
+    "value_norm": -12290000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 683,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0022",
+  "fact_b": "02-del-005-0052",
+  "explanation": "Figures differ but so does context: 'margin FY Cr' is ₹(404) Cr (FY2023, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (2,532) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0022",
+    "subject": "Delhivery Limited",
+    "attribute": "margin FY Cr",
+    "value_raw": "₹(404) Cr",
+    "value_norm": -4040000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0052",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA margin Year EBITDA Margin FY",
+    "value_raw": "(2,532)",
+    "value_norm": -25320000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 684,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0022",
+  "fact_b": "02-del-005-0053",
+  "explanation": "Figures differ but so does context: 'margin FY Cr' is ₹(404) Cr (FY2023, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (2,533) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0022",
+    "subject": "Delhivery Limited",
+    "attribute": "margin FY Cr",
+    "value_raw": "₹(404) Cr",
+    "value_norm": -4040000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0053",
+    "subject": "Delhivery Limited",
+    "attribute": "EBITDA Margin FY FY",
+    "value_raw": "(2,533)",
+    "value_norm": -25330000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 685,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0022",
+  "fact_b": "02-del-005-0058",
+  "explanation": "Figures differ but so does context: 'margin FY Cr' is ₹(404) Cr (FY2023, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (2,689) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0022",
+    "subject": "Delhivery Limited",
+    "attribute": "margin FY Cr",
+    "value_raw": "₹(404) Cr",
+    "value_norm": -4040000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0058",
+    "subject": "Delhivery Limited",
+    "attribute": "tax Year Profit Margin FY",
+    "value_raw": "(2,689)",
+    "value_norm": -26890000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 686,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0022",
+  "fact_b": "02-del-005-0059",
+  "explanation": "Figures differ but so does context: 'margin FY Cr' is ₹(404) Cr (FY2023, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs (4,157) (FY2020, inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.6])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0022",
+    "subject": "Delhivery Limited",
+    "attribute": "margin FY Cr",
+    "value_raw": "₹(404) Cr",
+    "value_norm": -4040000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   },
+   {
+    "fact_id": "02-del-005-0059",
+    "subject": "Delhivery Limited",
+    "attribute": "Profit Margin FY FY",
+    "value_raw": "(4,157)",
+    "value_norm": -41570000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2020",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# Financial Performance\n\nCorporate Overview Statutory Reports Financial Statements\n\n## Revenue from services* (₹ million)\n\n| Year | Total  | Express parcel | PTL | TL  | SCS | Cross-border |\n| ---- | ------ | -------------- | --- | --- | --- | ------------ |\n| FY20 | 27,748 | 70%            | -   | 13% | -   | -            |\n| FY21 | 36,355 | 70%            | 11% | 11% | -   | -            |\n| FY22 | 70,536 | 59%            | 24% | 8%  | 5%  | -            |\n| FY23 | 72,236 | 63%            | 16",
+     "crop": "data/crops/02-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": [
+     "paren-negative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 687,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0026",
+  "fact_b": "02-del-001-0002",
+  "explanation": "Figures differ but so does context: 'margin FY Mn Express parcel shipments' is 1.4 Mn (FY2023, mn-shipments [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 4.8Mn (Q4-FY2024, mn-shipments [02-delhivery-annual-report-fy24-excerpt.pdf p.2])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0026",
+    "subject": "Delhivery Limited",
+    "attribute": "margin FY Mn Express parcel shipments",
+    "value_raw": "1.4 Mn",
+    "value_norm": 1400000.0,
+    "unit_norm": "mn-shipments",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-001-0002",
+    "subject": "Delhivery Limited",
+    "attribute": "Numbers Bn Express parcel shipments delivered",
+    "value_raw": "4.8Mn",
+    "value_norm": 4800000.0,
+    "unit_norm": "mn-shipments",
+    "period": "Q4-FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 1,
+     "page_label": "2",
+     "quote": "# Delivery In Numbers\n\n| >2.8Bn(1)<br/>Express parcel shipments delivered since inception | >4.8Mn tonnes(1,2)<br/>Part-truckload freight delivered since inception | 15,065(3)<br/>Daily average fleet size              | 753(1)<br/>Count of 46-ft tractors | 98,135(1,5)<br/>Workforce strength      |                                    |\n| ---------------------------------------------------------------- | ----------------------------------------------------------------------- | ---------------------",
+     "crop": "data/crops/02-delhi-p1.png",
+     "modality": "table"
+    },
+    "flags": []
+   }
+  ]
+ },
+ {
+  "id": 688,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0028",
+  "fact_b": "02-del-084-0115",
+  "explanation": "Figures differ but so does context: 'FY revenue services Cr' is ₹8,142 Cr (FY2023, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 81,415.38 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0028",
+    "subject": "Delhivery Limited",
+    "attribute": "FY revenue services Cr",
+    "value_raw": "₹8,142 Cr",
+    "value_norm": 81420000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-084-0115",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue services",
+    "value_raw": "81,415.38",
+    "value_norm": 814153800000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 689,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0028",
+  "fact_b": "02-del-084-0116",
+  "explanation": "Figures differ but so does context: 'FY revenue services Cr' is ₹8,142 Cr (FY2023, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 72,236.47 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0028",
+    "subject": "Delhivery Limited",
+    "attribute": "FY revenue services Cr",
+    "value_raw": "₹8,142 Cr",
+    "value_norm": 81420000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-084-0116",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue services",
+    "value_raw": "72,236.47",
+    "value_norm": 722364700000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 690,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0028",
+  "fact_b": "02-del-084-0117",
+  "explanation": "Figures differ but so does context: 'FY revenue services Cr' is ₹8,142 Cr (FY2023, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 16.54 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0028",
+    "subject": "Delhivery Limited",
+    "attribute": "FY revenue services Cr",
+    "value_raw": "₹8,142 Cr",
+    "value_norm": 81420000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-084-0117",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue sale traded goods",
+    "value_raw": "16.54",
+    "value_norm": 165400000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 691,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-005-0028",
+  "fact_b": "02-del-084-0119",
+  "explanation": "Figures differ but so does context: 'FY revenue services Cr' is ₹8,142 Cr (FY2023, inr-cr [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 50,765.87 (inr-cr [02-delhivery-annual-report-fy24-excerpt.pdf p.85])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0028",
+    "subject": "Delhivery Limited",
+    "attribute": "FY revenue services Cr",
+    "value_raw": "₹8,142 Cr",
+    "value_norm": 81420000000.0,
+    "unit_norm": "inr-cr",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.75,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "EBITDA margin\nFY23: ₹(404) Cr / (5.6%)\n\n# 740 Mn\nExpress parcel shipments in FY24\nYoY: 11.5%\n\n# 1.4 Mn Tons\nPTL freight tonnage in FY24\nYoY: 29.8%\n\n| Metric                           | Value         | YoY   |\n| -------------------------------- | ------------- | ----- |\n| FY24 revenue from services       | ₹8,142 Cr     | 12.7% |\n| EBITDA / EBITDA margin           | ₹127Cr / 1.6% | -     |\n| Adj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "table"
+    },
+    "flags": []
+   },
+   {
+    "fact_id": "02-del-084-0119",
+    "subject": "Delhivery Limited",
+    "attribute": "Revenue Express Parcel services",
+    "value_raw": "50,765.87",
+    "value_norm": 507658700000.0,
+    "unit_norm": "inr-cr",
+    "period": "",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 84,
+     "page_label": "85",
+     "quote": "Revenue from contracts with customers\n\n| Particulars                           | March 31, 2024 | March 31, 2023 |\n| ------------------------------------- | -------------- | -------------- |\n| **Sale of services**                  |                |                |\n| Revenue from services\\*               | 81,415.38      | 72,236.47      |\n| **Sale of goods**                     |                |                |\n| Revenue from sale of traded goods     | -              | 16.54          |\n|    ",
+     "crop": "data/crops/02-delhi-p84.png",
+     "modality": "table"
+    },
+    "flags": [
+     "no-period"
+    ]
+   }
+  ]
+ }
+]

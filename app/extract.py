@@ -23,6 +23,10 @@ HTML_RE = re.compile(r"</?(sup|sub|br|b|i|em|strong|span|div)[^>]*>", re.I)
 MD_FMT_RE = re.compile(r"(\*\*|__|\*|_|`|#{1,6}\s?)")
 FOOTNOTE_LINE_RE = re.compile(
     r"^\(?\d{1,2}\)?\s+(As per|Growth rate|Includes|Note|Source|Due to)", re.I)
+LEGEND_RE = re.compile(
+    r"^\s*[#*^….\s]{1,6}:|^\s*\*{0,2}source\s*:|"
+    r"data for \d{4}[-–]\d{2} are provisional|"
+    r"^\s*(#+|\.\.\.)\s*:", re.I)
 
 
 def clean(s: str) -> str:
@@ -32,7 +36,10 @@ def clean(s: str) -> str:
 BOILER_RE = re.compile(
     r"^(contents?|what'?s inside|corporate overview|statutory reports|financial statements|"
     r"page \d+|annual report|for more details|https?://|\d+\s*$)", re.I)
-ORG_RE = re.compile(r"\b([A-Z][A-Za-z&.,'’\-]+(?:\s+[A-Z][A-Za-z&.,'’\-]+){0,3})\s+(Limited|Ltd\.?|Inc\.?|Bank|Corporation|Group)\b")
+ORG_RE = re.compile(
+    r"\b([A-Z][A-Za-z&.,'’\-]+(?:\s+(?:of\s+)?[A-Z][A-Za-z&.,'’\-]+){0,3})"
+    r"\s+(Limited|Ltd\.?|Inc\.?|Bank|Corporation|Group|Fund|Ministry|Board|"
+    r"Authority|Organisation|Organization|Agency|Department|Survey|Office|Commission)\b")
 ADDRESS_RE = re.compile(
     r"\b(plot|road|street|floor|building|complex|mumbai|delhi|tel|phone|fax|"
     r"\bCIN\b|pincode|email|@|www\.|gate|opposite|bandra|kurla)\b", re.I)
@@ -42,7 +49,7 @@ ROLE_VERBS = re.compile(r"\b(is|are|was|were|became|appointed|resigned|retired|h
 def detect_doc_entity(chunks: list[Chunk]) -> str:
     votes: Counter = Counter()
     for ci, c in enumerate(chunks[:40]):
-        w = 3 if ci < 3 else 1  # cover/titles outweigh banker/auditor lists
+        w = 5 if ci == 0 else (3 if ci < 3 else 1)  # cover titles first
         for m in ORG_RE.finditer(c.text):
             votes[m.group(0).strip()] += w
     if not votes:
@@ -59,6 +66,8 @@ def pre_extract(chunk: Chunk, doc_entity: str) -> list[Fact]:
             continue
         if FOOTNOTE_LINE_RE.match(clean(s)[:80]):
             continue  # footnote legend lines, not facts
+        if LEGEND_RE.search(s[:80]):
+            continue  # table legend/source lines ("#: ...", "Source: ...")
         numeric = _numeric_from_sentence(s, chunk, doc_entity)
         facts.extend(numeric)
         if not numeric and len(s.split()) >= 6 and (ROLE_VERBS.search(s) or ORG_RE.search(s)):
@@ -114,6 +123,10 @@ def _numeric_from_sentence(sent: str, chunk: Chunk, doc_entity: str) -> list[Fac
             raw += ")"
         if not unit_raw and re.fullmatch(r"\(?\s*(19|20)\d{2}\s*,?\)?", raw.strip()):
             continue  # bare calendar year, not a measurement
+        if not unit_raw and re.fullmatch(r"0\d+", re.sub(r"\D", "", raw)):
+            continue  # leading-zero codes (table refs), not measurements
+        if not unit_raw and len(re.sub(r"\D", "", raw)) >= 4 and "http" in sent.lower():
+            continue  # numbers inside URLs/references
         if not unit_raw and len(re.sub(r"\D", "", raw)) == 6:
             continue  # 6-digit bare number: pincode/phone fragment, not a fact
         if not unit_raw and ADDRESS_RE.search(sent):

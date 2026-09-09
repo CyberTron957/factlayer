@@ -59,7 +59,8 @@ def parse_number(raw: str) -> tuple[float | None, list[str]]:
 def canonical_unit(unit_raw: str, currency_hint: str = "") -> str:
     u = unit_raw.strip().lower().replace("₹", "").replace("rs.", "rs").strip(" .")
     hint = currency_hint.lower()
-    money = any(k in hint for k in ["₹", "rs", "inr"])
+    usd = "$" in hint or "usd" in hint or "dollar" in hint
+    money = usd or any(k in hint for k in ["₹", "rs", "inr"])
     count_nearby = any(k in hint for k in
                        ["shipment", "ton", "employee", "people", "branch", "order", "parcel"])
     scale = "cr" if "cr" in hint or "crore" in hint else (
@@ -81,7 +82,10 @@ def canonical_unit(unit_raw: str, currency_hint: str = "") -> str:
         if money and scale == "lakh":
             return "inr-lakh"
         if money and scale in ("mn", "bn"):
-            return "inr-mn" if scale == "mn" else "inr-bn"
+            fam = "usd" if usd else "inr"
+            return f"{fam}-mn" if scale == "mn" else f"{fam}-bn"
+        if usd:
+            return "usd"
         return "inr" if money else "qty"
     if u not in table:
         # compound scale+noun units ("mn tons", "million shipments")
@@ -103,9 +107,9 @@ def canonical_unit(unit_raw: str, currency_hint: str = "") -> str:
     # attach money family to bare scale words ONLY for money context,
     # never when a count noun (shipments/tons/...) is adjacent
     if cu in ("mn", "million") and money and not count_nearby:
-        return "inr-mn"
+        return "usd-mn" if usd else "inr-mn"
     if cu in ("bn", "billion") and money and not count_nearby:
-        return "inr-bn"
+        return "usd-bn" if usd else "inr-bn"
     return cu
 
 

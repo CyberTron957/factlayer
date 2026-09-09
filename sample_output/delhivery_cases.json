@@ -1,0 +1,136 @@
+{
+ "corroborated": {
+  "id": 656,
+  "relation": "corroborates",
+  "axis": null,
+  "fact_a": "03-del-005-0017",
+  "fact_b": "02-del-003-0014",
+  "explanation": "Same period, scope and value: 'FY FY revenue services YoY' is 1.6% (FY2024, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.6]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.85,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-005-0017",
+    "subject": "Delhivery Limited",
+    "attribute": "FY FY revenue services YoY",
+    "value_raw": "1.6%",
+    "value_norm": 1.6,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 5,
+     "page_label": "6",
+     "quote": "# India's largest integrated logistics platform<sup>(1)</sup>\n\n## FY24\n\n# ₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%<sup>(2)</sup>\n\n# ₹127Cr / 1.6%\nEBITDA / EBITDA margin\nFY23: ₹(452) Cr / (6.3%)\n\n# ₹76Cr / 0.9%\nAdj.",
+     "crop": "data/crops/03-delhi-p5.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-003-0014",
+    "subject": "Delhivery Limited",
+    "attribute": "Mn Revenue services EBITDA Adjusted EBITDA",
+    "value_raw": "1.6%",
+    "value_norm": 1.6,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   }
+  ]
+ },
+ "contradiction": null,
+ "reconciled": {
+  "id": 637,
+  "relation": "reconciled",
+  "axis": "time",
+  "fact_a": "03-del-004-0011",
+  "fact_b": "02-del-003-0014",
+  "explanation": "Figures differ but so does context: 'Parcel Service EBITDA profitability robust growth' is 30% (FY2023, % [03-delhivery-q4-fy24-earnings-presentation.pdf p.5]) vs 1.6% (FY2024, % [02-delhivery-annual-report-fy24-excerpt.pdf p.4])",
+  "confidence": 0.7,
+  "verified": 1,
+  "facts": [
+   {
+    "fact_id": "03-del-004-0011",
+    "subject": "Delhivery Limited",
+    "attribute": "Parcel Service EBITDA profitability robust growth",
+    "value_raw": "30%",
+    "value_norm": 30.0,
+    "unit_norm": "%",
+    "period": "FY2023",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+     "page_index": 4,
+     "page_label": "5",
+     "quote": "(1,008 Cr) in FY23\n\n2. **Express Parcel: 18%+ Service EBITDA profitability; robust growth in key segments**\n\n3. **PTL: 30%+ YoY growth with significant improvement in profitability and market share**\n\n4. **SCS: Doubled service EBITDA profitability over FY23, strong Q4**\n\n5. **TL: 40% YoY revenue growth with service EBITDA profitability improvement**\n\n6. **Sharp YoY reduction in NWC days from 38 to 31 days**\n\n4",
+     "crop": "data/crops/03-delhi-p4.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   },
+   {
+    "fact_id": "02-del-003-0014",
+    "subject": "Delhivery Limited",
+    "attribute": "Mn Revenue services EBITDA Adjusted EBITDA",
+    "value_raw": "1.6%",
+    "value_norm": 1.6,
+    "unit_norm": "%",
+    "period": "FY2024",
+    "scope": "",
+    "fact_type": "numeric",
+    "confidence": 0.65,
+    "evidence": {
+     "doc": "02-delhivery-annual-report-fy24-excerpt.pdf",
+     "page_index": 3,
+     "page_label": "4",
+     "quote": "# A year of impactful growth\n\n**740 Mn**\nExpress parcels shipped\n\n**1,429 K tonnes**\nPTL freight delivered\n\n**₹81,415 Mn**\nRevenue from services\n\n**₹1,266 Mn**\nEBITDA\n\n**₹758 Mn**\nAdjusted EBITDA\n\n**1.6%**\nEBITDA margin\n\n## Significant developments of FY24\n\n### EBITDA profitability\nFY24 was the first year of **full-year EBITDA profitability**.",
+     "crop": "data/crops/02-delhi-p3.png",
+     "modality": "chart"
+    },
+    "flags": [
+     "chart-sourced"
+    ]
+   }
+  ]
+ },
+ "failure": {
+  "kind": "chart-sourced-provisional",
+  "detail": "Cr = (452 Cr) awaits table/text corroboration.",
+  "fact_ids": [
+   "03-del-004-0008"
+  ],
+  "evidence": [
+   {
+    "doc": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+    "page_index": 4,
+    "page_label": "5",
+    "quote": "(452 Cr) in FY23\n   - b PAT profitable in Q3 FY24; PAT loss reduced by Rs.",
+    "crop": "data/crops/03-delhi-p4.png",
+    "modality": "chart"
+   }
+  ]
+ }
+}
