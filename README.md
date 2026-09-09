@@ -85,12 +85,16 @@ coding agent for scaffolding; all prompts are dataset-agnostic (see `app/llm.py`
 
 ## Limitations and Next Steps
 
-- **Contradiction on live data is verdict-ready but untriggered**: the engine
-  (tests: 10/10) emits `contradicts`, but the Delhivery docs genuinely agree —
-  no true same-context conflict exists in the subsets. Same for cross-publisher
-  macro links (MB, RBI/IMF phrasing variance). LLM extraction (live via Bedrock
-  mantle) raised recall 718→~880 facts and cleaned anchors; linking stays
-  heuristic-first with the LLM judging only ambiguous pairs (budget-capped).
+- **Case 2 (contradiction) — detector proven, no live specimen**: the Delhivery
+  docs genuinely agree (verified by spread audit + macroeconomy run: 0
+  contradicts). The detector itself is proven three ways: 12/12 unit tests
+  (incl. cross-dimension veto), a live synthetic pair through the full
+  `link_pair`→verify path (`contradicts`, verified: True), and precision —
+  the nearest real near-misses (cross-period margins) are correctly NOT
+  flagged. Feed it disagreeing docs and Case 2 fills itself.
+- Cross-publisher macro linking over-links on generic anchors ("GDP" matches
+  every metric) — needs IDF-weighted anchors; currently flagged as noisy
+  reconciliations, never silently trusted.
 - Deterministic period attribution uses nearest-token heuristics (table column
   headers need table-aware resolution — currently flagged `ambiguous-period`).
 - Chart legend→segment mapping is positional; ambiguous cases are flagged, not
