@@ -127,6 +127,8 @@ def cases():
         except Exception:
             pass
         score = 0.0
+        if (a.subject or "").lower() == (b.subject or "") and a.subject:
+            score += 3.0  # showcase pairs must be about the same entity
         if (a.unit_norm or "") == (b.unit_norm or "") and a.unit_norm:
             score += 2.0
         if (a.period or "") == (b.period or "") and a.period:
@@ -135,6 +137,13 @@ def cases():
         tb = set((b.attribute or "").lower().split())
         if ta and tb:
             score += len(ta & tb) / max(len(ta | tb), 1)
+            # a pair sharing ONLY filler words ("growth", "rate") is two
+            # different metrics that happen to move together — never showcase
+            generic = {"growth", "rate", "rates", "total", "average",
+                       "change", "index", "year", "annual", "overall",
+                       "general", "nominal", "real"}
+            if not ((ta & tb) - generic):
+                return -1.0
         score += 0.1 * min(a.confidence or 0, b.confidence or 0)
         for f in fs:
             if (f.evidence.modality or "") in ("chart", "infographic"):

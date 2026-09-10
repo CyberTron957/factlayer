@@ -93,6 +93,16 @@ def test_pct_in_value_beats_money_context():
     assert unorm == "%", unorm
 
 
+def test_per_cent_two_word_unit_parses():
+    # live gap: "per cent" (the dominant phrasing in macro reports) missed
+    # every unit map, leaving value_norm None and disabling verification.
+    from app.normalize import canonical_unit, normalize_fact_value, same_dimension
+    assert canonical_unit("per cent", "growth was 6.5 per cent") == "percent"
+    v, unorm, _, _ = normalize_fact_value("10.5 per cent", "per cent", "2023 values")
+    assert v == 10.5 and unorm == "percent", (v, unorm)
+    assert same_dimension("percent", "%")
+
+
 def test_cross_dimension_veto():
     from app.link import link_pair
     from app.models import Fact, Evidence
@@ -140,3 +150,23 @@ def test_doc_vintage_from_content_not_upload_order():
     # two sibling docs, different upload positions, same content vintage
     assert (_doc_vintage("a.pdf", mk_pages("FY2025 results"), fallback=0)
             == _doc_vintage("b.pdf", mk_pages("FY2025 results"), fallback=1))
+
+
+def test_finalize_tolerates_sloppy_judge_axis():
+    # live bug: the judge once returned the STRING "null" as axis and killed
+    # a 200-page link pass with a pydantic ValidationError. Axis is
+    # ancillary — coerce to None, keep the verdict.
+    from app.link import _finalize
+    a = F("a", "d1", "gdp growth", "6.5%", 6.5, "pct", "FY2025")
+    b = F("b", "d2", "gdp growth", "6.5 per cent", 6.5, "pct", "FY2025")
+    for bad in ("null", "None", "", "bogus-label", None):
+        r = _finalize({"relation": "corroborates", "axis": bad,
+                       "explanation": "same", "confidence": 0.8},
+                      a, b, 0.02, {"d1": 2025, "d2": 2025})
+        assert r is not None and r.relation == "corroborates" and r.axis is None
+    # superseded-by keeps its vintage axis even with a sloppy judge value
+    c = F("c", "old", "gdp growth", "6.1%", 6.1, "pct", "FY2025")
+    r = _finalize({"relation": "superseded-by", "axis": "null",
+                   "explanation": "restated", "confidence": 0.7},
+                  c, b, 0.02, {"old": 2024, "d2": 2025})
+    assert r is not None and r.axis == "vintage"

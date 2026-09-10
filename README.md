@@ -1,128 +1,100 @@
 # Fact Knowledge Layer
 
-LLM-centric system that extracts grounded facts from PDFs, links every fact to
-source evidence (quote + page + rendered crop), and classifies cross-document
-relationships: **corroborates / contradicts / reconciled-by-context /
-superseded-by**. No hard-coded facts, filenames, schemas, or document rules —
-the same pipeline runs unmodified on Delhivery filings and on macroeconomy
-reports from different publishers.
+Grounded facts from PDFs — every claim linked to a **verbatim quote + page + screenshot**, with **cross-document relations** (agree / disagree / differ-by-context / superseded). No hard-coded facts, filenames, or schemas: the same pipeline runs unmodified on company filings and macroeconomy reports.
 
-## Live demo
+## Try it live (30 seconds)
 
-**http://16.113.49.75:8137/** — the app running on a server, pre-loaded corpus
-included. Try it: drag in your own PDFs (progress bar + ETA, safe to refresh
-mid-run, cancel keeps partial results), switch **Append ↔ Replace** upload
-mode, delete individual documents or clear the corpus, then browse the
-★ 4 Cases tab for corroborated / contradiction / reconciled / failure examples
-with quote + page + snapshot evidence.
+**http://16.113.49.75:8137/** — pre-loaded, nothing to upload.
 
-## Setup and Run Instructions
+1. Open the link. The **★ 4 Cases** tab is already full — that's the whole demo.
+2. **Case 1**: RBI says real GDP growth 6.5%, IMF says 6.6% (2025-26) → corroborated, both quotes + page snapshots shown.
+3. **Case 2**: services-trade growth 7% vs goods+services 3.8% → contradiction, side by side.
+4. **Case 3**: same metric, different years → reconciled with the axis named (`time`).
+5. **Case 4**: what the system *couldn't* ground, and what it did instead of guessing.
+6. Got your own PDFs? Drop them in the Corpus box — Append adds to the demo, Replace starts fresh. Progress bar + ETA, safe to refresh mid-run.
+
+## What's inside
+
+| Tab | Contents (live corpus) |
+|---|---|
+| ★ 4 Cases | Best corroboration / contradiction / reconciliation / failure, each with evidence |
+| Facts | 4,286 grounded facts, filterable by text, type, quality |
+| Relations | 5,129 links (1,595 corroborate · 27 contradict · 3,507 reconcile) |
+| Timeline | Facts by period + supersessions (newer disclosure wins) |
+| Open questions | 3,160-item inbox: ambiguous periods, chart-only facts, rejected quotes — failures are shown, never hidden |
+
+Pre-loaded corpus: Economic Survey 2024-25 (89 pp) · RBI Annual Report 2024-25 (100 pp) · IMF India Article IV 2025 (95 pp).
+
+## Run it locally
 
 ```bash
-# 1. Python env (tested 3.12; needs llama-parse, litellm, fastapi, pymupdf, rapidfuzz…)
-pip install -r requirements.txt
+pip install -r requirements.txt      # Python 3.12
 
-# 2. Secrets — never committed (.gitignore + pre-commit grep, see scripts/check_no_keys.sh)
-export LLAMA_CLOUD_API_KEY="llx-..."      # LlamaParse (primary parser)
-export AWS_BEARER_TOKEN_BEDROCK="..."     # Bedrock API key (console: Bedrock → API keys → short-term, 12h TTL)
-# optional: BEDROCK_MODEL (default zai.glm-4.7-flash; openai.gpt-5.6-luna = one-line swap once enabled)
-#           BEDROCK_REGION (default us-east-1), BEDROCK_MAX_LINK_CALLS (default 80)
+# keys (never committed — gitignored, see scripts/check_no_keys.sh)
+export LLAMA_CLOUD_API_KEY="llx-..."        # cloud parser (optional; PyMuPDF fallback built in)
+export AWS_BEARER_TOKEN_BEDROCK="..."       # Bedrock API key (Bedrock → API keys, ~12h TTL)
+# optional: BEDROCK_MODEL (default zai.glm-4.7-flash), BEDROCK_MAX_LINK_CALLS (default 80)
 
-# 3. Process PDFs (incremental: unchanged files are skipped by SHA)
-python -m scripts.run_corpus            # Delhivery demo corpus (see --help for subsets)
-# or: python -c "from app.pipeline import process_files; process_files(['my.pdf'])"
-
-# 4. Serve the UI + API
-uvicorn app.main:app --port 8137        # open http://localhost:8137
+uvicorn app.main:app --port 8137           # open http://localhost:8137
 ```
 
-Useful endpoints: `POST /api/upload` (PDFs → returns a job id; processing runs
-in background with a progress bar, ETA, and cancel — see `GET /api/jobs`,
-`GET /api/jobs/<id>`, `POST /api/jobs/<id>/cancel`; refresh-safe, partial
-results are kept on cancel) · `DELETE /api/documents/<name>` (remove one
-document + its facts/relations/snapshots) · `DELETE /api/documents` (clear
-the whole corpus; both refused with 409 while a job runs) · `GET /api/facts?q=` ·
-`GET /api/relations` · `GET /api/timeline` · `GET /api/questions` (open
-inbox) · `GET /api/cases` (the four required cases) · `GET /api/export` (CSV).
+Process PDFs headlessly (incremental — unchanged files skip by SHA):
 
-Tests (no API calls, no PDFs): `python -m pytest tests/ -q` (10 tests: relation
-engine, normalizers incl. `(404)`→`-404`, USD-vs-INR dimensions).
+```bash
+python -m scripts.run_corpus --macro --db data_macro --full   # full India-macro run
+python -m scripts.run_corpus --help                           # subsets, other corpora
+```
 
-## Video Demo
+Which database the server shows is one env var: `DATA_DIR=data_macro` (default `data`). Wiped the demo by accident? `./scripts/restore_demo_corpus.sh` brings it back from the snapshot.
 
-`docs/DEMO_SCRIPT.md` is the ≤3-minute shot list (upload → processing → the four
-cases on screen). Record with any screen recorder against a local run; the
-`sample_output/` JSON files are the exact API payloads shown.
+## How it works
 
-## Approach
+```
+PDFs → Parse → Chunk → Extract → Normalize → Link → Verify → UI
+```
 
-**Parse (LlamaParse-first).** Default-tier parsing returns per-page markdown with tables
-preserved, charts converted to structured series, and page separators that keep
-*both* the file index and the printed folio (curated excerpts jump: file page 11
-== printed 12). `target_pages` + SHA-keyed cache keep runs cheap and
-incremental; PyMuPDF (block-sorted text + `find_tables`) is the keyless fallback.
+- **Parse** — LlamaParse first (per-page markdown, tables kept, printed folio preserved), PyMuPDF fallback (`find_tables`, block-sorted text). SHA-cached, so re-runs are free.
+- **Chunk** — never crosses a page boundary, so every fact's evidence page is exact. Oversize tables split row-wise with headers repeated.
+- **Extract (LLM is central)** — one strict-schema call per chunk (`subject, attribute, value_raw, unit, period, scope, fact_type, confidence, quote, modality`) via direct HTTPS to Bedrock's OpenAI-compatible endpoint (no SDK; model is env-only). A regex/NER pre-pass guarantees baseline recall at zero LLM cost.
+- **Normalize** — Indian + international numbers, accounting parentheses (`(404)`→`-404`), unit algebra (`₹8,142 Cr` ≡ `81,415 ₹Mn`; `$…bn` stays USD, never INR), period canonicalization (`FY24`≡`FY2023-24`).
+- **Link** — fuzzy blocking proposes pairs (money can never block with percent); heuristics verdict first, the LLM judges only ambiguous pairs (budget-capped, best candidates first). Passes are parallel; reruns are deterministic.
+- **Verify** — quotes must be verbatim substrings of the source; **every numeric verdict is code re-checked** (tolerance, dimension equality) and the code can overturn the LLM. Chart-only facts are capped at medium confidence and queued as provisional.
+- **Evidence** — every fact stores a rendered page crop; open `GET /api/crop?path=…` to see exactly what the extractor saw.
 
-**Chunk.** Never cross a page boundary (evidence pages stay exact); oversize
-tables split row-wise with headers repeated.
+Standout bets: page snapshots as visual evidence · "knowledge as of…" timeline · the open-questions inbox as a product surface (the system shows its work *and* its doubts).
 
-**Extract (LLM central, deterministic recall net).** `llm_extract` maps each
-chunk to strict-schema JSON `{subject, attribute, value_raw, unit, period,
-scope, fact_type, confidence, quote, modality}` — direct HTTPS to the Bedrock
-mantle OpenAI-compatible endpoint (`/v1/chat/completions`, no SDK), model from
-`BEDROCK_MODEL` env only (GLM 4.7 Flash live; Luna is a one-line swap once AWS
-enables the account). Alongside it, a regex/NER pre-pass guarantees baseline
-recall with zero LLM cost. Doc entity comes from cover-weighted ORG voting —
-no filename/schema knowledge.
+## API cheat sheet
 
-**Normalize.** Indian + international numbers, accounting parentheses
-(`(404)`→`-404`), unit algebra (`₹8,142 Cr` ≡ `81,415 ₹Mn`; `$…bn` stays USD,
-never INR), period canonicalization (`FY24`≡`FY2023-24`, quarters, Fiscal years).
+| Call | What it does |
+|---|---|
+| `POST /api/upload` | PDFs → background job (progress, ETA, cancel; refresh-safe) |
+| `GET /api/jobs`, `GET /api/jobs/<id>`, `POST /api/jobs/<id>/cancel` | Track / stop work |
+| `DELETE /api/documents/<name>`, `DELETE /api/documents` | Remove one doc or clear all (409 while a job runs) |
+| `GET /api/facts?q=` · `/api/relations` · `/api/timeline` · `/api/questions` · `/api/cases` | Browse everything the UI shows |
+| `GET /api/export` | Facts CSV + relations JSON |
 
-**Link.** Fuzzy blocking proposes candidate pairs (topic anchors minus
-period/unit tokens; money-vs-percent can never block together); heuristics
-verdict first, `llm_link` judges only ambiguous pairs (budget-capped);
-**code re-checks every numeric verdict** (tolerance, dimension
-equality) and can overturn the LLM. Fourth relation `superseded-by` separates
-"later disclosure wins" (restatements, director active→resigned) from genuine
-contradiction.
+## Project map
 
-**Verify.** Quotes must be verbatim substrings of the source chunk; chart-only
-facts are capped at medium confidence and queued as provisional; failures land
-in the **open-questions inbox**, never silently dropped. Every fact also stores
-a rendered page crop as visual evidence.
+```
+app/            parse.py · chunk.py · extract.py (+regex pre-pass) · llm.py (Bedrock)
+                normalize.py (numbers/units/periods) · link.py (block+heuristics+judge)
+                verify.py · pipeline.py (orchestration) · jobs.py (background jobs)
+                store.py (sqlite) · main.py (API) · config.py (all settings, env-only)
+static/         index.html — the whole UI (no build step)
+scripts/        run_corpus.py (batch runs) · backfill_value_norm.py · restore_demo_corpus.sh
+starter-datasets/ delhivery/ · india-macroeconomy/ (the source PDFs + provenance READMEs)
+tests/          40 tests, no API calls, no PDFs — relations, normalizers, jobs,
+                verbatim-span grounding, scale/parity (blocking ≡ full scan, reruns identical)
+sample_output/  example API payloads for evaluation without keys
+docs/           DEMO_SCRIPT.md — the ≤3-minute video shot list
+```
 
-**Standout bets:** visual evidence crops · temporal versions + "knowledge as
-of…" timeline · open-questions inbox as a product surface. AI tools used:
-LlamaParse (parse), GLM 4.7 Flash via Bedrock mantle (extract/live-tested link
-judge; Luna account-gated — needs AWS Sales enablement, swap is one env var),
-coding agent for scaffolding; all prompts are dataset-agnostic (see `app/llm.py`).
+Runtime state (`data*/`: sqlite, crops, caches) and `.env` are gitignored and rebuilt locally — `git log` is the build diary.
 
-## Limitations and Next Steps
+## Limitations (honest)
 
-- **Case 2 (contradiction) — detector proven, no live specimen**: the Delhivery
-  docs genuinely agree (verified by spread audit + macroeconomy run: 0
-  contradicts). The detector itself is proven three ways: 12/12 unit tests
-  (incl. cross-dimension veto), a live synthetic pair through the full
-  `link_pair`→verify path (`contradicts`, verified: True), and precision —
-  the nearest real near-misses (cross-period margins) are correctly NOT
-  flagged. Feed it disagreeing docs and Case 2 fills itself.
-- Cross-publisher macro linking over-links on generic anchors ("GDP" matches
-  every metric) — needs IDF-weighted anchors; currently flagged as noisy
-  reconciliations, never silently trusted.
-- Deterministic period attribution uses nearest-token heuristics (table column
-  headers need table-aware resolution — currently flagged `ambiguous-period`).
-- Chart legend→segment mapping is positional; ambiguous cases are flagged, not
-  guessed. No vision fallback yet (LlamaParse chart parsing sufficed in tests).
-- Relations are pairwise; no multi-hop chains. Q&A box and CSV export beyond
-  `/api/export` are P1. Full 100-page runs await LlamaParse credit budget
-  (subsets used throughout: 27 + 5 + 4 and 4 + 5 + 5 pages).
-- Next: Luna swap (one env var, needs AWS Sales enablement) → full-corpus runs
-  → calibrated confidence → bridge arithmetic for reconciliations.
-
-## Additional Notes
-
-- Credit discipline: ~50 LlamaParse pages spent total; every parse cached, every
-  rebuild free. `sample_output/` lets anyone evaluate without keys.
-- `data/` (sqlite, crops, cache) and `.env` are gitignored and rebuilt locally.
-- Check `git log` — history is the build diary: scaffold → parse test →
-  pipeline → fixes → API/UI → tests → generalization runs.
+- **Recall is deliberately precision-biased**: the extractor skips what it can't quote exactly; the misses land in Open questions rather than as hallucinations.
+- **Relations are pairwise** — no multi-hop chains yet.
+- **Table-period attribution is heuristic** (nearest tokens); column-header-aware resolution would shrink the 2,468 `ambiguous-period` items.
+- **Chart reading is positional** (legend→segment mapping); ambiguous cases are flagged provisional, no vision fallback yet.
+- Period/unit edge cases in non-English phrasing will still slip through — the verifier catches most, the inbox catches the rest.

@@ -18,7 +18,7 @@ UNIT_MULT = {
     "qty": 1, "mn": 1e6, "million": 1e6, "bn": 1e9, "billion": 1e9,
     "k": 1e3, "thousand": 1e3, "tons": 1, "tonnes": 1, "mn-tons": 1e6,
     "shipments": 1, "mn-shipments": 1e6, "bn-shipments": 1e9,
-    "people": 1, "employees": 1, "days": 1, "%": 1, "percent": 1,
+    "people": 1, "employees": 1, "days": 1, "%": 1, "percent": 1, "per cent": 1,
 }
 UNIT_DIM = {  # comparability families
     "inr": "money-inr", "rs": "money-inr", "rupee": "money-inr", "rupees": "money-inr",
@@ -32,7 +32,7 @@ UNIT_DIM = {  # comparability families
     "k": "qty-k", "thousand": "qty-k", "tons": "mass", "tonnes": "mass", "mn-tons": "mass",
     "shipments": "count", "mn-shipments": "count", "bn-shipments": "count",
     "people": "people", "employees": "people", "days": "days",
-    "%": "pct", "percent": "pct",
+    "%": "pct", "percent": "pct", "per cent": "pct",
 }
 
 NUM_RE = re.compile(r"\(?\s*[\d,]+(?:\.\d+)?\s*\)?")
@@ -70,6 +70,7 @@ def canonical_unit(unit_raw: str, currency_hint: str = "") -> str:
     table = {
         "cr": "inr-cr", "crs": "inr-cr", "crore": "cr", "crores": "cr",
         "lakh": "inr-lakh", "lakhs": "inr-lakh", "%": "%", "percent": "percent",
+        "per cent": "percent",
         "mn": "mn", "million": "million", "bn": "bn", "billion": "billion",
         "tons": "tons", "tonnes": "tons", "t": "tons",
         "shipments": "shipments", "employees": "employees", "people": "people",

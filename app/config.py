@@ -19,6 +19,11 @@ class Settings(BaseSettings):
     max_chunk_chars: int = 4000
     link_tolerance: float = 0.02     # numeric corroboration tolerance (relative)
     fuzzy_threshold: int = 82        # rapidfuzz token_set_ratio for blocking
+    # thread-pool sizes for the I/O-bound stages (LLM/cloud calls). The box is
+    # small but these threads mostly wait on network, not CPU.
+    parse_workers: int = 4           # per-document cloud parses in flight
+    extract_workers: int = 8         # per-chunk Bedrock extracts in flight
+    link_workers: int = 8            # LLM-judge pair calls in flight
 
     class Config:
         env_file = ".env"

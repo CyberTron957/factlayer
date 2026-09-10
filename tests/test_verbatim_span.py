@@ -90,3 +90,22 @@ def test_value_markdown_stripped():
     assert _clean_llm_value("12.7%") == "12.7%"
     assert _clean_llm_value("# **Annexure 1**\n# **Action**") == "# Annexure 1 # Action"
     assert _clean_llm_value("") == ""
+
+
+def test_padded_table_blob_extracts_fast():
+    # live bug: PyMuPDF pads table cells with thousand-space runs and the
+    # numeric matchers went quadratic (~1.2s for one 2.7KB chart title),
+    # stalling the whole extract fan-out. Must stay millseconds-fast, and
+    # quotes must remain verbatim substrings of the source.
+    import time
+    from app.extract import _numeric_from_sentence
+    sent = ("| Chart I.33: Containment of general government dis-savings "
+            "has contributed to macro-stability" + " " * 2200
+            + "| GDP growth was 6.5 percent in FY2025.")
+    c = _chunk(sent)
+    t = time.time()
+    facts = _numeric_from_sentence(sent, c, "Economic Survey")
+    assert time.time() - t < 1.0
+    assert facts, "the padded blob still holds a real fact"
+    for f in facts:
+        assert f.evidence.quote in sent

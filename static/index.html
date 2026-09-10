@@ -19,6 +19,7 @@ header h1{margin:0;font-size:20px;font-weight:650}header p{margin:4px 0 0;color:
 #drop button:disabled{opacity:.45;cursor:default}
 #corpus{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
 #corpus h3{margin:0 0 4px;font-size:16px}
+#demonote{background:#eef4ff;border:1px solid #c9dcfa;border-radius:8px;padding:9px 13px;font-size:13.5px;margin:8px 0 4px}
 #dz{border:2px dashed #b6c2d2;border-radius:10px;padding:20px;text-align:center;color:var(--mut);font-size:14px;margin:10px 0;transition:background .15s,border-color .15s}
 #dz.over{background:#eef4ff;border-color:#3b82f6;color:var(--ink)}
 .btn{display:inline-block;background:var(--ink);color:#fff;border-radius:7px;padding:8px 16px;cursor:pointer;font-size:14px;font-weight:600}
@@ -92,6 +93,7 @@ footer{color:var(--mut);font-size:12.5px;text-align:center;padding:24px}
 <div class="wrap">
 <div class="card" id="corpus">
 <h3>Corpus — documents &amp; upload</h3>
+<p id="demonote">📊 Pre-loaded demo corpus: <b>India macroeconomy</b> (Economic Survey 2024-25 · RBI Annual Report 2024-25 · IMF Article IV 2025) — the results below are live. Upload your own PDFs to append, or Replace to start fresh.</p>
 <div id="dz">Drag &amp; drop PDFs here or <label class="btn">browse files<input type="file" id="file" multiple accept=".pdf" hidden></label></div>
 <div id="picked"></div>
 <div class="urow">

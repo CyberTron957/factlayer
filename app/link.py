@@ -18,6 +18,9 @@ PERIOD_UNIT_TOKENS = re.compile(
     r"\b(fy\d{0,4}|q[1-4]|yoy|qoq|cr|crs|crore?s?|lakhs?|mn|bn|million|"
     r"billion|rs|inr|usd|per|cent|percent)\b|[₹$%]", re.I)
 FALLBACK_SUBJECTS = {"document", "doc", "report", "presentation"}
+# minimum subject similarity for two KNOWN-subject facts to link (mirrored
+# by _pair_plan's block merging — keep the two in sync).
+SUBJECT_MATCH_MIN = 60
 
 
 def _topic_anchor(attr: str) -> str:
@@ -44,8 +47,9 @@ def same_topic(a: Fact, b: Fact) -> bool:
         return False  # no substantive topic (FY-salad, bare units)
     toks_a, toks_b = set(ta.split()), set(tb.split())
     shared = toks_a & toks_b
-    attr_score = fuzz.token_set_ratio(ta, tb)
-    if not shared and attr_score < 92:
+    # fuzzy attribute check is the expensive call — skip it when tokens
+    # already overlap (verdict-identical: it only gates the no-shared case)
+    if not shared and fuzz.token_set_ratio(ta, tb) < 92:
         return False
     sa, sb = a.subject.lower().strip(), b.subject.lower().strip()
     unknown = (sa in FALLBACK_SUBJECTS or sb in FALLBACK_SUBJECTS or not sa or not sb)
@@ -61,7 +65,7 @@ def same_topic(a: Fact, b: Fact) -> bool:
             # one side subjectless: demand identical topic anchors (strict)
             if set(ta.split()) != set(tb.split()) or not ta:
                 return False
-    elif fuzz.token_set_ratio(sa, sb) < 60:
+    elif fuzz.token_set_ratio(sa, sb) < SUBJECT_MATCH_MIN:
         return False
     if a.fact_type == "numeric" and b.fact_type == "numeric":
         # money-vs-percent explosions end here; convertible units (₹Mn vs ₹Cr)
@@ -69,6 +73,63 @@ def same_topic(a: Fact, b: Fact) -> bool:
         if a.unit_norm and b.unit_norm and not same_dimension(a.unit_norm, b.unit_norm):
             return False
     return True
+
+
+def _pair_plan(facts: list[Fact]) -> tuple[int, object]:
+    """Blocking with EXACTLY the recall of the full O(F²) scan.
+
+    same_topic rejects known-subject pairs scoring < SUBJECT_MATCH_MIN, so
+    subjects are union-merged at that threshold first and only intra-block
+    pairs are emitted. Subjectless/fallback facts (pool) match across
+    subjects, so each is paired with every non-pool fact plus pool mates.
+    Returns (total_pairs, lazy_iterator).
+    """
+    n = len(facts)
+    pool: list[int] = []
+    blocks: dict[str, list[int]] = {}
+    for idx, f in enumerate(facts):
+        s = (f.subject or "").lower().strip()
+        if not s or s in FALLBACK_SUBJECTS:
+            pool.append(idx)
+        else:
+            blocks.setdefault(s, []).append(idx)
+    subjects = list(blocks)
+    parent = {s: s for s in subjects}
+
+    def find(x):
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    for x in range(len(subjects)):
+        for y in range(x + 1, len(subjects)):
+            if fuzz.token_set_ratio(subjects[x], subjects[y]) >= SUBJECT_MATCH_MIN:
+                rx, ry = find(subjects[x]), find(subjects[y])
+                if rx != ry:
+                    parent[ry] = rx
+    merged: dict[str, list[int]] = {}
+    for s in subjects:
+        merged.setdefault(find(s), []).extend(blocks[s])
+    poolset = set(pool)
+    nonpool = [i for i in range(n) if i not in poolset]
+    total = (sum(len(v) * (len(v) - 1) // 2 for v in merged.values())
+             + len(pool) * len(nonpool) + len(pool) * (len(pool) - 1) // 2) or 1
+
+    def gen():
+        for idxs in merged.values():
+            for a in range(len(idxs)):
+                for b in range(a + 1, len(idxs)):
+                    x, y = idxs[a], idxs[b]
+                    yield (x, y) if x < y else (y, x)
+        for p in pool:
+            for q in nonpool:
+                yield (p, q) if p < q else (q, p)
+        for a in range(len(pool)):
+            for b in range(a + 1, len(pool)):
+                yield pool[a], pool[b]
+
+    return total, gen()
 
 
 def _cross_dimension(a: Fact, b: Fact) -> bool:
@@ -132,40 +193,89 @@ def _ctx(f: Fact) -> str:
     return (", ".join(parts) or "no context") + f" [{f.evidence.doc} p.{f.evidence.page_label}]"
 
 
-_LINK_CALLS = 0  # per-process LLM-link budget (see settings)
+VALID_RELATIONS = ("corroborates", "contradicts", "reconciled", "superseded-by")
 
 
-def _link_budget_ok() -> bool:
-    global _LINK_CALLS
+class LinkBudget:
+    """Per-run cap on LLM-as-judge calls.
+
+    Created fresh by link_all on every run. (The old per-process counter
+    silently starved every job after the first 80 calls server-wide.)
+    """
+
+    def __init__(self, limit: int = 0):
+        try:
+            from .config import settings as _s
+            default = int(getattr(_s, "bedrock_max_link_calls", 80))
+        except Exception:
+            default = 80
+        self.remaining = int(limit) if limit else default
+
+    def take(self) -> bool:
+        if self.remaining <= 0:
+            return False
+        self.remaining -= 1
+        return True
+
+
+def _candidate_score(a: Fact, b: Fact, tol: float) -> float:
+    """Cheap rank for ambiguous pairs so the judge budget is spent on the
+    most promising candidates first (shared topic + same period/scope/units)."""
+    ta = set(_topic_anchor(a.attribute).split())
+    tb = set(_topic_anchor(b.attribute).split())
+    score = float(len(ta & tb))
+    if a.period and a.period == b.period:
+        score += 2.0
+    if a.scope and a.scope == b.scope:
+        score += 1.0
+    if a.unit_norm and a.unit_norm == b.unit_norm:
+        score += 1.0
+    if (a.fact_type == b.fact_type == "numeric"
+            and a.value_norm is not None and b.value_norm is not None):
+        denom = max(abs(a.value_norm), abs(b.value_norm), 1e-9)
+        if abs(a.value_norm - b.value_norm) / denom <= tol:
+            score += 1.5
+    return score
+
+
+def judge_pair(a: Fact, b: Fact, budget: "LinkBudget | None" = None) -> dict:
+    """LLM verdict for one ambiguous pair. Pure (no DB); safe to parallelize."""
+    if (a.fact_type == "numeric" and b.fact_type == "numeric"
+            and _cross_dimension(a, b)):
+        return {}  # veto stands even for the LLM judge
+    if not llm_available():
+        return {}
+    if budget is None:
+        budget = LinkBudget()
+    if not budget.take():
+        return {}
     try:
-        from .config import settings as _s
-        limit = int(getattr(_s, "bedrock_max_link_calls", 80))
+        return llm_link(_slim(a), _slim(b)) or {}
     except Exception:
-        limit = 80
-    if _LINK_CALLS >= limit:
-        return False
-    _LINK_CALLS += 1
-    return True
+        return {}
 
 
-def link_pair(a: Fact, b: Fact, tol: float, disclosures: dict) -> Relation | None:
-    """disclosures: doc -> vintage rank (higher = newer)."""
-    rel = heuristic_link(a, b, tol) or {}
-    if not rel and a.fact_type == "numeric" and b.fact_type == "numeric" \
-            and _cross_dimension(a, b):
-        return None  # veto stands even for the LLM judge
-    if rel.get("relation") not in (
-            "corroborates", "contradicts", "reconciled", "superseded-by"):
-        # heuristic ambiguous → LLM judge (budget-capped), never fabricate
-        rel = {}
-        if llm_available() and _link_budget_ok():
-            try:
-                rel = llm_link(_slim(a), _slim(b)) or {}
-            except Exception:
-                rel = {}
-    if not rel or rel.get("relation") not in (
-            "corroborates", "contradicts", "reconciled", "superseded-by"):
-        return None  # ambiguous and LLM has no verdict — skip, don't fabricate
+def _clean_axis(v):
+    """Coerce the judge's axis to schema. Judges occasionally emit the STRING
+    "null"/"none" or an off-schema label — axis is ancillary, so coerce to
+    None instead of letting one sloppy token crash the whole link pass."""
+    if v is None:
+        return None
+    s = str(v).strip().lower()
+    return s if s in ("time", "scope", "units", "vintage") else None
+
+
+def _finalize(rel: dict, a: Fact, b: Fact, tol: float,
+              disclosures: dict) -> Relation | None:
+    """Turn a heuristic/LLM verdict dict into a Relation (or None).
+
+    Applies the vintage-supersession override and the numeric re-check.
+    Pure; shared by link_pair and the two-pass link_all.
+    """
+    if not rel or rel.get("relation") not in VALID_RELATIONS:
+        return None  # ambiguous and no verdict — skip, don't fabricate
+    rel = dict(rel)
+    rel["axis"] = _clean_axis(rel.get("axis"))
     # supersession: same topic, different KNOWN disclosure vintages, conflicting
     # values — the newer disclosure wins (restatement or update), it is not a
     # live conflict. Unknown vintage (0) never supersedes: without evidence of
@@ -183,7 +293,7 @@ def link_pair(a: Fact, b: Fact, tol: float, disclosures: dict) -> Relation | Non
                         explanation=rel["explanation"], confidence=0.75, verified=True)
     rel = recheck_relation(rel, a, b, tol)
     if rel.get("relation") == "superseded-by":
-        return Relation(relation="superseded-by", axis=rel.get("axis", "vintage"),
+        return Relation(relation="superseded-by", axis=rel.get("axis") or "vintage",
                         fact_ids=[a.fact_id, b.fact_id],
                         explanation=rel.get("explanation", ""), confidence=rel.get("confidence", 0.7),
                         verified=rel.get("verified", False))
@@ -193,6 +303,16 @@ def link_pair(a: Fact, b: Fact, tol: float, disclosures: dict) -> Relation | Non
                     explanation=rel.get("explanation", ""),
                     confidence=float(rel.get("confidence", 0.5) or 0.5),
                     verified=bool(rel.get("verified", False)))
+
+
+def link_pair(a: Fact, b: Fact, tol: float, disclosures: dict,
+              budget: "LinkBudget | None" = None) -> Relation | None:
+    """disclosures: doc -> vintage rank (higher = newer)."""
+    rel = heuristic_link(a, b, tol) or {}
+    if rel.get("relation") not in VALID_RELATIONS:
+        # heuristic ambiguous → LLM judge (budget-capped), never fabricate
+        rel = judge_pair(a, b, budget)
+    return _finalize(rel, a, b, tol, disclosures)
 
 
 def _slim(f: Fact) -> dict:

@@ -118,7 +118,12 @@ def _looks_like_period_fragment(raw: str, before: str) -> bool:
 def _numeric_from_sentence(sent: str, chunk: Chunk, doc_entity: str) -> list[Fact]:
     out: list[Fact] = []
     seen: set[str] = set()
-    for m in list(MONEY_RE.finditer(sent)) + list(PCT_RE.finditer(sent)) + list(QTY_RE.finditer(sent)):
+    # PyMuPDF table cells pad with thousand-space runs; the match regexes go
+    # quadratic on those (a 2.7KB chart title took 1.2s). Scan a
+    # whitespace-collapsed copy — quotes still use the original sentence, so
+    # grounding stays verbatim, and offsets below all index into ns.
+    ns = re.sub(r"\s+", " ", sent)
+    for m in list(MONEY_RE.finditer(ns)) + list(PCT_RE.finditer(ns)) + list(QTY_RE.finditer(ns)):
         raw = m.group(0).strip()
         if not raw or raw in seen or not re.search(r"\d", raw):
             continue
@@ -127,7 +132,7 @@ def _numeric_from_sentence(sent: str, chunk: Chunk, doc_entity: str) -> list[Fac
         seen.add(raw)
         unit_raw = _tail_unit(raw)
         # extend over a closing paren: "(6.3%)" must keep its negative sign
-        if raw.startswith("(") and not raw.endswith(")") and m.end() < len(sent) and sent[m.end()] == ")":
+        if raw.startswith("(") and not raw.endswith(")") and m.end() < len(ns) and ns[m.end()] == ")":
             raw += ")"
         if not unit_raw and re.fullmatch(r"\(?\s*(19|20)\d{2}\s*,?\)?", raw.strip()):
             continue  # bare calendar year, not a measurement
@@ -139,16 +144,16 @@ def _numeric_from_sentence(sent: str, chunk: Chunk, doc_entity: str) -> list[Fac
             continue  # 6-digit bare number: pincode/phone fragment, not a fact
         if not unit_raw and ADDRESS_RE.search(sent):
             continue  # bare number inside address/contact block
-        before = sent[max(0, m.start() - 12):m.start()]
+        before = ns[max(0, m.start() - 12):m.start()]
         if _looks_like_period_fragment(raw, before):
             continue
         if not unit_raw and len(re.sub(r"\D", "", raw)) <= 3:
             continue  # bare tiny number: folio, count fragment, not a fact
         v, flags = parse_number(_num_part(raw))
-        unit_norm = canonical_unit(unit_raw, currency_hint=raw + " " + sent)
+        unit_norm = canonical_unit(unit_raw, currency_hint=raw + " " + ns)
         base = to_base(v, unit_norm) if v is not None else None
-        period, pflags = canonical_period(sent)
-        window = sent[max(0, m.start() - 90):m.start()]
+        period, pflags = canonical_period(ns)
+        window = ns[max(0, m.start() - 90):m.start()]
         window = window[window.find(" ") + 1:] if " " in window else ""  # snap to word boundary
         attr = _attr_of(window + " " + unit_raw) if window.strip() else unit_raw or "value"
         modality = "table" if "|" in sent else ("chart" if chunk.modality_hints and "chart" in chunk.modality_hints else "text")
@@ -200,11 +205,37 @@ def _ev(chunk: Chunk, sent: str, modality: str) -> Evidence:
                     page_label=chunk.page_label, quote=sent[:500], modality=modality)
 
 
-def extract_chunk(chunk: Chunk, doc_entity: str) -> tuple[list[Fact], list[dict]]:
-    """Returns (facts, open_questions). LLM facts merged with pre-pass."""
+def _chunk_has_signal(chunk: Chunk) -> bool:
+    """True when the chunk holds anything the extractors could use: a
+    number-like token (pre_extract's numeric path) or an org/role-verb
+    (its semantic path). Barren pages (TOC, covers, photo spreads) match
+    neither — the LLM would return [] or ungrounded junk the verifier
+    rejects, so calling it is pure cost."""
+    t = chunk.text or ""
+    return bool(MONEY_RE.search(t) or PCT_RE.search(t) or QTY_RE.search(t)
+                or ORG_RE.search(t) or ROLE_VERBS.search(t))
+
+
+def extract_chunk(chunk: Chunk, doc_entity: str,
+                  cache_key: str | None = None) -> tuple[list[Fact], list[dict]]:
+    """Returns (facts, open_questions). LLM facts merged with pre-pass.
+
+    cache_key (opaque, from extract_cache.make_key): identical chunks skip
+    the whole extraction and return the cached result.
+    """
+    if cache_key:
+        from .extract_cache import get as _cache_get
+        hit = _cache_get(cache_key)
+        if hit is not None:
+            return hit
     pre = pre_extract(chunk, doc_entity)
     questions: list[dict] = []
+    if not pre and not _chunk_has_signal(chunk):
+        return pre, questions  # barren page: LLM would add nothing
     if not llm_available():
+        if cache_key:
+            from .extract_cache import put as _cache_put
+            _cache_put(cache_key, pre, questions)
         return pre, questions
     try:
         items = llm_extract(chunk.text, chunk.doc)
@@ -222,6 +253,9 @@ def extract_chunk(chunk: Chunk, doc_entity: str) -> tuple[list[Fact], list[dict]
                               "detail": (f"[{chunk.doc} p{chunk.page_label}] rejected: {e}; "
                                          f"quote={(it.get('quote') or '')[:400]}; "
                                          f"item={str(it)[:200]}")})
+    if cache_key:
+        from .extract_cache import put as _cache_put
+        _cache_put(cache_key, merged, questions)
     return merged, questions
 
 

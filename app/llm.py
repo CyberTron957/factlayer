@@ -8,6 +8,9 @@ downstream; the LLM never writes to storage directly.
 """
 import json
 import os
+import random
+import time
+import urllib.error
 import urllib.request
 
 from .config import settings
@@ -57,7 +60,13 @@ def available() -> bool:
     return bool(_api_key())
 
 
-def _chat(system: str, user: str, max_tokens: int = 2000) -> str:
+_TRANSIENT_CODES = {429, 500, 502, 503, 504}  # retry these, fail fast on the rest
+
+
+def _chat(system: str, user: str, max_tokens: int = 2000, attempts: int = 3) -> str:
+    """POST one chat completion. Transient failures (rate-limit / 5xx /
+    network) retry with backoff; auth/client errors (401/400/...) raise
+    immediately so a dead key surfaces instead of hanging a job."""
     url = (f"https://bedrock-mantle.{settings.bedrock_region}"
            f".api.aws/v1/chat/completions")
     body = {"model": settings.bedrock_model,
@@ -65,13 +74,26 @@ def _chat(system: str, user: str, max_tokens: int = 2000) -> str:
                          {"role": "user", "content": user}],
             "temperature": 0,
             "max_tokens": max_tokens}
-    req = urllib.request.Request(
-        url, data=json.dumps(body).encode(),
-        headers={"Content-Type": "application/json",
-                 "Authorization": "Bearer " + _api_key()})
-    with urllib.request.urlopen(req, timeout=180) as resp:
-        out = json.loads(resp.read().decode())
-    return out["choices"][0]["message"]["content"] or ""
+    last: Exception | None = None
+    for attempt in range(attempts):
+        req = urllib.request.Request(
+            url, data=json.dumps(body).encode(),
+            headers={"Content-Type": "application/json",
+                     "Authorization": "Bearer " + _api_key()})
+        try:
+            with urllib.request.urlopen(req, timeout=180) as resp:
+                out = json.loads(resp.read().decode())
+            return out["choices"][0]["message"]["content"] or ""
+        except urllib.error.HTTPError as e:
+            last = e
+            if e.code not in _TRANSIENT_CODES:
+                raise
+        except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:
+            last = e
+        if attempt < attempts - 1:
+            time.sleep(min(2 ** attempt, 8) + random.uniform(0, 0.5))
+    assert last is not None
+    raise last
 
 
 def _parse_json_array(text: str) -> list[dict]:
