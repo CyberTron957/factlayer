@@ -48,12 +48,6 @@ inbox) · `GET /api/cases` (the four required cases) · `GET /api/export` (CSV).
 Tests (no API calls, no PDFs): `python -m pytest tests/ -q` (10 tests: relation
 engine, normalizers incl. `(404)`→`-404`, USD-vs-INR dimensions).
 
-## Video Demo
-
-`docs/DEMO_SCRIPT.md` is the ≤3-minute shot list (upload → processing → the four
-cases on screen). Record with any screen recorder against a local run; the
-`sample_output/` JSON files are the exact API payloads shown.
-
 ## Approach
 
 **Parse (LlamaParse-first).** Default-tier parsing returns per-page markdown with tables
